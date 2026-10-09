@@ -43,6 +43,35 @@ def _snap(phase):
                             epoch=1, sequence=0)
 
 
+def local_displacement(left_phase, phase, right_phase, target, alpha,
+                       safety_fraction=0.45):
+    """Clipped displacement for one tick, from the phases last received.
+
+    ``left_phase`` or ``right_phase`` is ``None`` until that neighbor has
+    actually been heard from. A job holding no snapshot of a neighbor has no
+    evidence of any slack on that side, so it believes the gap there is zero
+    and does not move: the only assumption that is safe before the first
+    message arrives. Seeding the view with a perfectly even ring
+    (``phase0 -/+ target``) instead lets ``limit_local_displacement`` clip
+    against a believed gap that, on random initial phases, can be many times
+    the true one, which licenses a first step straight past the neighbor.
+    Neighbors are bound to ports by index, so a crossing is unrecoverable:
+    afterwards each job applies the strict-neighbor rule to jobs that are no
+    longer its phase neighbors and the correction points the wrong way.
+
+    Paper convention: displacement = (alpha / 2) * correction, then clipped.
+    """
+    if left_phase is None or right_phase is None:
+        return 0.0
+    left, cur, right = _snap(left_phase), _snap(phase), _snap(right_phase)
+    corr = local_correction(left, cur, right, left_target=target,
+                            right_target=target, circumference=TWO_PI)
+    return limit_local_displacement(0.5 * alpha * corr, left, cur, right,
+                                    left_minimum=0.0, right_minimum=0.0,
+                                    safety_fraction=safety_fraction,
+                                    circumference=TWO_PI)
+
+
 def agent(idx, n, base_port, phase0, target, seconds, tick, outdir,
           loss=0.0, jitter=0.0):
     """One job process: UDP to two neighbors, local update on its own timer.
@@ -58,8 +87,7 @@ def agent(idx, n, base_port, phase0, target, seconds, tick, outdir,
     sock.bind(("127.0.0.1", base_port + idx))
     sock.setblocking(False)
     phase = phase0
-    left_phase = (phase0 - target) % TWO_PI      # optimistic init until first msg
-    right_phase = (phase0 + target) % TWO_PI
+    left_phase = right_phase = None   # no motion before the first message
     deadline = time.time() + seconds
     next_tick = time.time()
     while time.time() < deadline:
@@ -82,13 +110,9 @@ def agent(idx, n, base_port, phase0, target, seconds, tick, outdir,
                 sock.sendto(f"R:{phase}".encode(), ("127.0.0.1", left_port))
             if _r.random() >= loss:
                 sock.sendto(f"L:{phase}".encode(), ("127.0.0.1", right_port))
-            left, cur, right = _snap(left_phase), _snap(phase), _snap(right_phase)
-            corr = local_correction(left, cur, right, left_target=target,
-                                    right_target=target, circumference=TWO_PI)
-            disp = limit_local_displacement(0.1 * corr, left, cur, right,
-                                            left_minimum=0.0, right_minimum=0.0,
-                                            safety_fraction=0.45,
-                                            circumference=TWO_PI)
+            # 0.1 * corr is alpha = 0.2 in the paper's alpha/2 convention.
+            disp = local_displacement(left_phase, phase, right_phase, target,
+                                      alpha=0.2)
             phase = (phase + disp) % TWO_PI
             next_tick = now + tick + (_r.random() * jitter if jitter else 0.0)
         time.sleep(0.001)

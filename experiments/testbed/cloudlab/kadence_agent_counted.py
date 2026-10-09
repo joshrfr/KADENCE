@@ -27,16 +27,11 @@ import time
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "src"))
-from kadence.neighbor_gossip import (  # noqa: E402
-    NeighborSnapshot, local_correction, limit_local_displacement,
+from experiments.simulation.desync_distributed import (  # noqa: E402
+    local_displacement,                      # committed clipped-update helper
 )
 
 TWO_PI = 2 * math.pi
-
-
-def _snap(phase):
-    return NeighborSnapshot(jid="x", phase=phase % TWO_PI, width=0.0,
-                            epoch=1, sequence=0)
 
 
 def counted_agent(idx, n, base_port, phase0, target, seconds, tick, outdir,
@@ -48,8 +43,9 @@ def counted_agent(idx, n, base_port, phase0, target, seconds, tick, outdir,
     sock.bind(("127.0.0.1", base_port + idx))
     sock.setblocking(False)
     phase = phase0
-    left_phase = (phase0 - target) % TWO_PI
-    right_phase = (phase0 + target) % TWO_PI
+    # No motion toward a neighbour before that neighbour has been heard from;
+    # see local_displacement in experiments/simulation/desync_distributed.py.
+    left_phase = right_phase = None
     nonlo_src = nonlo_dst = 0
     ticks = sent = received = malformed = loss_dropped = send_errors = 0
     trace = []
@@ -98,13 +94,8 @@ def counted_agent(idx, n, base_port, phase0, target, seconds, tick, outdir,
                     send_errors += 1
             else:
                 loss_dropped += 1
-            left, cur, right = _snap(left_phase), _snap(phase), _snap(right_phase)
-            corr = local_correction(left, cur, right, left_target=target,
-                                    right_target=target, circumference=TWO_PI)
-            disp = limit_local_displacement(0.5 * alpha * corr, left, cur, right,
-                                            left_minimum=0.0, right_minimum=0.0,
-                                            safety_fraction=0.45,
-                                            circumference=TWO_PI)
+            disp = local_displacement(left_phase, phase, right_phase, target,
+                                      alpha=alpha)
             phase = (phase + disp) % TWO_PI
             ticks += 1
             trace.append(phase)

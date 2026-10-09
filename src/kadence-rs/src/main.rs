@@ -119,14 +119,14 @@ struct AgentStats {
 }
 
 /// Parse one datagram and apply it. Returns false if it was malformed.
-fn apply_datagram(bytes: &[u8], left_phase: &mut f64, right_phase: &mut f64) -> bool {
+fn apply_datagram(bytes: &[u8], left_phase: &mut Option<f64>, right_phase: &mut Option<f64>) -> bool {
     let Ok(s) = std::str::from_utf8(bytes) else { return false };
     let mut parts = s.splitn(2, ':');
     let (Some(who), Some(v)) = (parts.next(), parts.next()) else { return false };
     let Ok(val) = v.parse::<f64>() else { return false };
     match who {
-        "L" => *left_phase = val,
-        "R" => *right_phase = val,
+        "L" => *left_phase = Some(val),
+        "R" => *right_phase = Some(val),
         _ => return false,
     }
     true
@@ -141,8 +141,16 @@ async fn agent(idx: usize, phase0: f64, cfg: Cfg, sock: UdpSocket) -> AgentStats
 
     let mut st = AgentStats::default();
     let mut phase = phase0;
-    let mut left_phase = (phase0 - cfg.target).rem_euclid(TWO_PI);
-    let mut right_phase = (phase0 + cfg.target).rem_euclid(TWO_PI);
+    // FIX 3: pessimistic neighbour initialisation. `None` until that
+    // neighbour's phase has actually arrived: a job with no snapshot of a
+    // neighbour has no evidence of slack on that side, so it believes the gap
+    // is zero and does not move. Seeding the view with a perfectly even ring
+    // (phase0 -/+ target) instead let limit_displacement clip against a
+    // believed gap many times the true one on random initial phases, which
+    // licensed a first step past the neighbour. Neighbours are bound to ports
+    // by index, so a crossing is unrecoverable.
+    let mut left_phase: Option<f64> = None;
+    let mut right_phase: Option<f64> = None;
     let mut rng = StdRng::seed_from_u64(cfg.seed ^ (idx as u64).wrapping_mul(0x9E3779B97F4A7C15));
     let mut buf = [0u8; 64];
 
@@ -203,8 +211,13 @@ async fn agent(idx: usize, phase0: f64, cfg: Cfg, sock: UdpSocket) -> AgentStats
         }
 
         // Kernel update. FIX 2: rate is a parameter, paper convention alpha/2.
-        let corr = local_correction(left_phase, phase, right_phase, cfg.target);
-        let disp = limit_displacement(0.5 * cfg.alpha * corr, left_phase, phase, right_phase);
+        let disp = match (left_phase, right_phase) {
+            (Some(l), Some(r)) => {
+                let corr = local_correction(l, phase, r, cfg.target);
+                limit_displacement(0.5 * cfg.alpha * corr, l, phase, r)
+            }
+            _ => 0.0,
+        };
         phase = (phase + disp).rem_euclid(TWO_PI);
         st.ticks += 1;
         st.trace.push(phase);
@@ -483,7 +496,7 @@ async fn main() {
                 "strict": "final_gap_error < 1e-6 radians    [simulation]"
             },
             "global_clock": false, "language": "Rust/tokio",
-            "version": "fixed: all datagrams parsed, alpha is a parameter"
+            "version": "fixed: all datagrams parsed, alpha is a parameter, pessimistic neighbour init"
         },
         "reps": reps,
         "mean_final_pct": reps.iter().map(|r| r.final_pct_of_fair).sum::<f64>() / n,

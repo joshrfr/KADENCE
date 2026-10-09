@@ -1,18 +1,16 @@
 """Equivalence harness: the Python UDP agent of experiments/simulation/desync_distributed.py,
 copied verbatim except that (a) the update rate is a parameter (the original
-hardcodes 0.1*corr) and (b) each tick's phase is recorded so convergence time
-can be compared with the Rust trace.  Kernel functions are imported from
-core.neighbor_gossip, unchanged."""
+hardcodes 0.1*corr, i.e. mult = 0.1 = alpha/2) and (b) each tick's phase is
+recorded so convergence time can be compared with the Rust trace.  The clipped
+update, including the pessimistic neighbour initialisation, is the committed
+desync_distributed.local_displacement, unchanged."""
 import json, math, os, random, socket, sys, time
 from multiprocessing import Process
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "src"))
-from kadence.neighbor_gossip import NeighborSnapshot, local_correction, limit_local_displacement
+from experiments.simulation.desync_distributed import local_displacement
 TWO_PI = 2 * math.pi
-
-def _snap(p):
-    return NeighborSnapshot(jid="x", phase=p % TWO_PI, width=0.0, epoch=1, sequence=0)
 
 def agent(idx, n, base_port, phase0, target, seconds, tick, outdir, loss, mult, seed):
     r = random.Random(seed * 1000 + idx)
@@ -20,7 +18,7 @@ def agent(idx, n, base_port, phase0, target, seconds, tick, outdir, loss, mult, 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind(("127.0.0.1", base_port + idx)); sock.setblocking(False)
     phase = phase0
-    lph, rph = (phase0 - target) % TWO_PI, (phase0 + target) % TWO_PI
+    lph = rph = None                 # no motion before a neighbour is heard
     deadline = time.time() + seconds; next_tick = time.time(); trace = []; nrecv = 0
     while time.time() < deadline:
         try:
@@ -35,10 +33,7 @@ def agent(idx, n, base_port, phase0, target, seconds, tick, outdir, loss, mult, 
         if now >= next_tick:
             if r.random() >= loss: sock.sendto(f"R:{phase}".encode(), ("127.0.0.1", lp))
             if r.random() >= loss: sock.sendto(f"L:{phase}".encode(), ("127.0.0.1", rp))
-            l, c, rr = _snap(lph), _snap(phase), _snap(rph)
-            corr = local_correction(l, c, rr, left_target=target, right_target=target, circumference=TWO_PI)
-            disp = limit_local_displacement(mult * corr, l, c, rr, left_minimum=0.0, right_minimum=0.0,
-                                            safety_fraction=0.45, circumference=TWO_PI)
+            disp = local_displacement(lph, phase, rph, target, alpha=2.0 * mult)
             phase = (phase + disp) % TWO_PI
             trace.append(phase)
             next_tick = now + tick
