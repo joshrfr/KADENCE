@@ -1,0 +1,159 @@
+{
+  "dataset": "Alibaba cluster-trace-v2018 container_usage",
+  "granularity": "per-container",
+  "entities": 6000,
+  "windows": 3,
+  "history": 3,
+  "peak_nodes_mean": 1331.1666666666667,
+  "safe_points": 4,
+  "dominates_peak": true,
+  "best_safe_point": {
+    "tau": 1.01,
+    "z": 3,
+    "nodes_mean": 1330.6666666666667,
+    "max_overload": 0.0,
+    "nodes_vs_peak_pct": 0.037561036684607974
+  },
+  "grid": [
+    {
+      "tau": 0.5,
+      "z": 3,
+      "nodes_mean": 1326.5833333333333,
+      "max_overload": 0.020612686030779637,
+      "nodes_vs_peak_pct": 0.3443095029422971
+    },
+    {
+      "tau": 0.5,
+      "z": 4,
+      "nodes_mean": 1329.5833333333333,
+      "max_overload": 0.02090766224940537,
+      "nodes_vs_peak_pct": 0.11894328283461597
+    },
+    {
+      "tau": 0.5,
+      "z": 5,
+      "nodes_mean": 1331.6666666666667,
+      "max_overload": 0.018387175255987136,
+      "nodes_vs_peak_pct": -0.037561036684619076
+    },
+    {
+      "tau": 0.5,
+      "z": 6,
+      "nodes_mean": 1333.5833333333333,
+      "max_overload": 0.018285906586526422,
+      "nodes_vs_peak_pct": -0.18154501064229223
+    },
+    {
+      "tau": 0.7,
+      "z": 3,
+      "nodes_mean": 1320.5,
+      "max_overload": 0.02621275783040489,
+      "nodes_vs_peak_pct": 0.8013021159384071
+    },
+    {
+      "tau": 0.7,
+      "z": 4,
+      "nodes_mean": 1322.6666666666667,
+      "max_overload": 0.026731082740514906,
+      "nodes_vs_peak_pct": 0.6385376236384133
+    },
+    {
+      "tau": 0.7,
+      "z": 5,
+      "nodes_mean": 1324.1666666666667,
+      "max_overload": 0.0253250084623847,
+      "nodes_vs_peak_pct": 0.5258545135845782
+    },
+    {
+      "tau": 0.7,
+      "z": 6,
+      "nodes_mean": 1326.5,
+      "max_overload": 0.02466994085340093,
+      "nodes_vs_peak_pct": 0.35056967572305586
+    },
+    {
+      "tau": 0.85,
+      "z": 3,
+      "nodes_mean": 1319.9166666666667,
+      "max_overload": 0.022382580576759965,
+      "nodes_vs_peak_pct": 0.8451233254037849
+    },
+    {
+      "tau": 0.85,
+      "z": 4,
+      "nodes_mean": 1322.1666666666667,
+      "max_overload": 0.02053601766904519,
+      "nodes_vs_peak_pct": 0.6760986603230212
+    },
+    {
+      "tau": 0.85,
+      "z": 5,
+      "nodes_mean": 1323.4166666666667,
+      "max_overload": 0.01969792986903253,
+      "nodes_vs_peak_pct": 0.5821960686114958
+    },
+    {
+      "tau": 0.85,
+      "z": 6,
+      "nodes_mean": 1324.8333333333333,
+      "max_overload": 0.018883506416751097,
+      "nodes_vs_peak_pct": 0.4757731313384417
+    },
+    {
+      "tau": 0.95,
+      "z": 3,
+      "nodes_mean": 1323.0833333333333,
+      "max_overload": 0.01007311597851628,
+      "nodes_vs_peak_pct": 0.6072367597345751
+    },
+    {
+      "tau": 0.95,
+      "z": 4,
+      "nodes_mean": 1323.9166666666667,
+      "max_overload": 0.009658018867924528,
+      "nodes_vs_peak_pct": 0.5446350319268767
+    },
+    {
+      "tau": 0.95,
+      "z": 5,
+      "nodes_mean": 1324.1666666666667,
+      "max_overload": 0.009659329140461217,
+      "nodes_vs_peak_pct": 0.5258545135845782
+    },
+    {
+      "tau": 0.95,
+      "z": 6,
+      "nodes_mean": 1325.0,
+      "max_overload": 0.00930115635997989,
+      "nodes_vs_peak_pct": 0.4632527857768909
+    },
+    {
+      "tau": 1.01,
+      "z": 3,
+      "nodes_mean": 1330.6666666666667,
+      "max_overload": 0.0,
+      "nodes_vs_peak_pct": 0.037561036684607974
+    },
+    {
+      "tau": 1.01,
+      "z": 4,
+      "nodes_mean": 1330.6666666666667,
+      "max_overload": 0.0,
+      "nodes_vs_peak_pct": 0.037561036684607974
+    },
+    {
+      "tau": 1.01,
+      "z": 5,
+      "nodes_mean": 1330.6666666666667,
+      "max_overload": 0.0,
+      "nodes_vs_peak_pct": 0.037561036684607974
+    },
+    {
+      "tau": 1.01,
+      "z": 6,
+      "nodes_mean": 1330.6666666666667,
+      "max_overload": 0.0,
+      "nodes_vs_peak_pct": 0.037561036684607974
+    }
+  ]
+}

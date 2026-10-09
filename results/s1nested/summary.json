@@ -1,0 +1,344 @@
+{
+ "n_configs_requested": 12,
+ "n_infeasible": 3,
+ "n_evaluated": 9,
+ "reduction_pct": {
+  "mean": 30.254645709163963,
+  "sd": 3.0067152216459347,
+  "min": 24.489795918367346,
+  "max": 34.69387755102041,
+  "n": 9
+ },
+ "zero_overload_heldout": 8,
+ "peak_zero_overload_heldout": 8,
+ "all_beat_peak_nodes": true,
+ "reduction_by_held_day": {
+  "4": 29.15811950852382,
+  "5": 29.445447087776866,
+  "6": 32.1603705311912
+ },
+ "chosen_z_counts": {
+  "1.5": 7,
+  "2.0": 1,
+  "1.0": 1
+ },
+ "chosen_K_counts": {
+  "3": 3,
+  "1": 5,
+  "2": 1
+ },
+ "fixed_K4_val_selected_z": {
+  "mean": 29.465888572580738,
+  "sd": 3.5911818895476673,
+  "min": 23.636363636363637,
+  "max": 34.69387755102041,
+  "n": 9,
+  "zero_overload": 8
+ },
+ "paper_fixed_z2_K4": {
+  "mean": 23.661004635284716,
+  "sd": 0.912702988797089,
+  "min": 22.0,
+  "max": 24.528301886792452,
+  "n": 9,
+  "zero_overload": 8
+ },
+ "per_K_val_selected_z": {
+  "1": {
+   "mean_reduction": 28.26299898459798,
+   "zero_overload": 8,
+   "n": 9
+  },
+  "2": {
+   "mean_reduction": 27.27858553094745,
+   "zero_overload": 8,
+   "n": 9
+  },
+  "3": {
+   "mean_reduction": 29.22735713212236,
+   "zero_overload": 8,
+   "n": 9
+  },
+  "4": {
+   "mean_reduction": 29.465888572580738,
+   "zero_overload": 8,
+   "n": 9
+  },
+  "6": {
+   "mean_reduction": 28.183448659642462,
+   "zero_overload": 8,
+   "n": 9
+  },
+  "8": {
+   "mean_reduction": 27.73225916005263,
+   "zero_overload": 8,
+   "n": 9
+  },
+  "12": {
+   "mean_reduction": 28.785616463737203,
+   "zero_overload": 8,
+   "n": 9
+  }
+ },
+ "biased_reference_pct": 23.6,
+ "rows": [
+  {
+   "file": "ld4_s0_h3.json",
+   "last_day": 4,
+   "seed": 0,
+   "held_day": 3,
+   "val_day": null,
+   "status": "infeasible"
+  },
+  {
+   "file": "ld4_s1_h3.json",
+   "last_day": 4,
+   "seed": 1,
+   "held_day": 3,
+   "val_day": null,
+   "status": "infeasible"
+  },
+  {
+   "file": "ld4_s2_h3.json",
+   "last_day": 4,
+   "seed": 2,
+   "held_day": 3,
+   "val_day": null,
+   "status": "infeasible"
+  },
+  {
+   "file": "ld5_s0_h3.json",
+   "last_day": 5,
+   "seed": 0,
+   "held_day": 4,
+   "val_day": 3,
+   "status": "ok",
+   "z": 1.5,
+   "K": 3,
+   "peak_nodes": 55,
+   "peak_overload": 0.0,
+   "nodes": 38,
+   "overload": 0.0,
+   "reduction_pct": 30.90909090909091,
+   "K4": {
+    "z": 2.0,
+    "nodes": 42,
+    "overload": 0.0,
+    "reduction_pct": 23.636363636363637
+   },
+   "paper_z2K4": {
+    "nodes": 42,
+    "overload": 0.0,
+    "reduction_pct": 23.636363636363637
+   }
+  },
+  {
+   "file": "ld5_s1_h3.json",
+   "last_day": 5,
+   "seed": 1,
+   "held_day": 4,
+   "val_day": 3,
+   "status": "ok",
+   "z": 1.5,
+   "K": 1,
+   "peak_nodes": 53,
+   "peak_overload": 0.0,
+   "nodes": 36,
+   "overload": 0.0,
+   "reduction_pct": 32.075471698113205,
+   "K4": {
+    "z": 1.5,
+    "nodes": 36,
+    "overload": 0.0,
+    "reduction_pct": 32.075471698113205
+   },
+   "paper_z2K4": {
+    "nodes": 40,
+    "overload": 0.0,
+    "reduction_pct": 24.528301886792452
+   }
+  },
+  {
+   "file": "ld5_s2_h3.json",
+   "last_day": 5,
+   "seed": 2,
+   "held_day": 4,
+   "val_day": 3,
+   "status": "ok",
+   "z": 2.0,
+   "K": 1,
+   "peak_nodes": 49,
+   "peak_overload": 0.0,
+   "nodes": 37,
+   "overload": 0.0,
+   "reduction_pct": 24.489795918367346,
+   "K4": {
+    "z": 2.0,
+    "nodes": 37,
+    "overload": 0.0,
+    "reduction_pct": 24.489795918367346
+   },
+   "paper_z2K4": {
+    "nodes": 37,
+    "overload": 0.0,
+    "reduction_pct": 24.489795918367346
+   }
+  },
+  {
+   "file": "ld6_s0_h3.json",
+   "last_day": 6,
+   "seed": 0,
+   "held_day": 5,
+   "val_day": 4,
+   "status": "ok",
+   "z": 1.5,
+   "K": 2,
+   "peak_nodes": 46,
+   "peak_overload": 0.0,
+   "nodes": 33,
+   "overload": 0.0,
+   "reduction_pct": 28.26086956521739,
+   "K4": {
+    "z": 1.5,
+    "nodes": 32,
+    "overload": 0.0,
+    "reduction_pct": 30.434782608695652
+   },
+   "paper_z2K4": {
+    "nodes": 35,
+    "overload": 0.0,
+    "reduction_pct": 23.91304347826087
+   }
+  },
+  {
+   "file": "ld6_s1_h3.json",
+   "last_day": 6,
+   "seed": 1,
+   "held_day": 5,
+   "val_day": 4,
+   "status": "ok",
+   "z": 1.5,
+   "K": 1,
+   "peak_nodes": 50,
+   "peak_overload": 0.0,
+   "nodes": 36,
+   "overload": 0.0,
+   "reduction_pct": 28.0,
+   "K4": {
+    "z": 1.5,
+    "nodes": 36,
+    "overload": 0.0,
+    "reduction_pct": 28.0
+   },
+   "paper_z2K4": {
+    "nodes": 39,
+    "overload": 0.0,
+    "reduction_pct": 22.0
+   }
+  },
+  {
+   "file": "ld6_s2_h3.json",
+   "last_day": 6,
+   "seed": 2,
+   "held_day": 5,
+   "val_day": 4,
+   "status": "ok",
+   "z": 1.5,
+   "K": 1,
+   "peak_nodes": 53,
+   "peak_overload": 0.0,
+   "nodes": 36,
+   "overload": 0.0,
+   "reduction_pct": 32.075471698113205,
+   "K4": {
+    "z": 1.5,
+    "nodes": 36,
+    "overload": 0.0,
+    "reduction_pct": 32.075471698113205
+   },
+   "paper_z2K4": {
+    "nodes": 40,
+    "overload": 0.0,
+    "reduction_pct": 24.528301886792452
+   }
+  },
+  {
+   "file": "ld7_s0_h3.json",
+   "last_day": 7,
+   "seed": 0,
+   "held_day": 6,
+   "val_day": 5,
+   "status": "ok",
+   "z": 1.5,
+   "K": 3,
+   "peak_nodes": 50,
+   "peak_overload": 0.0,
+   "nodes": 34,
+   "overload": 0.0,
+   "reduction_pct": 32.0,
+   "K4": {
+    "z": 1.5,
+    "nodes": 35,
+    "overload": 0.0,
+    "reduction_pct": 30.0
+   },
+   "paper_z2K4": {
+    "nodes": 38,
+    "overload": 0.0,
+    "reduction_pct": 24.0
+   }
+  },
+  {
+   "file": "ld7_s1_h3.json",
+   "last_day": 7,
+   "seed": 1,
+   "held_day": 6,
+   "val_day": 5,
+   "status": "ok",
+   "z": 1.5,
+   "K": 1,
+   "peak_nodes": 47,
+   "peak_overload": 0.0,
+   "nodes": 33,
+   "overload": 0.0,
+   "reduction_pct": 29.78723404255319,
+   "K4": {
+    "z": 1.5,
+    "nodes": 33,
+    "overload": 0.0,
+    "reduction_pct": 29.78723404255319
+   },
+   "paper_z2K4": {
+    "nodes": 36,
+    "overload": 0.0,
+    "reduction_pct": 23.404255319148938
+   }
+  },
+  {
+   "file": "ld7_s2_h3.json",
+   "last_day": 7,
+   "seed": 2,
+   "held_day": 6,
+   "val_day": 5,
+   "status": "ok",
+   "z": 1.0,
+   "K": 3,
+   "peak_nodes": 49,
+   "peak_overload": 3.5430839002267575e-05,
+   "nodes": 32,
+   "overload": 0.00043402777777777775,
+   "reduction_pct": 34.69387755102041,
+   "K4": {
+    "z": 1.0,
+    "nodes": 32,
+    "overload": 0.0002712673611111111,
+    "reduction_pct": 34.69387755102041
+   },
+   "paper_z2K4": {
+    "nodes": 38,
+    "overload": 4.5687134502923974e-05,
+    "reduction_pct": 22.448979591836736
+   }
+  }
+ ]
+}

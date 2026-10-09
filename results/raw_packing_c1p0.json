@@ -1,0 +1,91 @@
+{
+  "scale": 1.0,
+  "capacity": 1.0,
+  "seeds": 300,
+  "per_scheme": {
+    "round_robin": {
+      "mean_fit": 34.38,
+      "std": 10.64
+    },
+    "legacy_desync": {
+      "mean_fit": 33.93,
+      "std": 10.43,
+      "gain_vs_rr_pct": -0.85,
+      "gain_ci95": [
+        -1.82,
+        0.14
+      ]
+    },
+    "repulsive": {
+      "mean_fit": 37.97,
+      "std": 10.75,
+      "gain_vs_rr_pct": 12.98,
+      "gain_ci95": [
+        10.73,
+        15.46
+      ]
+    },
+    "oracle": {
+      "mean_fit": 52.87,
+      "std": 8.21,
+      "gain_vs_rr_pct": 72.99,
+      "gain_ci95": [
+        63.45,
+        84.2
+      ]
+    }
+  },
+  "provenance": {
+    "dataset": "Google ClusterData 2011 v2.1 task_usage",
+    "license": "CC-BY-4.0",
+    "H": 288,
+    "day_start_us": 600000000,
+    "day_us": 86400000000,
+    "rows_in_window": 43910035,
+    "tasks_full_day": 82440,
+    "parts": [
+      "part-00000.csv.gz",
+      "part-00001.csv.gz",
+      "part-00002.csv.gz",
+      "part-00003.csv.gz",
+      "part-00004.csv.gz",
+      "part-00005.csv.gz",
+      "part-00006.csv.gz",
+      "part-00007.csv.gz",
+      "part-00008.csv.gz",
+      "part-00009.csv.gz",
+      "part-00010.csv.gz",
+      "part-00011.csv.gz",
+      "part-00012.csv.gz",
+      "part-00013.csv.gz",
+      "part-00014.csv.gz",
+      "part-00015.csv.gz",
+      "part-00016.csv.gz",
+      "part-00017.csv.gz"
+    ],
+    "part_sha256": {
+      "part-00000.csv.gz": "841254d3bc4199c26c82890dcd6bc87fcfb1ff23d75be8e39f0337f0ed1c6e28",
+      "part-00001.csv.gz": "1fa83e39536baac92a1646dbe750541c6504e4c26a85b7f45d9259fd16d3919c",
+      "part-00002.csv.gz": "7d217e976b9d380635f7330e1c75719858daa636efb2f35b8507823476c7b235",
+      "part-00003.csv.gz": "4145a0bbd4cce2effc376f6e1204019bfeca49e635dfd358c2ead4be9e7c6416",
+      "part-00004.csv.gz": "7b05867afe28b7b829a1fe17b8ed052ac67f4d9242c2714e41fe7046b73fbffd",
+      "part-00005.csv.gz": "dfd03c13513847e6ba81f91fb25950f1922d17da72b386b15b020b0ba5e14e43",
+      "part-00006.csv.gz": "4b252c7889d9e8d9e69d34f38f36c711341699a75d653ea8fb4f7c4a15b93fda",
+      "part-00007.csv.gz": "85dadac4a44b2948f482478bc9b4ce871f5d9ca5c1cf61eedc55efef8ec60b1b",
+      "part-00008.csv.gz": "56733bc1d4727ef29dfece2dc856fdb9bd5a561304e9752d2bbcc2085ab69257",
+      "part-00009.csv.gz": "46a078c9bd5c1ad99669247b79e2bb17a8a52330e2caeb40123f86ab784e1b56",
+      "part-00010.csv.gz": "58be0a45008a7d8f0f5ca20360e8acf0a535761bf6a809a70fec181763665b8d",
+      "part-00011.csv.gz": "2ddafabd3f5e0b5ef075da2e2fa62cdfe1c2f6d506c1ee1a0ebc88934caf64f6",
+      "part-00012.csv.gz": "1ec7703dd76a56d64462f6026e5c024e151c8e74516c69d9c2e9b750d6eb2373",
+      "part-00013.csv.gz": "538df5b23ae57daf5c92ceb98f65c40f14ed93fa77bff852bd223a7a39135c06",
+      "part-00014.csv.gz": "25459e724dd0f820bdab9ec7701dc64393a546fbe13709b91e3f72d6e77f40ff",
+      "part-00015.csv.gz": "8ed0bc5df7969f0f904990ce51d4197e2aad338e25261c4c1bc85fd73d877755",
+      "part-00016.csv.gz": "6b55a7c248e08bbcb03db1b8d11bee9fd4074b7d25c015021a86e4d8b7e75751",
+      "part-00017.csv.gz": "5ecf413ac6d799b681ff7586c6f449484353f5fb241526fff4004c419c1db544"
+    },
+    "generated_at": "2026-09-28T07:54:51Z",
+    "units": "Google normalised; node = 1.0 per resource",
+    "pool": 240,
+    "grid": 48
+  }
+}

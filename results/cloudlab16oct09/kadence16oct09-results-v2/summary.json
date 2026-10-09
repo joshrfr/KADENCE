@@ -1,0 +1,942 @@
+{
+  "complete": true,
+  "conditions": [
+    {
+      "classification_counts": {
+        "converged": 60,
+        "order-broken": 20
+      },
+      "complete": true,
+      "jobs_per_ring": 8,
+      "loss": 0.0,
+      "mean_fraction_nodes_converged_loose_0p1_target": 0.75,
+      "mean_fraction_nodes_converged_strict_1e6": 0.75,
+      "mean_median_error_pct_of_fair": 0.0,
+      "mean_p95_node_error_pct_of_fair": 100.0,
+      "median_median_error_pct_of_fair": 0.0,
+      "n_expected": 5,
+      "n_valid": 5,
+      "observations": [
+        {
+          "cell": "rep00_j08_loss00",
+          "classification_counts": {
+            "converged": 14,
+            "order-broken": 2
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.875,
+          "fraction_nodes_converged_strict_1e6": 0.875,
+          "measured_datagrams_received": 250733,
+          "measured_datagrams_sent": 250868,
+          "measured_ticks_executed": 125434,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 0,
+          "wall_s": 30.67
+        },
+        {
+          "cell": "rep01_j08_loss00",
+          "classification_counts": {
+            "converged": 10,
+            "order-broken": 6
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.625,
+          "fraction_nodes_converged_strict_1e6": 0.625,
+          "measured_datagrams_received": 250808,
+          "measured_datagrams_sent": 250940,
+          "measured_ticks_executed": 125470,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 1,
+          "wall_s": 30.71
+        },
+        {
+          "cell": "rep02_j08_loss00",
+          "classification_counts": {
+            "converged": 12,
+            "order-broken": 4
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.75,
+          "fraction_nodes_converged_strict_1e6": 0.75,
+          "measured_datagrams_received": 250801,
+          "measured_datagrams_sent": 250930,
+          "measured_ticks_executed": 125465,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 2,
+          "wall_s": 30.66
+        },
+        {
+          "cell": "rep03_j08_loss00",
+          "classification_counts": {
+            "converged": 10,
+            "order-broken": 6
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.625,
+          "fraction_nodes_converged_strict_1e6": 0.625,
+          "measured_datagrams_received": 250719,
+          "measured_datagrams_sent": 250852,
+          "measured_ticks_executed": 125426,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 3,
+          "wall_s": 30.66
+        },
+        {
+          "cell": "rep04_j08_loss00",
+          "classification_counts": {
+            "converged": 14,
+            "order-broken": 2
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.875,
+          "fraction_nodes_converged_strict_1e6": 0.875,
+          "measured_datagrams_received": 250981,
+          "measured_datagrams_sent": 251118,
+          "measured_ticks_executed": 125559,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 4,
+          "wall_s": 30.66
+        }
+      ],
+      "p95_median_error_pct_of_fair": 0.0
+    },
+    {
+      "classification_counts": {
+        "converged": 60,
+        "order-broken": 20
+      },
+      "complete": true,
+      "jobs_per_ring": 8,
+      "loss": 0.1,
+      "mean_fraction_nodes_converged_loose_0p1_target": 0.75,
+      "mean_fraction_nodes_converged_strict_1e6": 0.75,
+      "mean_median_error_pct_of_fair": 0.0,
+      "mean_p95_node_error_pct_of_fair": 100.0,
+      "median_median_error_pct_of_fair": 0.0,
+      "n_expected": 5,
+      "n_valid": 5,
+      "observations": [
+        {
+          "cell": "rep00_j08_loss10",
+          "classification_counts": {
+            "converged": 13,
+            "order-broken": 3
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.8125,
+          "fraction_nodes_converged_strict_1e6": 0.8125,
+          "measured_datagrams_received": 225651,
+          "measured_datagrams_sent": 225766,
+          "measured_ticks_executed": 125434,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 0,
+          "wall_s": 30.67
+        },
+        {
+          "cell": "rep01_j08_loss10",
+          "classification_counts": {
+            "converged": 11,
+            "order-broken": 5
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.6875,
+          "fraction_nodes_converged_strict_1e6": 0.6875,
+          "measured_datagrams_received": 225528,
+          "measured_datagrams_sent": 225648,
+          "measured_ticks_executed": 125476,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 1,
+          "wall_s": 30.67
+        },
+        {
+          "cell": "rep02_j08_loss10",
+          "classification_counts": {
+            "converged": 13,
+            "order-broken": 3
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.8125,
+          "fraction_nodes_converged_strict_1e6": 0.8125,
+          "measured_datagrams_received": 225709,
+          "measured_datagrams_sent": 225835,
+          "measured_ticks_executed": 125466,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 2,
+          "wall_s": 30.68
+        },
+        {
+          "cell": "rep03_j08_loss10",
+          "classification_counts": {
+            "converged": 11,
+            "order-broken": 5
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.6875,
+          "fraction_nodes_converged_strict_1e6": 0.6875,
+          "measured_datagrams_received": 225482,
+          "measured_datagrams_sent": 225606,
+          "measured_ticks_executed": 125406,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 3,
+          "wall_s": 30.66
+        },
+        {
+          "cell": "rep04_j08_loss10",
+          "classification_counts": {
+            "converged": 12,
+            "order-broken": 4
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.75,
+          "fraction_nodes_converged_strict_1e6": 0.75,
+          "measured_datagrams_received": 226025,
+          "measured_datagrams_sent": 226154,
+          "measured_ticks_executed": 125559,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 4,
+          "wall_s": 30.66
+        }
+      ],
+      "p95_median_error_pct_of_fair": 0.0
+    },
+    {
+      "classification_counts": {
+        "converged": 60,
+        "order-broken": 20
+      },
+      "complete": true,
+      "jobs_per_ring": 8,
+      "loss": 0.3,
+      "mean_fraction_nodes_converged_loose_0p1_target": 0.75,
+      "mean_fraction_nodes_converged_strict_1e6": 0.75,
+      "mean_median_error_pct_of_fair": 0.0,
+      "mean_p95_node_error_pct_of_fair": 100.0,
+      "median_median_error_pct_of_fair": 0.0,
+      "n_expected": 5,
+      "n_valid": 5,
+      "observations": [
+        {
+          "cell": "rep00_j08_loss30",
+          "classification_counts": {
+            "converged": 14,
+            "order-broken": 2
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.875,
+          "fraction_nodes_converged_strict_1e6": 0.875,
+          "measured_datagrams_received": 175706,
+          "measured_datagrams_sent": 175795,
+          "measured_ticks_executed": 125437,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 0,
+          "wall_s": 30.66
+        },
+        {
+          "cell": "rep01_j08_loss30",
+          "classification_counts": {
+            "converged": 11,
+            "order-broken": 5
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.6875,
+          "fraction_nodes_converged_strict_1e6": 0.6875,
+          "measured_datagrams_received": 175369,
+          "measured_datagrams_sent": 175463,
+          "measured_ticks_executed": 125469,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 1,
+          "wall_s": 30.68
+        },
+        {
+          "cell": "rep02_j08_loss30",
+          "classification_counts": {
+            "converged": 14,
+            "order-broken": 2
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.875,
+          "fraction_nodes_converged_strict_1e6": 0.875,
+          "measured_datagrams_received": 175742,
+          "measured_datagrams_sent": 175840,
+          "measured_ticks_executed": 125457,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 2,
+          "wall_s": 30.66
+        },
+        {
+          "cell": "rep03_j08_loss30",
+          "classification_counts": {
+            "converged": 10,
+            "order-broken": 6
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.625,
+          "fraction_nodes_converged_strict_1e6": 0.625,
+          "measured_datagrams_received": 175326,
+          "measured_datagrams_sent": 175424,
+          "measured_ticks_executed": 125411,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 3,
+          "wall_s": 30.66
+        },
+        {
+          "cell": "rep04_j08_loss30",
+          "classification_counts": {
+            "converged": 11,
+            "order-broken": 5
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.6875,
+          "fraction_nodes_converged_strict_1e6": 0.6875,
+          "measured_datagrams_received": 175698,
+          "measured_datagrams_sent": 175802,
+          "measured_ticks_executed": 125543,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 4,
+          "wall_s": 30.66
+        }
+      ],
+      "p95_median_error_pct_of_fair": 0.0
+    },
+    {
+      "classification_counts": {
+        "converged": 43,
+        "order-broken": 37
+      },
+      "complete": true,
+      "jobs_per_ring": 16,
+      "loss": 0.0,
+      "mean_fraction_nodes_converged_loose_0p1_target": 0.5375,
+      "mean_fraction_nodes_converged_strict_1e6": 0.5375,
+      "mean_median_error_pct_of_fair": 30.0,
+      "mean_p95_node_error_pct_of_fair": 100.0,
+      "median_median_error_pct_of_fair": 0.0,
+      "n_expected": 5,
+      "n_valid": 5,
+      "observations": [
+        {
+          "cell": "rep00_j16_loss00",
+          "classification_counts": {
+            "converged": 9,
+            "order-broken": 7
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.5625,
+          "fraction_nodes_converged_strict_1e6": 0.5625,
+          "measured_datagrams_received": 501413,
+          "measured_datagrams_sent": 501688,
+          "measured_ticks_executed": 250844,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 0,
+          "wall_s": 30.69
+        },
+        {
+          "cell": "rep01_j16_loss00",
+          "classification_counts": {
+            "converged": 8,
+            "order-broken": 8
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.5,
+          "fraction_nodes_converged_strict_1e6": 0.5,
+          "measured_datagrams_received": 501495,
+          "measured_datagrams_sent": 501774,
+          "measured_ticks_executed": 250887,
+          "median_error_pct_of_fair": 50.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 1,
+          "wall_s": 30.69
+        },
+        {
+          "cell": "rep02_j16_loss00",
+          "classification_counts": {
+            "converged": 11,
+            "order-broken": 5
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.6875,
+          "fraction_nodes_converged_strict_1e6": 0.6875,
+          "measured_datagrams_received": 501604,
+          "measured_datagrams_sent": 501884,
+          "measured_ticks_executed": 250942,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 2,
+          "wall_s": 30.68
+        },
+        {
+          "cell": "rep03_j16_loss00",
+          "classification_counts": {
+            "converged": 6,
+            "order-broken": 10
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.375,
+          "fraction_nodes_converged_strict_1e6": 0.375,
+          "measured_datagrams_received": 501443,
+          "measured_datagrams_sent": 501728,
+          "measured_ticks_executed": 250864,
+          "median_error_pct_of_fair": 100.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 3,
+          "wall_s": 30.69
+        },
+        {
+          "cell": "rep04_j16_loss00",
+          "classification_counts": {
+            "converged": 9,
+            "order-broken": 7
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.5625,
+          "fraction_nodes_converged_strict_1e6": 0.5625,
+          "measured_datagrams_received": 501456,
+          "measured_datagrams_sent": 501726,
+          "measured_ticks_executed": 250863,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 4,
+          "wall_s": 30.7
+        }
+      ],
+      "p95_median_error_pct_of_fair": 90.0
+    },
+    {
+      "classification_counts": {
+        "converged": 46,
+        "order-broken": 34
+      },
+      "complete": true,
+      "jobs_per_ring": 16,
+      "loss": 0.1,
+      "mean_fraction_nodes_converged_loose_0p1_target": 0.575,
+      "mean_fraction_nodes_converged_strict_1e6": 0.575,
+      "mean_median_error_pct_of_fair": 30.0,
+      "mean_p95_node_error_pct_of_fair": 110.0,
+      "median_median_error_pct_of_fair": 0.0,
+      "n_expected": 5,
+      "n_valid": 5,
+      "observations": [
+        {
+          "cell": "rep00_j16_loss10",
+          "classification_counts": {
+            "converged": 11,
+            "order-broken": 5
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.6875,
+          "fraction_nodes_converged_strict_1e6": 0.6875,
+          "measured_datagrams_received": 451473,
+          "measured_datagrams_sent": 451717,
+          "measured_ticks_executed": 250835,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 0,
+          "wall_s": 30.69
+        },
+        {
+          "cell": "rep01_j16_loss10",
+          "classification_counts": {
+            "converged": 10,
+            "order-broken": 6
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.625,
+          "fraction_nodes_converged_strict_1e6": 0.625,
+          "measured_datagrams_received": 451355,
+          "measured_datagrams_sent": 451596,
+          "measured_ticks_executed": 250877,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 1,
+          "wall_s": 30.69
+        },
+        {
+          "cell": "rep02_j16_loss10",
+          "classification_counts": {
+            "converged": 12,
+            "order-broken": 4
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.75,
+          "fraction_nodes_converged_strict_1e6": 0.75,
+          "measured_datagrams_received": 451402,
+          "measured_datagrams_sent": 451650,
+          "measured_ticks_executed": 250933,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 2,
+          "wall_s": 30.68
+        },
+        {
+          "cell": "rep03_j16_loss10",
+          "classification_counts": {
+            "converged": 5,
+            "order-broken": 11
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.3125,
+          "fraction_nodes_converged_strict_1e6": 0.3125,
+          "measured_datagrams_received": 451173,
+          "measured_datagrams_sent": 451420,
+          "measured_ticks_executed": 250843,
+          "median_error_pct_of_fair": 100.0,
+          "p95_node_error_pct_of_fair": 150.0,
+          "rep": 3,
+          "wall_s": 30.69
+        },
+        {
+          "cell": "rep04_j16_loss10",
+          "classification_counts": {
+            "converged": 8,
+            "order-broken": 8
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.5,
+          "fraction_nodes_converged_strict_1e6": 0.5,
+          "measured_datagrams_received": 451583,
+          "measured_datagrams_sent": 451829,
+          "measured_ticks_executed": 250866,
+          "median_error_pct_of_fair": 50.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 4,
+          "wall_s": 30.74
+        }
+      ],
+      "p95_median_error_pct_of_fair": 90.0
+    },
+    {
+      "classification_counts": {
+        "converged": 44,
+        "order-broken": 36
+      },
+      "complete": true,
+      "jobs_per_ring": 16,
+      "loss": 0.3,
+      "mean_fraction_nodes_converged_loose_0p1_target": 0.55,
+      "mean_fraction_nodes_converged_strict_1e6": 0.55,
+      "mean_median_error_pct_of_fair": 20.0,
+      "mean_p95_node_error_pct_of_fair": 120.0,
+      "median_median_error_pct_of_fair": 0.0,
+      "n_expected": 5,
+      "n_valid": 5,
+      "observations": [
+        {
+          "cell": "rep00_j16_loss30",
+          "classification_counts": {
+            "converged": 9,
+            "order-broken": 7
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.5625,
+          "fraction_nodes_converged_strict_1e6": 0.5625,
+          "measured_datagrams_received": 351527,
+          "measured_datagrams_sent": 351723,
+          "measured_ticks_executed": 250838,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 150.0,
+          "rep": 0,
+          "wall_s": 30.69
+        },
+        {
+          "cell": "rep01_j16_loss30",
+          "classification_counts": {
+            "converged": 10,
+            "order-broken": 6
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.625,
+          "fraction_nodes_converged_strict_1e6": 0.625,
+          "measured_datagrams_received": 350790,
+          "measured_datagrams_sent": 350976,
+          "measured_ticks_executed": 250876,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 1,
+          "wall_s": 30.69
+        },
+        {
+          "cell": "rep02_j16_loss30",
+          "classification_counts": {
+            "converged": 9,
+            "order-broken": 7
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.5625,
+          "fraction_nodes_converged_strict_1e6": 0.5625,
+          "measured_datagrams_received": 351390,
+          "measured_datagrams_sent": 351578,
+          "measured_ticks_executed": 250917,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 2,
+          "wall_s": 30.68
+        },
+        {
+          "cell": "rep03_j16_loss30",
+          "classification_counts": {
+            "converged": 7,
+            "order-broken": 9
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.4375,
+          "fraction_nodes_converged_strict_1e6": 0.4375,
+          "measured_datagrams_received": 350625,
+          "measured_datagrams_sent": 350820,
+          "measured_ticks_executed": 250838,
+          "median_error_pct_of_fair": 100.0,
+          "p95_node_error_pct_of_fair": 150.0,
+          "rep": 3,
+          "wall_s": 30.69
+        },
+        {
+          "cell": "rep04_j16_loss30",
+          "classification_counts": {
+            "converged": 9,
+            "order-broken": 7
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.5625,
+          "fraction_nodes_converged_strict_1e6": 0.5625,
+          "measured_datagrams_received": 350988,
+          "measured_datagrams_sent": 351187,
+          "measured_ticks_executed": 250865,
+          "median_error_pct_of_fair": 0.0,
+          "p95_node_error_pct_of_fair": 100.0,
+          "rep": 4,
+          "wall_s": 30.68
+        }
+      ],
+      "p95_median_error_pct_of_fair": 79.99999999999999
+    },
+    {
+      "classification_counts": {
+        "converged": 1,
+        "order-broken": 79
+      },
+      "complete": true,
+      "jobs_per_ring": 48,
+      "loss": 0.0,
+      "mean_fraction_nodes_converged_loose_0p1_target": 0.0125,
+      "mean_fraction_nodes_converged_strict_1e6": 0.0,
+      "mean_median_error_pct_of_fair": 188.4038,
+      "mean_p95_node_error_pct_of_fair": 382.636,
+      "median_median_error_pct_of_fair": 188.232,
+      "n_expected": 5,
+      "n_valid": 5,
+      "observations": [
+        {
+          "cell": "rep00_j48_loss00",
+          "classification_counts": {
+            "converged": 1,
+            "order-broken": 15
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0625,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1504250,
+          "measured_datagrams_sent": 1505096,
+          "measured_ticks_executed": 752548,
+          "median_error_pct_of_fair": 193.606,
+          "p95_node_error_pct_of_fair": 471.876,
+          "rep": 0,
+          "wall_s": 30.74
+        },
+        {
+          "cell": "rep01_j48_loss00",
+          "classification_counts": {
+            "order-broken": 16
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1504778,
+          "measured_datagrams_sent": 1505618,
+          "measured_ticks_executed": 752809,
+          "median_error_pct_of_fair": 188.232,
+          "p95_node_error_pct_of_fair": 339.084,
+          "rep": 1,
+          "wall_s": 30.74
+        },
+        {
+          "cell": "rep02_j48_loss00",
+          "classification_counts": {
+            "order-broken": 16
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1504984,
+          "measured_datagrams_sent": 1505826,
+          "measured_ticks_executed": 752913,
+          "median_error_pct_of_fair": 185.704,
+          "p95_node_error_pct_of_fair": 284.844,
+          "rep": 2,
+          "wall_s": 30.73
+        },
+        {
+          "cell": "rep03_j48_loss00",
+          "classification_counts": {
+            "order-broken": 16
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1504633,
+          "measured_datagrams_sent": 1505498,
+          "measured_ticks_executed": 752749,
+          "median_error_pct_of_fair": 183.981,
+          "p95_node_error_pct_of_fair": 476.067,
+          "rep": 3,
+          "wall_s": 30.75
+        },
+        {
+          "cell": "rep04_j48_loss00",
+          "classification_counts": {
+            "order-broken": 16
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1504666,
+          "measured_datagrams_sent": 1505500,
+          "measured_ticks_executed": 752750,
+          "median_error_pct_of_fair": 190.496,
+          "p95_node_error_pct_of_fair": 341.309,
+          "rep": 4,
+          "wall_s": 30.74
+        }
+      ],
+      "p95_median_error_pct_of_fair": 192.984
+    },
+    {
+      "classification_counts": {
+        "converged": 2,
+        "order-broken": 78
+      },
+      "complete": true,
+      "jobs_per_ring": 48,
+      "loss": 0.1,
+      "mean_fraction_nodes_converged_loose_0p1_target": 0.025,
+      "mean_fraction_nodes_converged_strict_1e6": 0.0,
+      "mean_median_error_pct_of_fair": 183.4762,
+      "mean_p95_node_error_pct_of_fair": 369.59159999999997,
+      "median_median_error_pct_of_fair": 184.712,
+      "n_expected": 5,
+      "n_valid": 5,
+      "observations": [
+        {
+          "cell": "rep00_j48_loss10",
+          "classification_counts": {
+            "converged": 1,
+            "order-broken": 15
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0625,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1353932,
+          "measured_datagrams_sent": 1354685,
+          "measured_ticks_executed": 752545,
+          "median_error_pct_of_fair": 176.216,
+          "p95_node_error_pct_of_fair": 476.796,
+          "rep": 0,
+          "wall_s": 30.74
+        },
+        {
+          "cell": "rep01_j48_loss10",
+          "classification_counts": {
+            "order-broken": 16
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1354190,
+          "measured_datagrams_sent": 1354944,
+          "measured_ticks_executed": 752779,
+          "median_error_pct_of_fair": 182.74,
+          "p95_node_error_pct_of_fair": 289.661,
+          "rep": 1,
+          "wall_s": 30.75
+        },
+        {
+          "cell": "rep02_j48_loss10",
+          "classification_counts": {
+            "converged": 1,
+            "order-broken": 15
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0625,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1354606,
+          "measured_datagrams_sent": 1355366,
+          "measured_ticks_executed": 752907,
+          "median_error_pct_of_fair": 184.712,
+          "p95_node_error_pct_of_fair": 329.904,
+          "rep": 2,
+          "wall_s": 30.74
+        },
+        {
+          "cell": "rep03_j48_loss10",
+          "classification_counts": {
+            "order-broken": 16
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1354317,
+          "measured_datagrams_sent": 1355072,
+          "measured_ticks_executed": 752717,
+          "median_error_pct_of_fair": 187.491,
+          "p95_node_error_pct_of_fair": 466.507,
+          "rep": 3,
+          "wall_s": 30.75
+        },
+        {
+          "cell": "rep04_j48_loss10",
+          "classification_counts": {
+            "order-broken": 16
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1354147,
+          "measured_datagrams_sent": 1354909,
+          "measured_ticks_executed": 752730,
+          "median_error_pct_of_fair": 186.222,
+          "p95_node_error_pct_of_fair": 285.09,
+          "rep": 4,
+          "wall_s": 30.73
+        }
+      ],
+      "p95_median_error_pct_of_fair": 187.2372
+    },
+    {
+      "classification_counts": {
+        "converged": 3,
+        "order-broken": 77
+      },
+      "complete": true,
+      "jobs_per_ring": 48,
+      "loss": 0.3,
+      "mean_fraction_nodes_converged_loose_0p1_target": 0.0375,
+      "mean_fraction_nodes_converged_strict_1e6": 0.0,
+      "mean_median_error_pct_of_fair": 145.2886,
+      "mean_p95_node_error_pct_of_fair": 324.1372,
+      "median_median_error_pct_of_fair": 142.999,
+      "n_expected": 5,
+      "n_valid": 5,
+      "observations": [
+        {
+          "cell": "rep00_j48_loss30",
+          "classification_counts": {
+            "order-broken": 16
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1053532,
+          "measured_datagrams_sent": 1054108,
+          "measured_ticks_executed": 752427,
+          "median_error_pct_of_fair": 158.702,
+          "p95_node_error_pct_of_fair": 410.919,
+          "rep": 0,
+          "wall_s": 30.94
+        },
+        {
+          "cell": "rep01_j48_loss30",
+          "classification_counts": {
+            "converged": 1,
+            "order-broken": 15
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0625,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1052409,
+          "measured_datagrams_sent": 1053024,
+          "measured_ticks_executed": 752732,
+          "median_error_pct_of_fair": 164.36,
+          "p95_node_error_pct_of_fair": 314.222,
+          "rep": 1,
+          "wall_s": 30.74
+        },
+        {
+          "cell": "rep02_j48_loss30",
+          "classification_counts": {
+            "converged": 2,
+            "order-broken": 14
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.125,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1054109,
+          "measured_datagrams_sent": 1054701,
+          "measured_ticks_executed": 752833,
+          "median_error_pct_of_fair": 142.999,
+          "p95_node_error_pct_of_fair": 246.392,
+          "rep": 2,
+          "wall_s": 30.73
+        },
+        {
+          "cell": "rep03_j48_loss30",
+          "classification_counts": {
+            "order-broken": 16
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1053190,
+          "measured_datagrams_sent": 1053788,
+          "measured_ticks_executed": 752660,
+          "median_error_pct_of_fair": 133.465,
+          "p95_node_error_pct_of_fair": 415.671,
+          "rep": 3,
+          "wall_s": 30.74
+        },
+        {
+          "cell": "rep04_j48_loss30",
+          "classification_counts": {
+            "order-broken": 16
+          },
+          "cross_node_messages_measured": 0,
+          "fraction_nodes_converged_loose_0p1_target": 0.0,
+          "fraction_nodes_converged_strict_1e6": 0.0,
+          "measured_datagrams_received": 1052743,
+          "measured_datagrams_sent": 1053355,
+          "measured_ticks_executed": 752684,
+          "median_error_pct_of_fair": 126.917,
+          "p95_node_error_pct_of_fair": 233.482,
+          "rep": 4,
+          "wall_s": 30.74
+        }
+      ],
+      "p95_median_error_pct_of_fair": 163.22840000000002
+    }
+  ],
+  "expected_cells": 45,
+  "experiment_id": "kadence16oct09",
+  "failures": [],
+  "kind": "16 physical workers; independent localhost UDP rings only",
+  "not_measured": [
+    "cross-node scheduler",
+    "JCT",
+    "SLO",
+    "utilization"
+  ],
+  "valid_cells": 45
+}

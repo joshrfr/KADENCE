@@ -1,0 +1,68 @@
+{
+  "provenance": {
+    "kind": "KADENCE cluster (local)",
+    "kernel": "core.neighbor_gossip via kadence_node (real UDP)",
+    "mode": "local",
+    "nodes": 16,
+    "jobs_per_ring": 24,
+    "rings_per_node": 1,
+    "loss": 0.1,
+    "jitter": 0.0,
+    "reps": 3,
+    "global_clock": false
+  },
+  "reps": [
+    {
+      "nodes_reporting": 16,
+      "across_node_final_pct_of_fair": {
+        "median": 87.62,
+        "p95": 165.568,
+        "p99": 189.593,
+        "worst_node_max": 195.599
+      },
+      "fraction_nodes_converged": 0.0625,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 153600,
+      "rep": 0,
+      "wall_s": 11.67
+    },
+    {
+      "nodes_reporting": 16,
+      "across_node_final_pct_of_fair": {
+        "median": 83.099,
+        "p95": 331.632,
+        "p99": 362.971,
+        "worst_node_max": 370.806
+      },
+      "fraction_nodes_converged": 0.1875,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 153600,
+      "rep": 1,
+      "wall_s": 12.46
+    },
+    {
+      "nodes_reporting": 16,
+      "across_node_final_pct_of_fair": {
+        "median": 15.632,
+        "p95": 99.082,
+        "p99": 105.717,
+        "worst_node_max": 107.376
+      },
+      "fraction_nodes_converged": 0.375,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 153600,
+      "rep": 2,
+      "wall_s": 6.48
+    }
+  ],
+  "across_node_median_pct_of_fair_ci95": [
+    62.117,
+    16.4899,
+    107.7441
+  ],
+  "cross_node_messages": 0,
+  "messages_per_job_round": 2
+}

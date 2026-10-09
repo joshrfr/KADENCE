@@ -1,0 +1,404 @@
+{
+  "note": "Closed-form reservation arms against peak-requests. No training, no GPU. last_day=8 rows duplicate last_day=7 because day index 7 of gct_days.npz yields no valid windows, so both resolve to held-out day 6; those rows are retained but excluded from the aggregate.",
+  "distinct_configs": 12,
+  "harmonic_z2_vs_peak_node_reduction_pct": {
+    "mean": 23.59,
+    "min": 22.0,
+    "max": 24.53,
+    "stdev": 0.94
+  },
+  "harmonic_z2_zero_overload_runs": 11,
+  "peak_nonzero_overload_runs": 1,
+  "runs": [
+    {
+      "file": "ld4_s0_h3.json",
+      "last_day": 4,
+      "seed": 0,
+      "history": 3,
+      "held_day": 3,
+      "test_windows": 40481,
+      "train_windows": 0,
+      "peak": {
+        "nodes": 50,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 39,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 36,
+        "overload": 4.8225308641975306e-05
+      },
+      "mean_z2": {
+        "nodes": 40,
+        "overload": 0.0
+      },
+      "n_beating_peak": 7
+    },
+    {
+      "file": "ld4_s1_h3.json",
+      "last_day": 4,
+      "seed": 1,
+      "history": 3,
+      "held_day": 3,
+      "test_windows": 40481,
+      "train_windows": 0,
+      "peak": {
+        "nodes": 54,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 41,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 38,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 43,
+        "overload": 0.0
+      },
+      "n_beating_peak": 8
+    },
+    {
+      "file": "ld4_s2_h3.json",
+      "last_day": 4,
+      "seed": 2,
+      "history": 3,
+      "held_day": 3,
+      "test_windows": 40481,
+      "train_windows": 0,
+      "peak": {
+        "nodes": 50,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 38,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 34,
+        "overload": 5.1062091503267975e-05
+      },
+      "mean_z2": {
+        "nodes": 40,
+        "overload": 0.0
+      },
+      "n_beating_peak": 6
+    },
+    {
+      "file": "ld5_s0_h3.json",
+      "last_day": 5,
+      "seed": 0,
+      "history": 3,
+      "held_day": 4,
+      "test_windows": 38429,
+      "train_windows": 0,
+      "peak": {
+        "nodes": 55,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 42,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 38,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 43,
+        "overload": 0.0
+      },
+      "n_beating_peak": 7
+    },
+    {
+      "file": "ld5_s1_h3.json",
+      "last_day": 5,
+      "seed": 1,
+      "history": 3,
+      "held_day": 4,
+      "test_windows": 38429,
+      "train_windows": 0,
+      "peak": {
+        "nodes": 53,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 40,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 36,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 41,
+        "overload": 0.0
+      },
+      "n_beating_peak": 9
+    },
+    {
+      "file": "ld5_s2_h3.json",
+      "last_day": 5,
+      "seed": 2,
+      "history": 3,
+      "held_day": 4,
+      "test_windows": 38429,
+      "train_windows": 0,
+      "peak": {
+        "nodes": 49,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 37,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 34,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 38,
+        "overload": 0.0
+      },
+      "n_beating_peak": 9
+    },
+    {
+      "file": "ld6_s0_h3.json",
+      "last_day": 6,
+      "seed": 0,
+      "history": 3,
+      "held_day": 5,
+      "test_windows": 47125,
+      "train_windows": 40481,
+      "peak": {
+        "nodes": 46,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 35,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 32,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 36,
+        "overload": 0.0
+      },
+      "n_beating_peak": 11
+    },
+    {
+      "file": "ld6_s1_h3.json",
+      "last_day": 6,
+      "seed": 1,
+      "history": 3,
+      "held_day": 5,
+      "test_windows": 47125,
+      "train_windows": 40481,
+      "peak": {
+        "nodes": 50,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 39,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 36,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 40,
+        "overload": 0.0
+      },
+      "n_beating_peak": 10
+    },
+    {
+      "file": "ld6_s2_h3.json",
+      "last_day": 6,
+      "seed": 2,
+      "history": 3,
+      "held_day": 5,
+      "test_windows": 47125,
+      "train_windows": 40481,
+      "peak": {
+        "nodes": 53,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 40,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 36,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 41,
+        "overload": 0.0
+      },
+      "n_beating_peak": 12
+    },
+    {
+      "file": "ld7_s0_h3.json",
+      "last_day": 7,
+      "seed": 0,
+      "history": 3,
+      "held_day": 6,
+      "test_windows": 49713,
+      "train_windows": 78910,
+      "peak": {
+        "nodes": 50,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 38,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 35,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 40,
+        "overload": 0.0
+      },
+      "n_beating_peak": 8
+    },
+    {
+      "file": "ld7_s1_h3.json",
+      "last_day": 7,
+      "seed": 1,
+      "history": 3,
+      "held_day": 6,
+      "test_windows": 49713,
+      "train_windows": 78910,
+      "peak": {
+        "nodes": 47,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 36,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 33,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 37,
+        "overload": 0.0
+      },
+      "n_beating_peak": 12
+    },
+    {
+      "file": "ld7_s2_h3.json",
+      "last_day": 7,
+      "seed": 2,
+      "history": 3,
+      "held_day": 6,
+      "test_windows": 49713,
+      "train_windows": 78910,
+      "peak": {
+        "nodes": 49,
+        "overload": 3.5430839002267575e-05
+      },
+      "harmonic_z2": {
+        "nodes": 38,
+        "overload": 4.5687134502923974e-05
+      },
+      "harmonic_z15": {
+        "nodes": 35,
+        "overload": 4.96031746031746e-05
+      },
+      "mean_z2": {
+        "nodes": 40,
+        "overload": 4.340277777777778e-05
+      },
+      "n_beating_peak": 0
+    },
+    {
+      "file": "ld8_s0_h3.json",
+      "last_day": 8,
+      "seed": 0,
+      "history": 3,
+      "held_day": 6,
+      "test_windows": 49713,
+      "train_windows": 78910,
+      "peak": {
+        "nodes": 50,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 38,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 35,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 40,
+        "overload": 0.0
+      },
+      "n_beating_peak": 8
+    },
+    {
+      "file": "ld8_s1_h3.json",
+      "last_day": 8,
+      "seed": 1,
+      "history": 3,
+      "held_day": 6,
+      "test_windows": 49713,
+      "train_windows": 78910,
+      "peak": {
+        "nodes": 47,
+        "overload": 0.0
+      },
+      "harmonic_z2": {
+        "nodes": 36,
+        "overload": 0.0
+      },
+      "harmonic_z15": {
+        "nodes": 33,
+        "overload": 0.0
+      },
+      "mean_z2": {
+        "nodes": 37,
+        "overload": 0.0
+      },
+      "n_beating_peak": 12
+    },
+    {
+      "file": "ld8_s2_h3.json",
+      "last_day": 8,
+      "seed": 2,
+      "history": 3,
+      "held_day": 6,
+      "test_windows": 49713,
+      "train_windows": 78910,
+      "peak": {
+        "nodes": 49,
+        "overload": 3.5430839002267575e-05
+      },
+      "harmonic_z2": {
+        "nodes": 38,
+        "overload": 4.5687134502923974e-05
+      },
+      "harmonic_z15": {
+        "nodes": 35,
+        "overload": 4.96031746031746e-05
+      },
+      "mean_z2": {
+        "nodes": 40,
+        "overload": 4.340277777777778e-05
+      },
+      "n_beating_peak": 0
+    }
+  ]
+}

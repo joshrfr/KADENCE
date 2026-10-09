@@ -1,0 +1,22 @@
+{
+  "status": "ok",
+  "data": "gct_days.npz",
+  "held_out_day": 6,
+  "n_windows": 49713,
+  "n_packed": 1000,
+  "history": 3,
+  "baselines": {
+    "peak": {
+      "nodes": 50,
+      "overload_pct": 0.0
+    },
+    "blind_z3": {
+      "nodes": 49,
+      "overload_pct": 0.0
+    }
+  },
+  "models": {},
+  "rows": [],
+  "elapsed_s": 0.0,
+  "note": "zero-shot, no training. Reverso runs on a float32 pure-torch port, not the CUDA kernels."
+}

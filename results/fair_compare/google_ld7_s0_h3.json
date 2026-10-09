@@ -1,0 +1,1082 @@
+{
+ "meta": {
+  "data": "gct_days.npz",
+  "data_md5": "ebe0f4482eda6186dc1f853401435d82",
+  "data_shape_full": [
+   8,
+   82440,
+   2,
+   288
+  ],
+  "history": 3,
+  "last_day": 7,
+  "seed": 0,
+  "n_tasks": 1000,
+  "cap": 1.0,
+  "usable_days": [
+   3,
+   4,
+   5,
+   6
+  ],
+  "zs": [
+   0.0,
+   0.25,
+   0.5,
+   0.75,
+   1.0,
+   1.25,
+   1.5,
+   1.75,
+   2.0,
+   2.25,
+   2.5,
+   2.75,
+   3.0,
+   3.25,
+   3.5,
+   3.75,
+   4.0,
+   4.25,
+   4.5,
+   4.75,
+   5.0,
+   5.25,
+   5.5,
+   5.75,
+   6.0
+  ],
+  "quantiles": [
+   0.5,
+   0.8,
+   0.9,
+   0.95,
+   0.975,
+   0.99,
+   0.995
+  ],
+  "K_harmonic": 4,
+  "selection_rule": "min nodes subject to validation overload <= peak-requests validation overload; ties -> smaller z/q; infeasible -> min overload (flag fallback)",
+  "script": "experiments/fair_compare/fair_compare.py",
+  "device": "cuda",
+  "torch": "2.0.0+cu117",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "held_day": 6,
+  "val_day": 5,
+  "train_days": [
+   3,
+   4
+  ],
+  "n_val": 47125,
+  "n_test": 49713,
+  "sampled_task_order_md5": {
+   "val": "bdb31d4101ebff523471ef2ecd6495c4",
+   "heldout": "ad6cc1027be130f5c1ced2f4ad87d9ea"
+  },
+  "train_max_tasks_per_day": null,
+  "wall_s": 395.7,
+  "peak_rss_gib": 14.45,
+  "recovered_from": "pod stdout @@RESULT@@ line (same script via ConfigMap, md5 verified identical)"
+ },
+ "arms": {
+  "peak": {
+   "val": {
+    "nodes": 46,
+    "overload": 0.0
+   },
+   "heldout": {
+    "nodes": 50,
+    "overload": 0.0
+   }
+  },
+  "mean_z": {
+   "selected_z": 1.0,
+   "fallback": false,
+   "n_feasible_on_val": 21,
+   "validation_basis": {
+    "day": 5,
+    "val_nodes": 30,
+    "val_overload": 0.0,
+    "val_peak_nodes": 46,
+    "val_peak_overload": 0.0
+   },
+   "heldout": {
+    "nodes": 33,
+    "overload": 0.0038404882154882154
+   },
+   "heldout_diagnostic": [
+    {
+     "z": 0.0,
+     "nodes": 29,
+     "overload": 0.11530172413793104
+    },
+    {
+     "z": 0.25,
+     "nodes": 30,
+     "overload": 0.04895833333333333
+    },
+    {
+     "z": 0.5,
+     "nodes": 30,
+     "overload": 0.02528935185185185
+    },
+    {
+     "z": 0.75,
+     "nodes": 32,
+     "overload": 0.011176215277777778
+    },
+    {
+     "z": 1.0,
+     "nodes": 33,
+     "overload": 0.0038404882154882154
+    },
+    {
+     "z": 1.25,
+     "nodes": 35,
+     "overload": 0.0
+    },
+    {
+     "z": 1.5,
+     "nodes": 36,
+     "overload": 0.0
+    },
+    {
+     "z": 1.75,
+     "nodes": 38,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 40,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 42,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 44,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 46,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 49,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 51,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 52,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 55,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 58,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 60,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 63,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 65,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 68,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 70,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 72,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 74,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 77,
+     "overload": 0.0
+    }
+   ],
+   "val_grid": [
+    {
+     "z": 0.0,
+     "nodes": 27,
+     "overload": 0.05864197530864197
+    },
+    {
+     "z": 0.25,
+     "nodes": 27,
+     "overload": 0.01954732510288066
+    },
+    {
+     "z": 0.5,
+     "nodes": 28,
+     "overload": 0.004216269841269841
+    },
+    {
+     "z": 0.75,
+     "nodes": 29,
+     "overload": 0.00041906130268199235
+    },
+    {
+     "z": 1.0,
+     "nodes": 30,
+     "overload": 0.0
+    },
+    {
+     "z": 1.25,
+     "nodes": 31,
+     "overload": 0.0
+    },
+    {
+     "z": 1.5,
+     "nodes": 33,
+     "overload": 0.0
+    },
+    {
+     "z": 1.75,
+     "nodes": 35,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 36,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 39,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 40,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 42,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 44,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 46,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 48,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 50,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 52,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 54,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 56,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 59,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 61,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 62,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 64,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 67,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 69,
+     "overload": 0.0
+    }
+   ]
+  },
+  "harmonic_z": {
+   "selected_z": 1.25,
+   "fallback": false,
+   "n_feasible_on_val": 20,
+   "validation_basis": {
+    "day": 5,
+    "val_nodes": 31,
+    "val_overload": 0.0,
+    "val_peak_nodes": 46,
+    "val_peak_overload": 0.0
+   },
+   "heldout": {
+    "nodes": 33,
+    "overload": 0.0
+   },
+   "heldout_diagnostic": [
+    {
+     "z": 0.0,
+     "nodes": 27,
+     "overload": 0.2318672839506173
+    },
+    {
+     "z": 0.25,
+     "nodes": 28,
+     "overload": 0.11365327380952381
+    },
+    {
+     "z": 0.5,
+     "nodes": 29,
+     "overload": 0.02993295019157088
+    },
+    {
+     "z": 0.75,
+     "nodes": 30,
+     "overload": 0.012847222222222222
+    },
+    {
+     "z": 1.0,
+     "nodes": 32,
+     "overload": 0.0015190972222222222
+    },
+    {
+     "z": 1.25,
+     "nodes": 33,
+     "overload": 0.0
+    },
+    {
+     "z": 1.5,
+     "nodes": 35,
+     "overload": 0.0
+    },
+    {
+     "z": 1.75,
+     "nodes": 36,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 38,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 40,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 43,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 45,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 47,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 49,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 51,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 54,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 56,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 58,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 61,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 63,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 66,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 69,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 71,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 74,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 76,
+     "overload": 0.0
+    }
+   ],
+   "val_grid": [
+    {
+     "z": 0.0,
+     "nodes": 26,
+     "overload": 0.12132745726495726
+    },
+    {
+     "z": 0.25,
+     "nodes": 26,
+     "overload": 0.04740918803418803
+    },
+    {
+     "z": 0.5,
+     "nodes": 27,
+     "overload": 0.0073302469135802465
+    },
+    {
+     "z": 0.75,
+     "nodes": 28,
+     "overload": 0.0008680555555555555
+    },
+    {
+     "z": 1.0,
+     "nodes": 29,
+     "overload": 0.00017959770114942528
+    },
+    {
+     "z": 1.25,
+     "nodes": 31,
+     "overload": 0.0
+    },
+    {
+     "z": 1.5,
+     "nodes": 32,
+     "overload": 0.0
+    },
+    {
+     "z": 1.75,
+     "nodes": 34,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 35,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 37,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 39,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 41,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 43,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 45,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 47,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 49,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 51,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 52,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 55,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 57,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 59,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 61,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 64,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 66,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 67,
+     "overload": 0.0
+    }
+   ]
+  },
+  "neural": {
+   "selected_q": 0.9,
+   "fallback": false,
+   "n_feasible_on_val": 5,
+   "validation_basis": {
+    "day": 5,
+    "val_nodes": 33,
+    "val_overload": 0.0,
+    "val_peak_nodes": 46,
+    "val_peak_overload": 0.0
+   },
+   "heldout": {
+    "nodes": 34,
+    "overload": 0.0
+   },
+   "heldout_q95": {
+    "nodes": 36,
+    "overload": 0.0
+   },
+   "heldout_diagnostic": [
+    {
+     "q": 0.5,
+     "nodes": 27,
+     "overload": 0.12969393004115226
+    },
+    {
+     "q": 0.8,
+     "nodes": 30,
+     "overload": 0.000925925925925926
+    },
+    {
+     "q": 0.9,
+     "nodes": 34,
+     "overload": 0.0
+    },
+    {
+     "q": 0.95,
+     "nodes": 36,
+     "overload": 0.0
+    },
+    {
+     "q": 0.975,
+     "nodes": 41,
+     "overload": 0.0
+    },
+    {
+     "q": 0.99,
+     "nodes": 49,
+     "overload": 0.0
+    },
+    {
+     "q": 0.995,
+     "nodes": 54,
+     "overload": 0.0
+    }
+   ],
+   "val_grid": [
+    {
+     "q": 0.5,
+     "nodes": 26,
+     "overload": 0.06964476495726496
+    },
+    {
+     "q": 0.8,
+     "nodes": 29,
+     "overload": 0.00011973180076628352
+    },
+    {
+     "q": 0.9,
+     "nodes": 33,
+     "overload": 0.0
+    },
+    {
+     "q": 0.95,
+     "nodes": 35,
+     "overload": 0.0
+    },
+    {
+     "q": 0.975,
+     "nodes": 39,
+     "overload": 0.0
+    },
+    {
+     "q": 0.99,
+     "nodes": 46,
+     "overload": 0.0
+    },
+    {
+     "q": 0.995,
+     "nodes": 51,
+     "overload": 0.0
+    }
+   ],
+   "training_budget": {
+    "backbone": "tcn",
+    "emb": 48,
+    "batch": 256,
+    "lr": 0.002,
+    "optimizer": "AdamW wd1e-4, cosine over max/fixed epochs, clip 2.0",
+    "quantiles": [
+     0.5,
+     0.8,
+     0.9,
+     0.95,
+     0.975,
+     0.99,
+     0.995
+    ],
+    "max_epochs": 100,
+    "patience": 10,
+    "fixed_epochs": null,
+    "epochs_run": 44,
+    "stopped_by": "patience",
+    "best_epoch": 33,
+    "best_val_pinball": 0.000742,
+    "n_train_windows": 78910,
+    "device": "cuda",
+    "val_pinball_last10": [
+     0.000759,
+     0.000775,
+     0.000783,
+     0.000749,
+     0.000757,
+     0.000751,
+     0.000745,
+     0.00074,
+     0.000752,
+     0.000757
+    ],
+    "val_drop_last10": 2e-06,
+    "weights_used": "best-val checkpoint"
+   },
+   "history": [
+    {
+     "epoch": 0,
+     "train_pinball": 0.002455,
+     "val_pinball": 0.001066,
+     "lr": 0.002,
+     "t_s": 5.8
+    },
+    {
+     "epoch": 1,
+     "train_pinball": 0.001113,
+     "val_pinball": 0.000868,
+     "lr": 0.0019995065603657315,
+     "t_s": 10.3
+    },
+    {
+     "epoch": 2,
+     "train_pinball": 0.00104,
+     "val_pinball": 0.000979,
+     "lr": 0.0019980267284282717,
+     "t_s": 14.9
+    },
+    {
+     "epoch": 3,
+     "train_pinball": 0.001003,
+     "val_pinball": 0.000892,
+     "lr": 0.00199556196460308,
+     "t_s": 19.4
+    },
+    {
+     "epoch": 4,
+     "train_pinball": 0.000984,
+     "val_pinball": 0.000912,
+     "lr": 0.001992114701314478,
+     "t_s": 23.9
+    },
+    {
+     "epoch": 5,
+     "train_pinball": 0.000967,
+     "val_pinball": 0.000854,
+     "lr": 0.0019876883405951376,
+     "t_s": 28.4
+    },
+    {
+     "epoch": 6,
+     "train_pinball": 0.000938,
+     "val_pinball": 0.000855,
+     "lr": 0.001982287250728689,
+     "t_s": 32.9
+    },
+    {
+     "epoch": 7,
+     "train_pinball": 0.000905,
+     "val_pinball": 0.000858,
+     "lr": 0.001975916761938747,
+     "t_s": 37.3
+    },
+    {
+     "epoch": 8,
+     "train_pinball": 0.000896,
+     "val_pinball": 0.000931,
+     "lr": 0.0019685831611286307,
+     "t_s": 41.8
+    },
+    {
+     "epoch": 9,
+     "train_pinball": 0.00088,
+     "val_pinball": 0.000861,
+     "lr": 0.001960293685676943,
+     "t_s": 46.2
+    },
+    {
+     "epoch": 10,
+     "train_pinball": 0.000861,
+     "val_pinball": 0.000813,
+     "lr": 0.0019510565162951534,
+     "t_s": 50.7
+    },
+    {
+     "epoch": 11,
+     "train_pinball": 0.000854,
+     "val_pinball": 0.0008,
+     "lr": 0.0019408807689542255,
+     "t_s": 55.2
+    },
+    {
+     "epoch": 12,
+     "train_pinball": 0.000841,
+     "val_pinball": 0.000794,
+     "lr": 0.0019297764858882513,
+     "t_s": 59.7
+    },
+    {
+     "epoch": 13,
+     "train_pinball": 0.000843,
+     "val_pinball": 0.000836,
+     "lr": 0.001917754625683981,
+     "t_s": 64.3
+    },
+    {
+     "epoch": 14,
+     "train_pinball": 0.000828,
+     "val_pinball": 0.000822,
+     "lr": 0.0019048270524660196,
+     "t_s": 68.8
+    },
+    {
+     "epoch": 15,
+     "train_pinball": 0.000822,
+     "val_pinball": 0.00082,
+     "lr": 0.0018910065241883678,
+     "t_s": 73.4
+    },
+    {
+     "epoch": 16,
+     "train_pinball": 0.000809,
+     "val_pinball": 0.000783,
+     "lr": 0.0018763066800438636,
+     "t_s": 77.9
+    },
+    {
+     "epoch": 17,
+     "train_pinball": 0.000813,
+     "val_pinball": 0.000818,
+     "lr": 0.0018607420270039439,
+     "t_s": 82.4
+    },
+    {
+     "epoch": 18,
+     "train_pinball": 0.000798,
+     "val_pinball": 0.000801,
+     "lr": 0.0018443279255020153,
+     "t_s": 86.9
+    },
+    {
+     "epoch": 19,
+     "train_pinball": 0.000795,
+     "val_pinball": 0.000808,
+     "lr": 0.001827080574274562,
+     "t_s": 91.5
+    },
+    {
+     "epoch": 20,
+     "train_pinball": 0.000784,
+     "val_pinball": 0.000803,
+     "lr": 0.0018090169943749477,
+     "t_s": 96.0
+    },
+    {
+     "epoch": 21,
+     "train_pinball": 0.000776,
+     "val_pinball": 0.000812,
+     "lr": 0.0017901550123756904,
+     "t_s": 100.5
+    },
+    {
+     "epoch": 22,
+     "train_pinball": 0.000773,
+     "val_pinball": 0.000811,
+     "lr": 0.0017705132427757893,
+     "t_s": 105.1
+    },
+    {
+     "epoch": 23,
+     "train_pinball": 0.000766,
+     "val_pinball": 0.000825,
+     "lr": 0.0017501110696304595,
+     "t_s": 109.6
+    },
+    {
+     "epoch": 24,
+     "train_pinball": 0.00075,
+     "val_pinball": 0.000761,
+     "lr": 0.0017289686274214115,
+     "t_s": 114.2
+    },
+    {
+     "epoch": 25,
+     "train_pinball": 0.000753,
+     "val_pinball": 0.000793,
+     "lr": 0.0017071067811865474,
+     "t_s": 118.8
+    },
+    {
+     "epoch": 26,
+     "train_pinball": 0.000747,
+     "val_pinball": 0.00077,
+     "lr": 0.0016845471059286888,
+     "t_s": 123.3
+    },
+    {
+     "epoch": 27,
+     "train_pinball": 0.000746,
+     "val_pinball": 0.000785,
+     "lr": 0.0016613118653236519,
+     "t_s": 127.9
+    },
+    {
+     "epoch": 28,
+     "train_pinball": 0.000739,
+     "val_pinball": 0.000852,
+     "lr": 0.0016374239897486897,
+     "t_s": 132.4
+    },
+    {
+     "epoch": 29,
+     "train_pinball": 0.000735,
+     "val_pinball": 0.000818,
+     "lr": 0.0016129070536529766,
+     "t_s": 137.0
+    },
+    {
+     "epoch": 30,
+     "train_pinball": 0.000734,
+     "val_pinball": 0.000786,
+     "lr": 0.0015877852522924733,
+     "t_s": 141.6
+    },
+    {
+     "epoch": 31,
+     "train_pinball": 0.000726,
+     "val_pinball": 0.000786,
+     "lr": 0.0015620833778521308,
+     "t_s": 146.2
+    },
+    {
+     "epoch": 32,
+     "train_pinball": 0.000723,
+     "val_pinball": 0.000757,
+     "lr": 0.0015358267949789966,
+     "t_s": 150.7
+    },
+    {
+     "epoch": 33,
+     "train_pinball": 0.000717,
+     "val_pinball": 0.000742,
+     "lr": 0.0015090414157503714,
+     "t_s": 155.2
+    },
+    {
+     "epoch": 34,
+     "train_pinball": 0.000718,
+     "val_pinball": 0.000759,
+     "lr": 0.0014817536741017154,
+     "t_s": 159.7
+    },
+    {
+     "epoch": 35,
+     "train_pinball": 0.000709,
+     "val_pinball": 0.000775,
+     "lr": 0.001453990499739547,
+     "t_s": 164.2
+    },
+    {
+     "epoch": 36,
+     "train_pinball": 0.000713,
+     "val_pinball": 0.000783,
+     "lr": 0.0014257792915650727,
+     "t_s": 169.1
+    },
+    {
+     "epoch": 37,
+     "train_pinball": 0.000704,
+     "val_pinball": 0.000749,
+     "lr": 0.0013971478906347806,
+     "t_s": 174.3
+    },
+    {
+     "epoch": 38,
+     "train_pinball": 0.000702,
+     "val_pinball": 0.000757,
+     "lr": 0.0013681245526846783,
+     "t_s": 179.9
+    },
+    {
+     "epoch": 39,
+     "train_pinball": 0.000701,
+     "val_pinball": 0.000751,
+     "lr": 0.0013387379202452916,
+     "t_s": 184.4
+    },
+    {
+     "epoch": 40,
+     "train_pinball": 0.000695,
+     "val_pinball": 0.000745,
+     "lr": 0.0013090169943749475,
+     "t_s": 188.9
+    },
+    {
+     "epoch": 41,
+     "train_pinball": 0.000694,
+     "val_pinball": 0.00074,
+     "lr": 0.0012789911060392294,
+     "t_s": 193.0
+    },
+    {
+     "epoch": 42,
+     "train_pinball": 0.000691,
+     "val_pinball": 0.000752,
+     "lr": 0.0012486898871648547,
+     "t_s": 197.6
+    },
+    {
+     "epoch": 43,
+     "train_pinball": 0.000685,
+     "val_pinball": 0.000757,
+     "lr": 0.0012181432413965428,
+     "t_s": 202.3
+    }
+   ],
+   "checkpoint": {
+    "file": "fair_compare_ld7_s0_h3.json.model.pt",
+    "sha256": "f02d8a3fb45d5a432d172dfa2f8609a0d1778593d2823ce3a988522e8bb77578",
+    "bytes": 4456460
+   }
+  }
+ },
+ "status": "ok"
+}

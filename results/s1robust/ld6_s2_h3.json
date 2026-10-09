@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "data": "gct_days.npz",
+    "history": 3,
+    "n_tasks": 1000,
+    "max_tasks": null,
+    "seed": 2,
+    "cap": 1.0,
+    "last_day": 6,
+    "train_windows": 40481,
+    "test_windows": 47125,
+    "held_day": 5,
+    "wall_s": 26.2,
+    "peak_rss_gib": 10.25
+  },
+  "peak_baseline": {
+    "arm": "peak",
+    "z": null,
+    "nodes": 53,
+    "overload": 0.0,
+    "params": 0,
+    "trained": false
+  },
+  "rows": [
+    {
+      "arm": "peak",
+      "z": null,
+      "nodes": 53,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 1.0,
+      "nodes": 34,
+      "overload": 5.1062091503267975e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 1.0,
+      "nodes": 33,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 1.5,
+      "nodes": 38,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 1.5,
+      "nodes": 36,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 2.0,
+      "nodes": 41,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 2.0,
+      "nodes": 40,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 2.5,
+      "nodes": 46,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 2.5,
+      "nodes": 44,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 3.0,
+      "nodes": 49,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 3.0,
+      "nodes": 50,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 3.5,
+      "nodes": 54,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 3.5,
+      "nodes": 54,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "lsq_z",
+      "z": 1.0,
+      "nodes": 41,
+      "overload": 0.0,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "lsq_z",
+      "z": 1.5,
+      "nodes": 47,
+      "overload": 0.0,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "lsq_z",
+      "z": 2.0,
+      "nodes": 53,
+      "overload": 0.0,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "lsq_z",
+      "z": 2.5,
+      "nodes": 59,
+      "overload": 0.0,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "lsq_z",
+      "z": 3.0,
+      "nodes": 65,
+      "overload": 0.0,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "lsq_z",
+      "z": 3.5,
+      "nodes": 72,
+      "overload": 0.0,
+      "params": 5,
+      "trained": true
+    }
+  ],
+  "beats_peak": [
+    {
+      "arm": "harmonic_z",
+      "z": 1.0,
+      "nodes": 33,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 1.5,
+      "nodes": 36,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 1.5,
+      "nodes": 38,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 2.0,
+      "nodes": 40,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 2.0,
+      "nodes": 41,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "lsq_z",
+      "z": 1.0,
+      "nodes": 41,
+      "overload": 0.0,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 2.5,
+      "nodes": 44,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 2.5,
+      "nodes": 46,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "lsq_z",
+      "z": 1.5,
+      "nodes": 47,
+      "overload": 0.0,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "mean_z",
+      "z": 3.0,
+      "nodes": 49,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 3.0,
+      "nodes": 50,
+      "overload": 0.0,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "lsq_z",
+      "z": 2.0,
+      "nodes": 53,
+      "overload": 0.0,
+      "params": 5,
+      "trained": true
+    }
+  ],
+  "lsq": {
+    "coef": [
+      -4.153738700551912e-05,
+      0.13345150649547577,
+      0.3040269911289215,
+      0.8501591086387634,
+      -0.00046666423440910876
+    ],
+    "resid_std": 0.011251101270318031
+  }
+}

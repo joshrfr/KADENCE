@@ -1,0 +1,98 @@
+{
+  "provenance": {
+    "kind": "KADENCE cluster (ssh)",
+    "kernel": "core.neighbor_gossip via kadence_node (real UDP)",
+    "mode": "ssh",
+    "nodes": "hostfile",
+    "jobs_per_ring": 48,
+    "rings_per_node": 1,
+    "loss": 0.3,
+    "jitter": 0.02,
+    "reps": 5,
+    "global_clock": false
+  },
+  "reps": [
+    {
+      "nodes_reporting": 15,
+      "across_node_final_pct_of_fair": {
+        "median": 92.415,
+        "p95": 150.541,
+        "p99": 159.912,
+        "worst_node_max": 162.255
+      },
+      "fraction_nodes_converged": 0.0667,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 720000,
+      "rep": 0,
+      "wall_s": 10.41
+    },
+    {
+      "nodes_reporting": 15,
+      "across_node_final_pct_of_fair": {
+        "median": 116.672,
+        "p95": 169.847,
+        "p99": 173.28,
+        "worst_node_max": 174.138
+      },
+      "fraction_nodes_converged": 0.0667,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 720000,
+      "rep": 1,
+      "wall_s": 10.41
+    },
+    {
+      "nodes_reporting": 15,
+      "across_node_final_pct_of_fair": {
+        "median": 23.478,
+        "p95": 171.357,
+        "p99": 185.749,
+        "worst_node_max": 189.347
+      },
+      "fraction_nodes_converged": 0.0667,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 720000,
+      "rep": 2,
+      "wall_s": 10.41
+    },
+    {
+      "nodes_reporting": 15,
+      "across_node_final_pct_of_fair": {
+        "median": 96.123,
+        "p95": 210.817,
+        "p99": 238.702,
+        "worst_node_max": 245.673
+      },
+      "fraction_nodes_converged": 0.0,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 720000,
+      "rep": 3,
+      "wall_s": 10.4
+    },
+    {
+      "nodes_reporting": 15,
+      "across_node_final_pct_of_fair": {
+        "median": 25.032,
+        "p95": 134.611,
+        "p99": 135.762,
+        "worst_node_max": 136.05
+      },
+      "fraction_nodes_converged": 0.0667,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 720000,
+      "rep": 4,
+      "wall_s": 10.41
+    }
+  ],
+  "across_node_median_pct_of_fair_ci95": [
+    70.744,
+    32.6706,
+    108.8174
+  ],
+  "cross_node_messages": 0,
+  "messages_per_job_round": 2
+}

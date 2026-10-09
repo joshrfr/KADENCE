@@ -1,0 +1,34 @@
+{
+  "provenance": {
+    "kind": "KADENCE cluster (ssh)",
+    "kernel": "core.neighbor_gossip via kadence_node (real UDP)",
+    "mode": "ssh",
+    "nodes": "hostfile",
+    "jobs_per_ring": 32,
+    "rings_per_node": 1,
+    "loss": 0.0,
+    "jitter": 0.0,
+    "reps": 1,
+    "global_clock": false
+  },
+  "reps": [
+    {
+      "nodes_reporting": 0,
+      "across_node_final_pct_of_fair": {},
+      "fraction_nodes_converged": 0.0,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 0,
+      "error": "no nodes reported",
+      "rep": 0,
+      "wall_s": 0.0
+    }
+  ],
+  "across_node_median_pct_of_fair_ci95": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "cross_node_messages": 0,
+  "messages_per_job_round": 2
+}

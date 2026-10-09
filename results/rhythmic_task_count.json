@@ -1,0 +1,12 @@
+{
+  "note": "Rhythmic-task count behind the phase-velocity figure caption. Reproduces the RHYTHMIC selector in paper_ipdps/figures/make_model_figures.py: tasks whose dominant CPU harmonic is k=1 and whose variance share in that harmonic exceeds 0.6, after the same activity filter.",
+  "source_npz": "data/gct_day0_series.npz",
+  "source_md5": "bccfe9f6fc7b4f5f72b55f2b37b3a4f3",
+  "tasks_in_file": 82440,
+  "tasks_after_activity_filter": 33866,
+  "harmonics_K": 144,
+  "share_threshold": 0.6,
+  "rhythmic_tasks": 8225,
+  "rhythmic_fraction_of_filtered": 0.2429,
+  "median_share_rhythmic": 0.8243
+}

@@ -1,0 +1,77 @@
+{
+  "provenance": {
+    "kernel": "core.neighbor_gossip primitives",
+    "n": 200,
+    "spoof_fraction_of_gap": 0.45,
+    "rounds": 1000,
+    "attack": "phase-spoofing / slot-stealing",
+    "defense": "rate-limit + continuity detector (envelope 0.15 fair-gap)"
+  },
+  "fractions": [
+    {
+      "malicious_frac": 0.0,
+      "no_defense": {
+        "attacker_slot_inflation": 1.0,
+        "honest_jain": 1.0,
+        "honest_min_ratio": 0.989
+      },
+      "defense": {
+        "attacker_slot_inflation": 1.0,
+        "honest_jain": 1.0,
+        "honest_min_ratio": 0.989
+      }
+    },
+    {
+      "malicious_frac": 0.05,
+      "no_defense": {
+        "attacker_slot_inflation": 1.785,
+        "honest_jain": 0.967,
+        "honest_min_ratio": 0.188
+      },
+      "defense": {
+        "attacker_slot_inflation": 0.999,
+        "honest_jain": 1.0,
+        "honest_min_ratio": 0.975
+      }
+    },
+    {
+      "malicious_frac": 0.1,
+      "no_defense": {
+        "attacker_slot_inflation": 1.818,
+        "honest_jain": 0.926,
+        "honest_min_ratio": 0.138
+      },
+      "defense": {
+        "attacker_slot_inflation": 1.0,
+        "honest_jain": 1.0,
+        "honest_min_ratio": 0.97
+      }
+    },
+    {
+      "malicious_frac": 0.2,
+      "no_defense": {
+        "attacker_slot_inflation": 1.818,
+        "honest_jain": 0.834,
+        "honest_min_ratio": 0.121
+      },
+      "defense": {
+        "attacker_slot_inflation": 1.0,
+        "honest_jain": 0.999,
+        "honest_min_ratio": 0.947
+      }
+    },
+    {
+      "malicious_frac": 0.3,
+      "no_defense": {
+        "attacker_slot_inflation": 1.817,
+        "honest_jain": 0.72,
+        "honest_min_ratio": 0.121
+      },
+      "defense": {
+        "attacker_slot_inflation": 1.0,
+        "honest_jain": 0.999,
+        "honest_min_ratio": 0.927
+      }
+    }
+  ]
+}

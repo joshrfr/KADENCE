@@ -1,0 +1,135 @@
+# =============================================================================
+# KADENCE demand forecaster -- NRP / Nautilus training Job
+# =============================================================================
+# Serial, checkpointed four-configuration deadline sweep on Google and Alibaba.
+#
+# 32Gi host RAM is intentional: the earlier 12Gi pod died of cgroup OOM.
+#
+# PRE-REQUISITES (must exist before `kubectl apply`):
+#   1. A PersistentVolumeClaim named `kadence-vol` in your namespace. Create it
+#      with the example in README.md. It is mounted at /home/jovyan.
+#   2. The two datasets AND the repo must already be staged onto that PVC:
+#        /home/jovyan/kadence/                (the repo, incl. experiments/simulation/)
+#        /home/jovyan/kadence/data/gct_days.npz
+#        /home/jovyan/kadence/data/alibaba_days.npz
+#      See README.md for the upload procedure (the .npz are large and are NOT
+#      committed to git; stage them separately).
+#   3. ConfigMap kadence-forecaster-code-deadline4 containing the checked-in
+#      train_forecaster.py and forecast_models.py. Mounted over the PVC files
+#      only in this pod; the active Indexed sweep sees its original PVC code.
+#
+# SUBMIT / WATCH / CLEANUP:
+#   kubectl apply  -f experiments/testbed/nrp/train_forecaster_job.yaml
+#   kubectl get    pods -l job-name=kadence-forecaster-deadline4 -w
+#   kubectl logs   -f job/kadence-forecaster-deadline4
+#   kubectl delete -f experiments/testbed/nrp/train_forecaster_job.yaml   # removes Job + pod
+#
+# The container image is a public CUDA + PyTorch image. It is SWAPPABLE: any
+# image that ships torch with CUDA will work (e.g.
+#   gitlab-registry.nrp-nautilus.io/prp/jupyter-stack/prp
+# or a pinned nvcr.io/nvidia/pytorch:24.xx-py3 tag). Pick one your namespace can
+# pull. numpy ships in all of these; the job pip-installs nothing by default.
+# =============================================================================
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kadence-forecaster-deadline4
+  namespace: NAMESPACE
+  labels:
+    app: kadence-forecaster
+spec:
+  backoffLimit: 3
+  # Eight hours caps GPU occupancy; partial configs remain on the PVC if hit.
+  activeDeadlineSeconds: 28800
+  # Reap the finished Job object automatically one day after completion.
+  ttlSecondsAfterFinished: 86400
+  template:
+    metadata:
+      labels:
+        app: kadence-forecaster
+    spec:
+      restartPolicy: Never
+      # Tolerate the GPU taint so we can land on GPU nodes; PreferNoSchedule
+      # keeps us off them only when a non-GPU node would do (it never does here).
+      tolerations:
+        - key: nvidia.com/gpu
+          operator: Exists
+          effect: PreferNoSchedule
+      affinity:
+        nodeAffinity:
+          # Submission-critical deadline sweep: require a high-memory
+          # A100/L40/A40 result rather than a low-VRAM fallback. This deliberate
+          # constraint is narrower than the usual soft-preference policy.
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: nvidia.com/gpu.product
+                    operator: In
+                    values: [NVIDIA-L40S, NVIDIA-L40, NVIDIA-A40, NVIDIA-A100-SXM4-80GB, NVIDIA-A100-PCIE-40GB, NVIDIA-A100-SXM4-40GB, NVIDIA-A100-80GB-PCIe, NVIDIA-H100-80GB-HBM3, NVIDIA-H200-NVL, NVIDIA-RTX-A6000, NVIDIA-RTX-PRO-6000-Blackwell-Max-Q-Workstation-Edition, Quadro-RTX-8000]
+          # Within the required high-memory family, rank the preferred hardware.
+          # This is an explicit submission-run exception to the normal
+          # soft-preference policy and may remain Pending until capacity appears.
+          preferredDuringSchedulingIgnoredDuringExecution:
+            # Tier 1: L40S / L40 / A40 (48GB) -- our first choice.
+            - weight: 100
+              preference:
+                matchExpressions:
+                  - key: nvidia.com/gpu.product
+                    operator: In
+                    values: [NVIDIA-L40S, NVIDIA-L40, NVIDIA-A40]
+            # Tier 2: A100 (40/80GB) -- powerful, more contested.
+            - weight: 80
+              preference:
+                matchExpressions:
+                  - key: nvidia.com/gpu.product
+                    operator: In
+                    values: [NVIDIA-A100-SXM4-80GB, NVIDIA-A100-PCIE-40GB, NVIDIA-A100-SXM4-40GB]
+      containers:
+        - name: trainer
+          image: gitlab-registry.nrp-nautilus.io/prp/jupyter-stack/prp:latest
+          workingDir: /home/jovyan/kadence
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              set -euo pipefail
+              nvidia-smi
+              cd /home/jovyan/kadence
+              mkdir -p results
+              export PYTHONPATH="/home/jovyan/kadence:${PYTHONPATH:-}"
+              export OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2
+              python3 experiments/forecasting/train_forecaster.py \
+                --require-gpu --epochs 400 --quantize \
+                --backbones cnn tcn --datasets google alibaba \
+                --history 3 --quantiles 0.95 \
+                --out results/forecaster_deadline4.json
+              test -s results/forecaster_deadline4.json
+              echo "DONE. Results under /home/jovyan/kadence/results/"
+          resources:
+            # Host RAM, not GPU VRAM, caused the prior OOMKilled runs.
+            requests:
+              cpu: "2"
+              memory: 32Gi
+              nvidia.com/gpu: "1"
+            limits:
+              cpu: "2"
+              memory: 32Gi
+              nvidia.com/gpu: "1"
+          volumeMounts:
+            - name: kadence-vol
+              mountPath: /home/jovyan
+            - name: forecaster-code
+              mountPath: /home/jovyan/kadence/experiments/forecasting/train_forecaster.py
+              subPath: train_forecaster.py
+              readOnly: true
+            - name: forecaster-code
+              mountPath: /home/jovyan/kadence/experiments/simulation/forecast_models.py
+              subPath: forecast_models.py
+              readOnly: true
+      volumes:
+        - name: kadence-vol
+          persistentVolumeClaim:
+            # This PVC MUST pre-exist in the namespace (see README.md).
+            claimName: kadence-vol
+        - name: forecaster-code
+          configMap:
+            name: kadence-forecaster-code-deadline4

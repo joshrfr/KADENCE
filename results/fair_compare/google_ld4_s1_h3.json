@@ -1,0 +1,77 @@
+{
+ "meta": {
+  "data": "gct_days.npz",
+  "data_md5": "ebe0f4482eda6186dc1f853401435d82",
+  "data_shape_full": [
+   8,
+   82440,
+   2,
+   288
+  ],
+  "history": 3,
+  "last_day": 4,
+  "seed": 1,
+  "n_tasks": 1000,
+  "cap": 1.0,
+  "usable_days": [
+   3
+  ],
+  "zs": [
+   0.0,
+   0.25,
+   0.5,
+   0.75,
+   1.0,
+   1.25,
+   1.5,
+   1.75,
+   2.0,
+   2.25,
+   2.5,
+   2.75,
+   3.0,
+   3.25,
+   3.5,
+   3.75,
+   4.0,
+   4.25,
+   4.5,
+   4.75,
+   5.0,
+   5.25,
+   5.5,
+   5.75,
+   6.0
+  ],
+  "quantiles": [
+   0.5,
+   0.8,
+   0.9,
+   0.95,
+   0.975,
+   0.99,
+   0.995
+  ],
+  "K_harmonic": 4,
+  "selection_rule": "min nodes subject to validation overload <= peak-requests validation overload; ties -> smaller z/q; infeasible -> min overload (flag fallback)",
+  "script": "experiments/fair_compare/fair_compare.py",
+  "device": "cpu",
+  "torch": "2.0.0+cu117",
+  "gpu": null,
+  "held_day": 3,
+  "val_day": null,
+  "wall_s": 32.8,
+  "peak_rss_gib": 5.97,
+  "recovered_from": "pod stdout @@RESULT@@ line; CPU pod, no neural arm possible (no training days / no validation day)"
+ },
+ "arms": {
+  "peak": {
+   "heldout": {
+    "nodes": 54,
+    "overload": 0.0
+   }
+  }
+ },
+ "status": "no_validation_day",
+ "reason": "fewer than two usable days; nothing can be selected on a validation day"
+}

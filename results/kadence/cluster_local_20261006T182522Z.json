@@ -1,0 +1,53 @@
+{
+  "provenance": {
+    "kind": "KADENCE cluster (local)",
+    "kernel": "core.neighbor_gossip via kadence_node (real UDP)",
+    "mode": "local",
+    "nodes": 4,
+    "jobs_per_ring": 16,
+    "rings_per_node": 1,
+    "loss": 0.1,
+    "jitter": 0.0,
+    "reps": 2,
+    "global_clock": false
+  },
+  "reps": [
+    {
+      "nodes_reporting": 4,
+      "across_node_final_pct_of_fair": {
+        "median": 0.041,
+        "p95": 0.082,
+        "p99": 0.087,
+        "worst_node_max": 0.088
+      },
+      "fraction_nodes_converged": 1.0,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 64000,
+      "rep": 0,
+      "wall_s": 10.39
+    },
+    {
+      "nodes_reporting": 4,
+      "across_node_final_pct_of_fair": {
+        "median": 0.064,
+        "p95": 0.101,
+        "p99": 0.103,
+        "worst_node_max": 0.103
+      },
+      "fraction_nodes_converged": 1.0,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 64000,
+      "rep": 1,
+      "wall_s": 10.35
+    }
+  ],
+  "across_node_median_pct_of_fair_ci95": [
+    0.0525,
+    0.03,
+    0.075
+  ],
+  "cross_node_messages": 0,
+  "messages_per_job_round": 2
+}

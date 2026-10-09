@@ -1,0 +1,18 @@
+{
+  "ceiling": 1.0,
+  "seeds": 30,
+  "generated_at": 1783886734.428309,
+  "per_scheme": {
+    "linear-rr": {
+      "mean_jobs_fit": 28.07,
+      "min": 23,
+      "max": 38
+    },
+    "phase-coupled": {
+      "mean_jobs_fit": 38.73,
+      "min": 29,
+      "max": 46
+    }
+  },
+  "phase_packing_gain_pct": 38.0
+}

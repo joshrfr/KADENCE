@@ -1,0 +1,85 @@
+{
+  "dataset": "Google ClusterData 2011 v2.1 task_usage",
+  "history": 3,
+  "K": 24,
+  "tau": 0.6,
+  "z": 3,
+  "n_tasks": 1500,
+  "seeds": 6,
+  "summary": {
+    "peak_nodes_mean": 63.33333333333333,
+    "phase_gated_nodes_mean": 41.99999999999999,
+    "phase_ungated_nodes_mean": 51.08333333333333,
+    "gated_gain_vs_peak_pct": 33.684210526315795,
+    "max_gated_overload": 0.24447318276973262,
+    "windows": 4
+  },
+  "per_window": [
+    {
+      "test_day": 3,
+      "candidate_tasks": 40481,
+      "peak_nodes": 68.83333333333333,
+      "gated_nodes": 43.166666666666664,
+      "gated_overload": 0.24447318276973262,
+      "ungated_nodes": 53.666666666666664,
+      "ungated_overload": 0.0017109187191887926,
+      "trusted_frac": 0.7583333333333333
+    },
+    {
+      "test_day": 4,
+      "candidate_tasks": 38429,
+      "peak_nodes": 64.83333333333333,
+      "gated_nodes": 43.666666666666664,
+      "gated_overload": 0.19648690275262873,
+      "ungated_nodes": 52.333333333333336,
+      "ungated_overload": 0.0015530000616465756,
+      "trusted_frac": 0.7624444444444446
+    },
+    {
+      "test_day": 5,
+      "candidate_tasks": 47125,
+      "peak_nodes": 60.0,
+      "gated_nodes": 41.5,
+      "gated_overload": 0.19713004027195566,
+      "ungated_nodes": 50.166666666666664,
+      "ungated_overload": 0.0004065825954711994,
+      "trusted_frac": 0.7585555555555555
+    },
+    {
+      "test_day": 6,
+      "candidate_tasks": 49713,
+      "peak_nodes": 59.666666666666664,
+      "gated_nodes": 39.666666666666664,
+      "gated_overload": 0.20333336811819847,
+      "ungated_nodes": 48.166666666666664,
+      "ungated_overload": 0.0018321829569101081,
+      "trusted_frac": 0.727
+    }
+  ],
+  "adversary": [
+    {
+      "malicious_frac": 0.0,
+      "overload": 0.20333336811819847,
+      "nodes": 39.666666666666664,
+      "adversary_demoted_frac": 1.0
+    },
+    {
+      "malicious_frac": 0.1,
+      "overload": 0.23508616618690295,
+      "nodes": 38.5,
+      "adversary_demoted_frac": 0.4379691821414461
+    },
+    {
+      "malicious_frac": 0.2,
+      "overload": 0.2769322249037161,
+      "nodes": 37.0,
+      "adversary_demoted_frac": 0.4349879421221865
+    },
+    {
+      "malicious_frac": 0.3,
+      "overload": 0.3012385468188541,
+      "nodes": 36.5,
+      "adversary_demoted_frac": 0.4293463520477353
+    }
+  ]
+}

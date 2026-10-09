@@ -1,0 +1,67 @@
+# Matched full-data Google comparison. Submit from the cluster-control machine.
+# Prerequisites in NAMESPACE: Bound kadence-vol PVC with gct_days.npz, and
+# ConfigMap kadence-fair-code containing fair_compare.py + forecast_models.py.
+# The Job stores both JSON metrics and the best-validation model checkpoint on
+# the PVC; fair_compare.py also prints a @@RESULT@@ JSON line to the pod logs.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kadence-fair-google-ld6
+  namespace: NAMESPACE
+  labels: {app: kadence-fair-compare}
+spec:
+  backoffLimit: 2
+  activeDeadlineSeconds: 21600
+  ttlSecondsAfterFinished: 86400
+  template:
+    spec:
+      restartPolicy: Never
+      tolerations:
+        - {key: nvidia.com/gpu, operator: Exists, effect: PreferNoSchedule}
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: nvidia.com/gpu.product
+                    operator: In
+                    values: [NVIDIA-L40S, NVIDIA-L40, NVIDIA-A40, NVIDIA-RTX-A6000, NVIDIA-A100-SXM4-80GB, NVIDIA-A100-PCIE-40GB, NVIDIA-A100-SXM4-40GB, NVIDIA-GeForce-RTX-4090, NVIDIA-GeForce-RTX-3090, NVIDIA-A10, Quadro-RTX-8000]
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              preference:
+                matchExpressions:
+                  - key: nvidia.com/gpu.product
+                    operator: In
+                    values: [NVIDIA-L40S, NVIDIA-L40, NVIDIA-A40, NVIDIA-RTX-A6000]
+      containers:
+        - name: trainer
+          image: gitlab-registry.nrp-nautilus.io/prp/jupyter-stack/prp:latest
+          workingDir: /home/jovyan/kadence
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              set -euo pipefail
+              nvidia-smi
+              export PYTHONPATH=/home/jovyan/kadence
+              export OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2
+              mkdir -p results
+              python3 /code/fair_compare.py \
+                --data data/gct_days.npz --history 3 --last-day 6 --seed 0 \
+                --n-tasks 1000 --max-epochs 100 --patience 10 --require-gpu \
+                --out results/fair_compare_ld6_s0_h3.json
+              test -s results/fair_compare_ld6_s0_h3.json
+              test -s results/fair_compare_ld6_s0_h3.json.model.pt
+          resources:
+            requests: {cpu: "2", memory: 32Gi, nvidia.com/gpu: "1"}
+            limits: {cpu: "2", memory: 32Gi, nvidia.com/gpu: "1"}
+          volumeMounts:
+            - {name: data, mountPath: /home/jovyan}
+            - {name: code, mountPath: /code, readOnly: true}
+            - {name: model-code, mountPath: /home/jovyan/kadence/experiments/simulation/forecast_models.py, subPath: forecast_models.py, readOnly: true}
+      volumes:
+        - name: data
+          persistentVolumeClaim: {claimName: kadence-vol}
+        - name: code
+          configMap: {name: kadence-fair-code}
+        - name: model-code
+          configMap: {name: kadence-fair-code}

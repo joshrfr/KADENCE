@@ -1,0 +1,73 @@
+{
+  "provenance": {
+    "kernel": "core.neighbor_gossip.RingController via sim.desync_scale.settle",
+    "messages_per_job_round": 2,
+    "per_node_size_dist": "uniform[8,48]",
+    "claim": "per-job message rate and per-node convergence are invariant to N"
+  },
+  "by_N": [
+    {
+      "N_nodes": 100,
+      "total_jobs": 2837,
+      "per_node_ring_size": {
+        "min": 8,
+        "median": 29.5,
+        "max": 48
+      },
+      "per_node_convergence_rounds": {
+        "median": 2189.5,
+        "p95": 4530.0,
+        "max": 4942.0
+      },
+      "cross_node_messages": 0,
+      "messages_per_job_per_round": 2,
+      "total_messages_to_cluster_convergence": 15424142,
+      "msgs_per_job_per_round_measured": 2.0
+    },
+    {
+      "N_nodes": 1000,
+      "total_jobs": 28526,
+      "per_node_ring_size": {
+        "min": 8,
+        "median": 29.0,
+        "max": 48
+      },
+      "per_node_convergence_rounds": {
+        "median": 2128.0,
+        "p95": 4797.0,
+        "max": 4942.0
+      },
+      "cross_node_messages": 0,
+      "messages_per_job_per_round": 2,
+      "total_messages_to_cluster_convergence": 159646808,
+      "msgs_per_job_per_round_measured": 2.0
+    },
+    {
+      "N_nodes": 10000,
+      "total_jobs": 279677,
+      "per_node_ring_size": {
+        "min": 8,
+        "median": 28.0,
+        "max": 48
+      },
+      "per_node_convergence_rounds": {
+        "median": 2008.0,
+        "p95": 4530.0,
+        "max": 4942.0
+      },
+      "cross_node_messages": 0,
+      "messages_per_job_per_round": 2,
+      "total_messages_to_cluster_convergence": 1538315380,
+      "msgs_per_job_per_round_measured": 2.0
+    }
+  ],
+  "flatness": {
+    "per_node_median_rounds_across_N": [
+      2189.5,
+      2128.0,
+      2008.0
+    ],
+    "relative_spread": 0.0861,
+    "msgs_per_job_round_constant": true
+  }
+}

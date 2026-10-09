@@ -1,0 +1,28 @@
+{
+  "provenance": {
+    "data": "gct_small.npz",
+    "history": 3,
+    "quantile": 0.9,
+    "epochs": 15,
+    "n_train": 6118,
+    "n_test": 2382,
+    "held_out_day": 6,
+    "torch": true,
+    "device": "cpu",
+    "status": "ok"
+  },
+  "results": {
+    "learned_q": {
+      "nodes": 143,
+      "overload_pct": 0.0
+    },
+    "peak": {
+      "nodes": 51,
+      "overload_pct": 0.0
+    },
+    "blind_z3": {
+      "nodes": 49,
+      "overload_pct": 0.0
+    }
+  }
+}

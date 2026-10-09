@@ -1,0 +1,697 @@
+{
+ "configs": [
+  {
+   "file": "google_ld7_s0_h3.json",
+   "last_day": 7,
+   "seed": 0,
+   "status": "ok",
+   "device": "cuda",
+   "gpu": "NVIDIA GeForce RTX 3090",
+   "held_day": 6,
+   "val_day": 5,
+   "train_days": [
+    3,
+    4
+   ],
+   "n_train": 78910,
+   "arms": {
+    "peak": {
+     "nodes": 50,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    },
+    "mean_z": {
+     "nodes": 33,
+     "overload": 0.0038404882154882154,
+     "selected_z": 1.0,
+     "fallback": false,
+     "pct_vs_peak": -34.0
+    },
+    "harmonic_z": {
+     "nodes": 33,
+     "overload": 0.0,
+     "selected_z": 1.25,
+     "fallback": false,
+     "pct_vs_peak": -34.0
+    },
+    "neural": {
+     "nodes": 34,
+     "overload": 0.0,
+     "selected_q": 0.9,
+     "fallback": false,
+     "epochs_run": 44,
+     "device": "cuda",
+     "pct_vs_peak": -32.0
+    }
+   },
+   "winner_zero_overload": [
+    "harmonic_z"
+   ],
+   "winner_nodes": 33
+  },
+  {
+   "file": "google_ld7_s1_h3.json",
+   "last_day": 7,
+   "seed": 1,
+   "status": "ok",
+   "device": "cuda",
+   "gpu": "NVIDIA A10",
+   "held_day": 6,
+   "val_day": 5,
+   "train_days": [
+    3,
+    4
+   ],
+   "n_train": 78910,
+   "arms": {
+    "peak": {
+     "nodes": 47,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    },
+    "mean_z": {
+     "nodes": 34,
+     "overload": 0.0,
+     "selected_z": 1.5,
+     "fallback": false,
+     "pct_vs_peak": -27.66
+    },
+    "harmonic_z": {
+     "nodes": 31,
+     "overload": 0.0,
+     "selected_z": 1.25,
+     "fallback": false,
+     "pct_vs_peak": -34.04
+    },
+    "neural": {
+     "nodes": 30,
+     "overload": 0.0010416666666666667,
+     "selected_q": 0.8,
+     "fallback": false,
+     "epochs_run": 28,
+     "device": "cuda",
+     "pct_vs_peak": -36.17
+    }
+   },
+   "winner_zero_overload": [
+    "harmonic_z"
+   ],
+   "winner_nodes": 31
+  },
+  {
+   "file": "google_ld7_s2_h3.json",
+   "last_day": 7,
+   "seed": 2,
+   "status": "ok",
+   "device": "cuda",
+   "gpu": "NVIDIA GeForce RTX 3090",
+   "held_day": 6,
+   "val_day": 5,
+   "train_days": [
+    3,
+    4
+   ],
+   "n_train": 78910,
+   "arms": {
+    "peak": {
+     "nodes": 49,
+     "overload": 3.5430839002267575e-05,
+     "pct_vs_peak": 0.0
+    },
+    "mean_z": {
+     "nodes": 34,
+     "overload": 5.1062091503267975e-05,
+     "selected_z": 1.25,
+     "fallback": false,
+     "pct_vs_peak": -30.61
+    },
+    "harmonic_z": {
+     "nodes": 32,
+     "overload": 0.0002712673611111111,
+     "selected_z": 1.0,
+     "fallback": false,
+     "pct_vs_peak": -34.69
+    },
+    "neural": {
+     "nodes": 34,
+     "overload": 5.1062091503267975e-05,
+     "selected_q": 0.9,
+     "fallback": false,
+     "epochs_run": 26,
+     "device": "cuda",
+     "pct_vs_peak": -30.61
+    }
+   },
+   "winner_zero_overload": [
+    "peak"
+   ],
+   "winner_nodes": 49
+  },
+  {
+   "file": "google_ld6_s0_h3.json",
+   "last_day": 6,
+   "seed": 0,
+   "status": "ok",
+   "device": "cuda",
+   "gpu": "NVIDIA A10",
+   "held_day": 5,
+   "val_day": 4,
+   "train_days": [
+    3
+   ],
+   "n_train": 40481,
+   "arms": {
+    "peak": {
+     "nodes": 46,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    },
+    "mean_z": {
+     "nodes": 31,
+     "overload": 0.0,
+     "selected_z": 1.25,
+     "fallback": false,
+     "pct_vs_peak": -32.61
+    },
+    "harmonic_z": {
+     "nodes": 32,
+     "overload": 0.0,
+     "selected_z": 1.5,
+     "fallback": false,
+     "pct_vs_peak": -30.43
+    },
+    "neural": {
+     "nodes": 33,
+     "overload": 0.0,
+     "selected_q": 0.9,
+     "fallback": false,
+     "epochs_run": 47,
+     "device": "cuda",
+     "pct_vs_peak": -28.26
+    }
+   },
+   "winner_zero_overload": [
+    "mean_z"
+   ],
+   "winner_nodes": 31
+  },
+  {
+   "file": "google_ld6_s1_h3.json",
+   "last_day": 6,
+   "seed": 1,
+   "status": "ok",
+   "device": "cuda",
+   "gpu": "NVIDIA GeForce RTX 3090",
+   "held_day": 5,
+   "val_day": 4,
+   "train_days": [
+    3
+   ],
+   "n_train": 40481,
+   "arms": {
+    "peak": {
+     "nodes": 50,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    },
+    "mean_z": {
+     "nodes": 34,
+     "overload": 0.0004084967320261438,
+     "selected_z": 1.0,
+     "fallback": false,
+     "pct_vs_peak": -32.0
+    },
+    "harmonic_z": {
+     "nodes": 36,
+     "overload": 0.0,
+     "selected_z": 1.5,
+     "fallback": false,
+     "pct_vs_peak": -28.0
+    },
+    "neural": {
+     "nodes": 36,
+     "overload": 0.0,
+     "selected_q": 0.9,
+     "fallback": false,
+     "epochs_run": 20,
+     "device": "cuda",
+     "pct_vs_peak": -28.0
+    }
+   },
+   "winner_zero_overload": [
+    "harmonic_z",
+    "neural"
+   ],
+   "winner_nodes": 36
+  },
+  {
+   "file": "google_ld6_s2_h3.json",
+   "last_day": 6,
+   "seed": 2,
+   "status": "ok",
+   "device": "cuda",
+   "gpu": "NVIDIA GeForce RTX 3090",
+   "held_day": 5,
+   "val_day": 4,
+   "train_days": [
+    3
+   ],
+   "n_train": 40481,
+   "arms": {
+    "peak": {
+     "nodes": 53,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    },
+    "mean_z": {
+     "nodes": 36,
+     "overload": 0.0,
+     "selected_z": 1.25,
+     "fallback": false,
+     "pct_vs_peak": -32.08
+    },
+    "harmonic_z": {
+     "nodes": 36,
+     "overload": 0.0,
+     "selected_z": 1.5,
+     "fallback": false,
+     "pct_vs_peak": -32.08
+    },
+    "neural": {
+     "nodes": 37,
+     "overload": 0.0,
+     "selected_q": 0.8,
+     "fallback": false,
+     "epochs_run": 23,
+     "device": "cuda",
+     "pct_vs_peak": -30.19
+    }
+   },
+   "winner_zero_overload": [
+    "mean_z",
+    "harmonic_z"
+   ],
+   "winner_nodes": 36
+  },
+  {
+   "file": "google_ld5_s0_h3.json",
+   "last_day": 5,
+   "seed": 0,
+   "status": "ok_no_neural",
+   "device": "cpu",
+   "gpu": null,
+   "held_day": 4,
+   "val_day": 3,
+   "train_days": [],
+   "n_train": null,
+   "arms": {
+    "peak": {
+     "nodes": 55,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    },
+    "mean_z": {
+     "nodes": 39,
+     "overload": 4.451566951566952e-05,
+     "selected_z": 1.5,
+     "fallback": false,
+     "pct_vs_peak": -29.09
+    },
+    "harmonic_z": {
+     "nodes": 40,
+     "overload": 0.0,
+     "selected_z": 1.75,
+     "fallback": false,
+     "pct_vs_peak": -27.27
+    }
+   },
+   "winner_zero_overload": [
+    "harmonic_z"
+   ],
+   "winner_nodes": 40
+  },
+  {
+   "file": "google_ld5_s1_h3.json",
+   "last_day": 5,
+   "seed": 1,
+   "status": "ok_no_neural",
+   "device": "cpu",
+   "gpu": null,
+   "held_day": 4,
+   "val_day": 3,
+   "train_days": [],
+   "n_train": null,
+   "arms": {
+    "peak": {
+     "nodes": 53,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    },
+    "mean_z": {
+     "nodes": 37,
+     "overload": 0.0,
+     "selected_z": 1.5,
+     "fallback": false,
+     "pct_vs_peak": -30.19
+    },
+    "harmonic_z": {
+     "nodes": 36,
+     "overload": 0.0,
+     "selected_z": 1.5,
+     "fallback": false,
+     "pct_vs_peak": -32.08
+    }
+   },
+   "winner_zero_overload": [
+    "harmonic_z"
+   ],
+   "winner_nodes": 36
+  },
+  {
+   "file": "google_ld5_s2_h3.json",
+   "last_day": 5,
+   "seed": 2,
+   "status": "ok_no_neural",
+   "device": "cpu",
+   "gpu": null,
+   "held_day": 4,
+   "val_day": 3,
+   "train_days": [],
+   "n_train": null,
+   "arms": {
+    "peak": {
+     "nodes": 49,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    },
+    "mean_z": {
+     "nodes": 36,
+     "overload": 0.0,
+     "selected_z": 1.75,
+     "fallback": false,
+     "pct_vs_peak": -26.53
+    },
+    "harmonic_z": {
+     "nodes": 36,
+     "overload": 0.0,
+     "selected_z": 1.75,
+     "fallback": false,
+     "pct_vs_peak": -26.53
+    }
+   },
+   "winner_zero_overload": [
+    "mean_z",
+    "harmonic_z"
+   ],
+   "winner_nodes": 36
+  },
+  {
+   "file": "google_ld4_s0_h3.json",
+   "last_day": 4,
+   "seed": 0,
+   "status": "no_validation_day",
+   "device": "cpu",
+   "gpu": null,
+   "held_day": 3,
+   "val_day": null,
+   "train_days": null,
+   "n_train": null,
+   "arms": {
+    "peak": {
+     "nodes": 50,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    }
+   },
+   "winner_zero_overload": [
+    "peak"
+   ],
+   "winner_nodes": 50
+  },
+  {
+   "file": "google_ld4_s1_h3.json",
+   "last_day": 4,
+   "seed": 1,
+   "status": "no_validation_day",
+   "device": "cpu",
+   "gpu": null,
+   "held_day": 3,
+   "val_day": null,
+   "train_days": null,
+   "n_train": null,
+   "arms": {
+    "peak": {
+     "nodes": 54,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    }
+   },
+   "winner_zero_overload": [
+    "peak"
+   ],
+   "winner_nodes": 54
+  },
+  {
+   "file": "google_ld4_s2_h3.json",
+   "last_day": 4,
+   "seed": 2,
+   "status": "no_validation_day",
+   "device": "cpu",
+   "gpu": null,
+   "held_day": 3,
+   "val_day": null,
+   "train_days": null,
+   "n_train": null,
+   "arms": {
+    "peak": {
+     "nodes": 50,
+     "overload": 0.0,
+     "pct_vs_peak": 0.0
+    }
+   },
+   "winner_zero_overload": [
+    "peak"
+   ],
+   "winner_nodes": 50
+  }
+ ],
+ "aggregate_all": {
+  "label": "all configurations (arms averaged over the configs where they exist)",
+  "n_configs": 12,
+  "arms": {
+   "peak": {
+    "n_configs": 12,
+    "mean_nodes": 50.5,
+    "min": 46,
+    "max": 55,
+    "mean_pct_vs_peak": 0.0,
+    "pooled_pct_vs_peak": 0.0,
+    "n_zero_overload": 11,
+    "mean_overload": 3e-06,
+    "wins": 4,
+    "ties_for_best": 0
+   },
+   "mean_z": {
+    "n_configs": 9,
+    "mean_nodes": 34.89,
+    "min": 31,
+    "max": 39,
+    "mean_pct_vs_peak": -30.53,
+    "pooled_pct_vs_peak": -30.53,
+    "n_zero_overload": 5,
+    "mean_overload": 0.000483,
+    "wins": 1,
+    "ties_for_best": 2
+   },
+   "harmonic_z": {
+    "n_configs": 9,
+    "mean_nodes": 34.67,
+    "min": 31,
+    "max": 40,
+    "mean_pct_vs_peak": -31.01,
+    "pooled_pct_vs_peak": -30.97,
+    "n_zero_overload": 8,
+    "mean_overload": 3e-05,
+    "wins": 4,
+    "ties_for_best": 3
+   },
+   "neural": {
+    "n_configs": 6,
+    "mean_nodes": 34,
+    "min": 30,
+    "max": 37,
+    "mean_pct_vs_peak": -30.87,
+    "pooled_pct_vs_peak": -30.85,
+    "n_zero_overload": 4,
+    "mean_overload": 0.000182,
+    "wins": 0,
+    "ties_for_best": 1
+   }
+  },
+  "mean_vs_harmonic": {
+   "n_paired": 9,
+   "mean_fewer_nodes": 3,
+   "harmonic_fewer_nodes": 3,
+   "tied": 3
+  },
+  "neural_comparisons": {
+   "n_paired": 6,
+   "mean_z_fewer_than_neural": 4,
+   "mean_z_equal_neural": 1,
+   "mean_z_more_than_neural": 1,
+   "harmonic_z_fewer_than_neural": 4,
+   "harmonic_z_equal_neural": 1,
+   "harmonic_z_more_than_neural": 1,
+   "neural_fewer_than_peak": 6,
+   "neural_zero_overload_and_fewer_than_peak": 4
+  }
+ },
+ "aggregate_4arm_configs": {
+  "label": "configs where all four arms are defined (last_day 6, 7)",
+  "n_configs": 6,
+  "arms": {
+   "peak": {
+    "n_configs": 6,
+    "mean_nodes": 49.17,
+    "min": 46,
+    "max": 53,
+    "mean_pct_vs_peak": 0.0,
+    "pooled_pct_vs_peak": 0.0,
+    "n_zero_overload": 5,
+    "mean_overload": 6e-06,
+    "wins": 1,
+    "ties_for_best": 0
+   },
+   "mean_z": {
+    "n_configs": 6,
+    "mean_nodes": 33.67,
+    "min": 31,
+    "max": 36,
+    "mean_pct_vs_peak": -31.49,
+    "pooled_pct_vs_peak": -31.53,
+    "n_zero_overload": 3,
+    "mean_overload": 0.000717,
+    "wins": 1,
+    "ties_for_best": 1
+   },
+   "harmonic_z": {
+    "n_configs": 6,
+    "mean_nodes": 33.33,
+    "min": 31,
+    "max": 36,
+    "mean_pct_vs_peak": -32.21,
+    "pooled_pct_vs_peak": -32.2,
+    "n_zero_overload": 5,
+    "mean_overload": 4.5e-05,
+    "wins": 2,
+    "ties_for_best": 2
+   },
+   "neural": {
+    "n_configs": 6,
+    "mean_nodes": 34,
+    "min": 30,
+    "max": 37,
+    "mean_pct_vs_peak": -30.87,
+    "pooled_pct_vs_peak": -30.85,
+    "n_zero_overload": 4,
+    "mean_overload": 0.000182,
+    "wins": 0,
+    "ties_for_best": 1
+   }
+  },
+  "mean_vs_harmonic": {
+   "n_paired": 6,
+   "mean_fewer_nodes": 2,
+   "harmonic_fewer_nodes": 2,
+   "tied": 2
+  },
+  "neural_comparisons": {
+   "n_paired": 6,
+   "mean_z_fewer_than_neural": 4,
+   "mean_z_equal_neural": 1,
+   "mean_z_more_than_neural": 1,
+   "harmonic_z_fewer_than_neural": 4,
+   "harmonic_z_equal_neural": 1,
+   "harmonic_z_more_than_neural": 1,
+   "neural_fewer_than_peak": 6,
+   "neural_zero_overload_and_fewer_than_peak": 4
+  }
+ },
+ "aggregate_closed_form_configs": {
+  "label": "all configs with a validation day (last_day 5, 6, 7)",
+  "n_configs": 9,
+  "arms": {
+   "peak": {
+    "n_configs": 9,
+    "mean_nodes": 50.22,
+    "min": 46,
+    "max": 55,
+    "mean_pct_vs_peak": 0.0,
+    "pooled_pct_vs_peak": 0.0,
+    "n_zero_overload": 8,
+    "mean_overload": 4e-06,
+    "wins": 1,
+    "ties_for_best": 0
+   },
+   "mean_z": {
+    "n_configs": 9,
+    "mean_nodes": 34.89,
+    "min": 31,
+    "max": 39,
+    "mean_pct_vs_peak": -30.53,
+    "pooled_pct_vs_peak": -30.53,
+    "n_zero_overload": 5,
+    "mean_overload": 0.000483,
+    "wins": 1,
+    "ties_for_best": 2
+   },
+   "harmonic_z": {
+    "n_configs": 9,
+    "mean_nodes": 34.67,
+    "min": 31,
+    "max": 40,
+    "mean_pct_vs_peak": -31.01,
+    "pooled_pct_vs_peak": -30.97,
+    "n_zero_overload": 8,
+    "mean_overload": 3e-05,
+    "wins": 4,
+    "ties_for_best": 3
+   },
+   "neural": {
+    "n_configs": 6,
+    "mean_nodes": 34,
+    "min": 30,
+    "max": 37,
+    "mean_pct_vs_peak": -30.87,
+    "pooled_pct_vs_peak": -30.85,
+    "n_zero_overload": 4,
+    "mean_overload": 0.000182,
+    "wins": 0,
+    "ties_for_best": 1
+   }
+  },
+  "mean_vs_harmonic": {
+   "n_paired": 9,
+   "mean_fewer_nodes": 3,
+   "harmonic_fewer_nodes": 3,
+   "tied": 3
+  },
+  "neural_comparisons": {
+   "n_paired": 6,
+   "mean_z_fewer_than_neural": 4,
+   "mean_z_equal_neural": 1,
+   "mean_z_more_than_neural": 1,
+   "harmonic_z_fewer_than_neural": 4,
+   "harmonic_z_equal_neural": 1,
+   "harmonic_z_more_than_neural": 1,
+   "neural_fewer_than_peak": 6,
+   "neural_zero_overload_and_fewer_than_peak": 4
+  }
+ },
+ "notes": [
+  "winner = fewest held-out nodes among arms whose held-out overload is no worse than peak's own held-out overload (peak always included); zero-overload counts are reported separately",
+  "last_day 5: usable days [3,4] -> val 3, held 4, no training day, neural infeasible",
+  "last_day 4: usable days [3] -> no validation day, only the peak anchor can be scored",
+  "seed changes only the sampled task order and net init; the data day split is fixed by last_day"
+ ]
+}

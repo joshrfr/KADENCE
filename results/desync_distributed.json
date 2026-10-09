@@ -1,0 +1,15 @@
+{
+  "provenance": {
+    "kind": "real asynchronous multi-process (UDP) run",
+    "kernel": "core.neighbor_gossip.local_correction",
+    "n": 16,
+    "seconds": 8.0,
+    "tick_s": 0.02,
+    "transport": "UDP/loopback, no global clock"
+  },
+  "n": 16,
+  "wall_seconds": 8.02,
+  "initial_max_gap_error": 1.3279,
+  "final_max_gap_error": 0.001344,
+  "converged": true
+}

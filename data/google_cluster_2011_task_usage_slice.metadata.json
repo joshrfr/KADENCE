@@ -1,0 +1,56 @@
+{
+  "data_kind": "raw-official-slice",
+  "dataset": "Google ClusterData 2011 v2.1 task_usage",
+  "documentation": "https://github.com/google/cluster-data/blob/master/ClusterData2011_2.md",
+  "extraction": {
+    "columns": [
+      "start_time",
+      "end_time",
+      "job_id",
+      "task_index",
+      "machine_id",
+      "mean_cpu_usage_rate",
+      "canonical_memory_usage",
+      "assigned_memory_usage",
+      "unmapped_page_cache",
+      "total_page_cache",
+      "maximum_memory_usage",
+      "mean_disk_io_time",
+      "mean_local_disk_space_used",
+      "maximum_cpu_usage",
+      "maximum_disk_io_time",
+      "cycles_per_instruction",
+      "memory_accesses_per_instruction",
+      "sample_portion",
+      "aggregation_type",
+      "sampled_cpu_usage"
+    ],
+    "end_us_exclusive": 7800000000,
+    "first_start_us": 600000000,
+    "last_end_us": 5700000000,
+    "rows": 102,
+    "slice_sha256": "54a2d8d2fd3142e5f0008fe2507e770a876cd25c1db8a4cd6b78d839a3b03e98",
+    "start_us_inclusive": 600000000,
+    "tasks": [
+      "3418309:0",
+      "3418309:1",
+      "3418314:0",
+      "3418314:1",
+      "3418319:0",
+      "3418319:1"
+    ]
+  },
+  "generated_at": "2026-09-27T02:44:07.774615+00:00",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "limitations": [
+    "one deterministic shard/window/task subset; not representative",
+    "usage is observed fulfilled demand, not unconstrained offered load",
+    "Google documents missing-data and measurement caveats"
+  ],
+  "source_object": {
+    "etag": "a12dcc95e74f0b8563772e7e58496784",
+    "sha256": "841254d3bc4199c26c82890dcd6bc87fcfb1ff23d75be8e39f0337f0ed1c6e28",
+    "url": "https://storage.googleapis.com/clusterdata-2011-2/task_usage/part-00000-of-00500.csv.gz"
+  }
+}

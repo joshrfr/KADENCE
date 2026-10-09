@@ -1,0 +1,56 @@
+{
+  "across_node_median_pct_of_fair_ci95": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "provenance": {
+    "alpha": 1.0,
+    "criteria": {
+      "loose": "final_gap_error < 0.1*(2*pi/n)",
+      "strict": "final_gap_error < 1e-6 rad"
+    },
+    "global_clock": false,
+    "impl": "python",
+    "jitter": 0.02,
+    "jobs_per_ring": 8,
+    "kernel": "core.neighbor_gossip via kadence_node (real UDP)",
+    "kind": "KADENCE cluster (ssh)",
+    "loss": 0.3,
+    "mode": "ssh",
+    "nodes": "hostfile",
+    "reps": 1,
+    "rings_per_node": 1,
+    "scope_note": "rings are per-node and isolated by construction; N nodes = N samples of a single-node experiment",
+    "seconds": 30.0,
+    "tick": 0.02
+  },
+  "reps": [
+    {
+      "across_node_final_pct_of_fair": {
+        "median": 0.0,
+        "p95": 100.0,
+        "p99": 100.0,
+        "worst_node_max": 100.0
+      },
+      "classification_counts": {
+        "converged": 11,
+        "order-broken": 5
+      },
+      "cross_node_messages_measured": 0,
+      "fraction_nodes_converged_loose_0p1_target": 0.6875,
+      "fraction_nodes_converged_strict_1e6": 0.6875,
+      "impl": "python",
+      "measured_datagrams_received": 175698,
+      "measured_datagrams_sent": 175802,
+      "measured_tick_deficit": 2457,
+      "measured_ticks_executed": 125543,
+      "nodes_reporting": 16,
+      "old_estimate_2n_seconds_over_tick": 384000,
+      "old_estimate_minus_measured_sent": 208198,
+      "rep": 0,
+      "rings_total": 16,
+      "wall_s": 30.66
+    }
+  ]
+}

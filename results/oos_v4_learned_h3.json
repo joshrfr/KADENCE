@@ -1,0 +1,115 @@
+{
+  "provenance": {
+    "history": 3,
+    "alpha_up": 0.85,
+    "zs": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.7
+    ],
+    "n_tasks": 1000,
+    "seeds": 8,
+    "target_overload_pct": 0.5,
+    "test_windows": 1,
+    "sklearn": true,
+    "dataset": "Google 2011 multi-day (/tmp/gct_days_v4.npz)"
+  },
+  "frontier": {
+    "blind": [
+      [
+        33.4,
+        0.565
+      ],
+      [
+        35.2,
+        0.152
+      ],
+      [
+        37.6,
+        0.098
+      ],
+      [
+        40.0,
+        0.007
+      ],
+      [
+        42.2,
+        0.002
+      ],
+      [
+        47.5,
+        0.0
+      ]
+    ],
+    "v2": [
+      [
+        33.5,
+        0.488
+      ],
+      [
+        35.5,
+        0.16
+      ],
+      [
+        37.4,
+        0.002
+      ],
+      [
+        39.8,
+        0.002
+      ],
+      [
+        42.0,
+        0.0
+      ],
+      [
+        47.2,
+        0.0
+      ]
+    ],
+    "v4": [
+      [
+        32.6,
+        9.588
+      ],
+      [
+        34.6,
+        6.73
+      ],
+      [
+        37.0,
+        4.003
+      ],
+      [
+        39.4,
+        2.284
+      ],
+      [
+        41.8,
+        1.032
+      ],
+      [
+        47.1,
+        0.307
+      ]
+    ]
+  },
+  "peak_nodes_measured": 31.5,
+  "nodes_at_target": {
+    "blind": 33.7,
+    "v2": 33.5,
+    "v4": 45.7
+  },
+  "reference_baselines": {
+    "peak_requests": 31.3,
+    "phase_blind": 33.4,
+    "phase_aware": 34.2
+  },
+  "v4_nodes_at_target": 45.7,
+  "beats_best_baseline": false,
+  "v4_vs_peak_pct": -46.0,
+  "notes": "Strict hold-out: the test day never enters model fitting; the model is trained only on within-history day->next-day peak pairs. With history=3 there are few (2) training day transitions per window, so the learned model has high variance and risks overfitting; results should be read as indicative, not definitive."
+}

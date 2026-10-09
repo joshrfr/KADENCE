@@ -1,0 +1,87 @@
+{
+  "populations": [
+    {
+      "n": 50,
+      "by_k": [
+        {
+          "k": 1,
+          "neighbors_each_side": 1,
+          "messages_per_round": 2,
+          "settling_rounds": 5367,
+          "final_gap_error": 9.986249369375866e-07,
+          "energy_increase_rounds": 0,
+          "rounds_vs_k1": 1.0
+        },
+        {
+          "k": 2,
+          "neighbors_each_side": 2,
+          "messages_per_round": 4,
+          "settling_rounds": 4000000,
+          "final_gap_error": 0.003920278419050294,
+          "energy_increase_rounds": 0,
+          "rounds_vs_k1": 745.295
+        },
+        {
+          "k": 3,
+          "neighbors_each_side": 3,
+          "messages_per_round": 6,
+          "settling_rounds": 16353,
+          "final_gap_error": 9.99520799155329e-07,
+          "energy_increase_rounds": 0,
+          "rounds_vs_k1": 3.047
+        },
+        {
+          "k": 4,
+          "neighbors_each_side": 4,
+          "messages_per_round": 8,
+          "settling_rounds": 4000000,
+          "final_gap_error": 0.003920278419052847,
+          "energy_increase_rounds": 0,
+          "rounds_vs_k1": 745.295
+        }
+      ]
+    },
+    {
+      "n": 200,
+      "by_k": [
+        {
+          "k": 1,
+          "neighbors_each_side": 1,
+          "messages_per_round": 2,
+          "settling_rounds": 62416,
+          "final_gap_error": 9.999357496390249e-07,
+          "energy_increase_rounds": 0,
+          "rounds_vs_k1": 1.0
+        },
+        {
+          "k": 2,
+          "neighbors_each_side": 2,
+          "messages_per_round": 4,
+          "settling_rounds": 4000000,
+          "final_gap_error": 7.485349759869808e-05,
+          "energy_increase_rounds": 0,
+          "rounds_vs_k1": 64.086
+        },
+        {
+          "k": 3,
+          "neighbors_each_side": 3,
+          "messages_per_round": 6,
+          "settling_rounds": 226050,
+          "final_gap_error": 9.99977769547411e-07,
+          "energy_increase_rounds": 0,
+          "rounds_vs_k1": 3.622
+        },
+        {
+          "k": 4,
+          "neighbors_each_side": 4,
+          "messages_per_round": 8,
+          "settling_rounds": 4000000,
+          "final_gap_error": 0.0019401114906609923,
+          "energy_increase_rounds": 0,
+          "rounds_vs_k1": 64.086
+        }
+      ]
+    }
+  ],
+  "note": "k=1 is the committed two-neighbor rule; messages/round = 2k"
+}

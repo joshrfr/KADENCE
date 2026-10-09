@@ -1,0 +1,792 @@
+{
+  "meta": {
+    "data": "gct_days.npz",
+    "data_md5": "ebe0f4482eda6186dc1f853401435d82",
+    "history": 3,
+    "n_tasks": 1000,
+    "seed": 0,
+    "cap": 1.0,
+    "last_day": 7,
+    "held_day": 6,
+    "val_day": 5,
+    "zs": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      6.0
+    ],
+    "ks": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      12
+    ],
+    "rule": "min nodes s.t. zero overload on validation; ties: smaller z, then smaller K",
+    "script": "experiments/stage1_cheap.py --nested",
+    "wall_s": 497.0,
+    "peak_rss_gib": 4.23
+  },
+  "status": "ok",
+  "result": {
+    "chosen_z": 1.5,
+    "chosen_K": 3,
+    "validation_basis": {
+      "val_nodes": 32,
+      "val_overload": 0.0,
+      "val_peak_nodes": 46,
+      "val_peak_overload": 0.0,
+      "n_feasible_on_val": 70
+    },
+    "peak_heldout": {
+      "nodes": 50,
+      "overload": 0.0
+    },
+    "harmonic_heldout": {
+      "nodes": 34,
+      "overload": 0.0
+    },
+    "reduction_pct": 32.0
+  },
+  "heldout_diagnostic": [
+    {
+      "K": 1,
+      "z": 0.0,
+      "val_nodes": 26,
+      "val_overload": 0.16038995726495728,
+      "heldout_nodes": 27,
+      "heldout_overload": 0.2425411522633745
+    },
+    {
+      "K": 1,
+      "z": 0.5,
+      "val_nodes": 27,
+      "val_overload": 0.009130658436213992,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.051065613026819924
+    },
+    {
+      "K": 1,
+      "z": 1.0,
+      "val_nodes": 29,
+      "val_overload": 0.00035919540229885057,
+      "heldout_nodes": 31,
+      "heldout_overload": 0.0015120967741935483
+    },
+    {
+      "K": 1,
+      "z": 1.5,
+      "val_nodes": 33,
+      "val_overload": 0.0,
+      "heldout_nodes": 35,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 2.0,
+      "val_nodes": 35,
+      "val_overload": 0.0,
+      "heldout_nodes": 38,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 2.5,
+      "val_nodes": 39,
+      "val_overload": 0.0,
+      "heldout_nodes": 42,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 3.0,
+      "val_nodes": 42,
+      "val_overload": 0.0,
+      "heldout_nodes": 46,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 3.5,
+      "val_nodes": 47,
+      "val_overload": 0.0,
+      "heldout_nodes": 51,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 4.0,
+      "val_nodes": 49,
+      "val_overload": 0.0,
+      "heldout_nodes": 55,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 4.5,
+      "val_nodes": 55,
+      "val_overload": 0.0,
+      "heldout_nodes": 61,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 5.0,
+      "val_nodes": 59,
+      "val_overload": 0.0,
+      "heldout_nodes": 65,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 5.5,
+      "val_nodes": 63,
+      "val_overload": 0.0,
+      "heldout_nodes": 71,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 6.0,
+      "val_nodes": 67,
+      "val_overload": 0.0,
+      "heldout_nodes": 75,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 0.0,
+      "val_nodes": 26,
+      "val_overload": 0.15324519230769232,
+      "heldout_nodes": 27,
+      "heldout_overload": 0.27996399176954734
+    },
+    {
+      "K": 2,
+      "z": 0.5,
+      "val_nodes": 27,
+      "val_overload": 0.011252572016460906,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.03460249042145594
+    },
+    {
+      "K": 2,
+      "z": 1.0,
+      "val_nodes": 29,
+      "val_overload": 0.00023946360153256704,
+      "heldout_nodes": 31,
+      "heldout_overload": 0.001064068100358423
+    },
+    {
+      "K": 2,
+      "z": 1.5,
+      "val_nodes": 33,
+      "val_overload": 0.0,
+      "heldout_nodes": 35,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 2.0,
+      "val_nodes": 35,
+      "val_overload": 0.0,
+      "heldout_nodes": 39,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 2.5,
+      "val_nodes": 39,
+      "val_overload": 0.0,
+      "heldout_nodes": 42,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 3.0,
+      "val_nodes": 42,
+      "val_overload": 0.0,
+      "heldout_nodes": 47,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 3.5,
+      "val_nodes": 47,
+      "val_overload": 0.0,
+      "heldout_nodes": 51,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 4.0,
+      "val_nodes": 50,
+      "val_overload": 0.0,
+      "heldout_nodes": 56,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 4.5,
+      "val_nodes": 55,
+      "val_overload": 0.0,
+      "heldout_nodes": 61,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 5.0,
+      "val_nodes": 59,
+      "val_overload": 0.0,
+      "heldout_nodes": 66,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 5.5,
+      "val_nodes": 63,
+      "val_overload": 0.0,
+      "heldout_nodes": 71,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 6.0,
+      "val_nodes": 68,
+      "val_overload": 0.0,
+      "heldout_nodes": 76,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 0.0,
+      "val_nodes": 26,
+      "val_overload": 0.13708600427350429,
+      "heldout_nodes": 27,
+      "heldout_overload": 0.2690972222222222
+    },
+    {
+      "K": 3,
+      "z": 0.5,
+      "val_nodes": 27,
+      "val_overload": 0.008551954732510287,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.03993055555555555
+    },
+    {
+      "K": 3,
+      "z": 1.0,
+      "val_nodes": 29,
+      "val_overload": 0.00023946360153256704,
+      "heldout_nodes": 31,
+      "heldout_overload": 0.0016801075268817205
+    },
+    {
+      "K": 3,
+      "z": 1.5,
+      "val_nodes": 32,
+      "val_overload": 0.0,
+      "heldout_nodes": 34,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 2.0,
+      "val_nodes": 35,
+      "val_overload": 0.0,
+      "heldout_nodes": 38,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 2.5,
+      "val_nodes": 39,
+      "val_overload": 0.0,
+      "heldout_nodes": 42,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 3.0,
+      "val_nodes": 43,
+      "val_overload": 0.0,
+      "heldout_nodes": 46,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 3.5,
+      "val_nodes": 47,
+      "val_overload": 0.0,
+      "heldout_nodes": 51,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 4.0,
+      "val_nodes": 50,
+      "val_overload": 0.0,
+      "heldout_nodes": 56,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 4.5,
+      "val_nodes": 55,
+      "val_overload": 0.0,
+      "heldout_nodes": 61,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 5.0,
+      "val_nodes": 59,
+      "val_overload": 0.0,
+      "heldout_nodes": 66,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 5.5,
+      "val_nodes": 64,
+      "val_overload": 0.0,
+      "heldout_nodes": 71,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 6.0,
+      "val_nodes": 67,
+      "val_overload": 0.0,
+      "heldout_nodes": 76,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 0.0,
+      "val_nodes": 26,
+      "val_overload": 0.12132745726495726,
+      "heldout_nodes": 27,
+      "heldout_overload": 0.2318672839506173
+    },
+    {
+      "K": 4,
+      "z": 0.5,
+      "val_nodes": 27,
+      "val_overload": 0.0073302469135802465,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.02993295019157088
+    },
+    {
+      "K": 4,
+      "z": 1.0,
+      "val_nodes": 29,
+      "val_overload": 0.00017959770114942528,
+      "heldout_nodes": 32,
+      "heldout_overload": 0.0015190972222222222
+    },
+    {
+      "K": 4,
+      "z": 1.5,
+      "val_nodes": 32,
+      "val_overload": 0.0,
+      "heldout_nodes": 35,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 2.0,
+      "val_nodes": 35,
+      "val_overload": 0.0,
+      "heldout_nodes": 38,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 2.5,
+      "val_nodes": 39,
+      "val_overload": 0.0,
+      "heldout_nodes": 43,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 3.0,
+      "val_nodes": 43,
+      "val_overload": 0.0,
+      "heldout_nodes": 47,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 3.5,
+      "val_nodes": 47,
+      "val_overload": 0.0,
+      "heldout_nodes": 51,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 4.0,
+      "val_nodes": 51,
+      "val_overload": 0.0,
+      "heldout_nodes": 56,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 4.5,
+      "val_nodes": 55,
+      "val_overload": 0.0,
+      "heldout_nodes": 61,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 5.0,
+      "val_nodes": 59,
+      "val_overload": 0.0,
+      "heldout_nodes": 66,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 5.5,
+      "val_nodes": 64,
+      "val_overload": 0.0,
+      "heldout_nodes": 71,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 6.0,
+      "val_nodes": 67,
+      "val_overload": 0.0,
+      "heldout_nodes": 76,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 0.0,
+      "val_nodes": 26,
+      "val_overload": 0.12373130341880342,
+      "heldout_nodes": 27,
+      "heldout_overload": 0.19984567901234568
+    },
+    {
+      "K": 6,
+      "z": 0.5,
+      "val_nodes": 27,
+      "val_overload": 0.006301440329218107,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.03879310344827586
+    },
+    {
+      "K": 6,
+      "z": 1.0,
+      "val_nodes": 29,
+      "val_overload": 0.00035919540229885057,
+      "heldout_nodes": 31,
+      "heldout_overload": 0.0005600358422939068
+    },
+    {
+      "K": 6,
+      "z": 1.5,
+      "val_nodes": 32,
+      "val_overload": 0.0,
+      "heldout_nodes": 35,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 2.0,
+      "val_nodes": 36,
+      "val_overload": 0.0,
+      "heldout_nodes": 39,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 2.5,
+      "val_nodes": 39,
+      "val_overload": 0.0,
+      "heldout_nodes": 42,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 3.0,
+      "val_nodes": 42,
+      "val_overload": 0.0,
+      "heldout_nodes": 47,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 3.5,
+      "val_nodes": 47,
+      "val_overload": 0.0,
+      "heldout_nodes": 51,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 4.0,
+      "val_nodes": 50,
+      "val_overload": 0.0,
+      "heldout_nodes": 56,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 4.5,
+      "val_nodes": 55,
+      "val_overload": 0.0,
+      "heldout_nodes": 60,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 5.0,
+      "val_nodes": 59,
+      "val_overload": 0.0,
+      "heldout_nodes": 66,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 5.5,
+      "val_nodes": 63,
+      "val_overload": 0.0,
+      "heldout_nodes": 71,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 6.0,
+      "val_nodes": 67,
+      "val_overload": 0.0,
+      "heldout_nodes": 76,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 0.0,
+      "val_nodes": 26,
+      "val_overload": 0.10276442307692307,
+      "heldout_nodes": 27,
+      "heldout_overload": 0.21231995884773663
+    },
+    {
+      "K": 8,
+      "z": 0.5,
+      "val_nodes": 27,
+      "val_overload": 0.007265946502057613,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.03603927203065134
+    },
+    {
+      "K": 8,
+      "z": 1.0,
+      "val_nodes": 29,
+      "val_overload": 0.0002993295019157088,
+      "heldout_nodes": 32,
+      "heldout_overload": 0.0037434895833333335
+    },
+    {
+      "K": 8,
+      "z": 1.5,
+      "val_nodes": 33,
+      "val_overload": 0.0,
+      "heldout_nodes": 35,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 2.0,
+      "val_nodes": 35,
+      "val_overload": 0.0,
+      "heldout_nodes": 38,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 2.5,
+      "val_nodes": 39,
+      "val_overload": 0.0,
+      "heldout_nodes": 42,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 3.0,
+      "val_nodes": 42,
+      "val_overload": 0.0,
+      "heldout_nodes": 47,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 3.5,
+      "val_nodes": 47,
+      "val_overload": 0.0,
+      "heldout_nodes": 51,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 4.0,
+      "val_nodes": 51,
+      "val_overload": 0.0,
+      "heldout_nodes": 56,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 4.5,
+      "val_nodes": 55,
+      "val_overload": 0.0,
+      "heldout_nodes": 61,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 5.0,
+      "val_nodes": 59,
+      "val_overload": 0.0,
+      "heldout_nodes": 66,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 5.5,
+      "val_nodes": 63,
+      "val_overload": 0.0,
+      "heldout_nodes": 72,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 6.0,
+      "val_nodes": 67,
+      "val_overload": 0.0,
+      "heldout_nodes": 76,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 0.0,
+      "val_nodes": 26,
+      "val_overload": 0.0938167735042735,
+      "heldout_nodes": 28,
+      "heldout_overload": 0.18328373015873015
+    },
+    {
+      "K": 12,
+      "z": 0.5,
+      "val_nodes": 27,
+      "val_overload": 0.006622942386831276,
+      "heldout_nodes": 30,
+      "heldout_overload": 0.04704861111111111
+    },
+    {
+      "K": 12,
+      "z": 1.0,
+      "val_nodes": 29,
+      "val_overload": 0.00017959770114942528,
+      "heldout_nodes": 32,
+      "heldout_overload": 0.005045572916666667
+    },
+    {
+      "K": 12,
+      "z": 1.5,
+      "val_nodes": 32,
+      "val_overload": 0.0,
+      "heldout_nodes": 35,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 2.0,
+      "val_nodes": 35,
+      "val_overload": 0.0,
+      "heldout_nodes": 39,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 2.5,
+      "val_nodes": 39,
+      "val_overload": 0.0,
+      "heldout_nodes": 42,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 3.0,
+      "val_nodes": 43,
+      "val_overload": 0.0,
+      "heldout_nodes": 47,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 3.5,
+      "val_nodes": 47,
+      "val_overload": 0.0,
+      "heldout_nodes": 51,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 4.0,
+      "val_nodes": 50,
+      "val_overload": 0.0,
+      "heldout_nodes": 56,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 4.5,
+      "val_nodes": 56,
+      "val_overload": 0.0,
+      "heldout_nodes": 62,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 5.0,
+      "val_nodes": 59,
+      "val_overload": 0.0,
+      "heldout_nodes": 66,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 5.5,
+      "val_nodes": 64,
+      "val_overload": 0.0,
+      "heldout_nodes": 72,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 6.0,
+      "val_nodes": 67,
+      "val_overload": 0.0,
+      "heldout_nodes": 76,
+      "heldout_overload": 0.0
+    }
+  ]
+}

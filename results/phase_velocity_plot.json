@@ -1,0 +1,9 @@
+{
+  "sampled_tasks": 200,
+  "rhythmic_tasks": 8225,
+  "window_pairs": 1000,
+  "window_hours": 4.0,
+  "selection": "first 200 rhythmic tasks in trace order",
+  "data_sha256": "bca336f381f3edbc3093c08253f3f541ffa9886f376f4152d0768c27199cd68c",
+  "phase_change_units": "radians per adjacent 4-hour windows"
+}

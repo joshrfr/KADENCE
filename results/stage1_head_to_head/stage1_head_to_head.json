@@ -1,0 +1,171 @@
+{
+  "note": "SIMULATION ONLY, not a cluster measurement. JCT is a contention-derived proxy. See docs/STAGE1_HEAD_TO_HEAD.md.",
+  "n_jobs": 35,
+  "seeds": 24,
+  "capacity": 1.0,
+  "period": 100.0,
+  "resources": [
+    "cpu",
+    "io"
+  ],
+  "workload_types": [
+    "web",
+    "api",
+    "batch",
+    "analytics",
+    "ml"
+  ],
+  "policies": [
+    "linear-fixed",
+    "linear-rr",
+    "ml-cfs-static",
+    "phase-coupled"
+  ],
+  "generated_at": 1791372963.9958794,
+  "aggregate": {
+    "linear-fixed": {
+      "peak_cpu": 9.576,
+      "peak_io": 5.7317,
+      "slo_viol_cpu": 0.1908,
+      "slo_viol_io": 0.1953,
+      "jct_stretch_mean": 5.6795
+    },
+    "linear-rr": {
+      "peak_cpu": 1.212,
+      "peak_io": 0.8235,
+      "slo_viol_cpu": 0.1619,
+      "slo_viol_io": 0.0,
+      "jct_stretch_mean": 1.0183
+    },
+    "ml-cfs-static": {
+      "peak_cpu": 1.3401,
+      "peak_io": 0.8275,
+      "slo_viol_cpu": 0.2269,
+      "slo_viol_io": 0.0,
+      "jct_stretch_mean": 1.0501
+    },
+    "phase-coupled": {
+      "peak_cpu": 1.1456,
+      "peak_io": 0.8102,
+      "slo_viol_cpu": 0.1156,
+      "slo_viol_io": 0.0032,
+      "jct_stretch_mean": 1.0068
+    }
+  },
+  "by_type": {
+    "linear-fixed": {
+      "web": {
+        "slo_viol_share": 1.0,
+        "jct_stretch_mean": 7.3755
+      },
+      "api": {
+        "slo_viol_share": 1.0,
+        "jct_stretch_mean": 8.2081
+      },
+      "batch": {
+        "slo_viol_share": 0.9071,
+        "jct_stretch_mean": 3.703
+      },
+      "analytics": {
+        "slo_viol_share": 0.9861,
+        "jct_stretch_mean": 4.6052
+      },
+      "ml": {
+        "slo_viol_share": 0.9024,
+        "jct_stretch_mean": 4.5056
+      }
+    },
+    "linear-rr": {
+      "web": {
+        "slo_viol_share": 0.206,
+        "jct_stretch_mean": 1.0183
+      },
+      "api": {
+        "slo_viol_share": 0.5065,
+        "jct_stretch_mean": 1.0507
+      },
+      "batch": {
+        "slo_viol_share": 0.0261,
+        "jct_stretch_mean": 1.0026
+      },
+      "analytics": {
+        "slo_viol_share": 0.0525,
+        "jct_stretch_mean": 1.0049
+      },
+      "ml": {
+        "slo_viol_share": 0.1635,
+        "jct_stretch_mean": 1.0149
+      }
+    },
+    "ml-cfs-static": {
+      "web": {
+        "slo_viol_share": 0.4629,
+        "jct_stretch_mean": 1.0767
+      },
+      "api": {
+        "slo_viol_share": 0.6997,
+        "jct_stretch_mean": 1.1207
+      },
+      "batch": {
+        "slo_viol_share": 0.04,
+        "jct_stretch_mean": 1.0071
+      },
+      "analytics": {
+        "slo_viol_share": 0.0725,
+        "jct_stretch_mean": 1.0114
+      },
+      "ml": {
+        "slo_viol_share": 0.2198,
+        "jct_stretch_mean": 1.0346
+      }
+    },
+    "phase-coupled": {
+      "web": {
+        "slo_viol_share": 0.0491,
+        "jct_stretch_mean": 1.003
+      },
+      "api": {
+        "slo_viol_share": 0.164,
+        "jct_stretch_mean": 1.0124
+      },
+      "batch": {
+        "slo_viol_share": 0.0131,
+        "jct_stretch_mean": 1.0007
+      },
+      "analytics": {
+        "slo_viol_share": 0.048,
+        "jct_stretch_mean": 1.0038
+      },
+      "ml": {
+        "slo_viol_share": 0.1718,
+        "jct_stretch_mean": 1.0139
+      }
+    }
+  },
+  "packing": {
+    "linear-fixed": {
+      "mean_jobs_fit": 0.0,
+      "min": 0,
+      "max": 0,
+      "gain_vs_rr_pct": -100.0
+    },
+    "linear-rr": {
+      "mean_jobs_fit": 26.67,
+      "min": 25,
+      "max": 30,
+      "gain_vs_rr_pct": 0.0
+    },
+    "ml-cfs-static": {
+      "mean_jobs_fit": 21.04,
+      "min": 20,
+      "max": 25,
+      "gain_vs_rr_pct": -21.1
+    },
+    "phase-coupled": {
+      "mean_jobs_fit": 27.71,
+      "min": 25,
+      "max": 30,
+      "gain_vs_rr_pct": 3.9
+    }
+  }
+}

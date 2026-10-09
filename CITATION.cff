@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the accompanying paper."
+title: "KADENCE: artifact for decentralized desynchronization of periodic bursts"
+type: software
+authors:
+  - name: "Anonymous Authors"
+license: MIT
+repository-code: "ANONYMIZED-FOR-REVIEW"
+abstract: >-
+  Reference simulator, Rust prototype, C kernels, experiment drivers, raw
+  results and the paper's figures for a decentralized cluster scheduler in
+  which admitted jobs are phase oscillators on a per-node resource ring.
+keywords:
+  - cluster scheduling
+  - distributed systems
+  - burst desynchronization

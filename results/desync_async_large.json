@@ -1,0 +1,46 @@
+{
+  "provenance": {
+    "kind": "async multi-process UDP w/ loss, extended sweep",
+    "kernel": "core.neighbor_gossip.local_correction",
+    "n": 16,
+    "seconds": 8.0,
+    "seeds": 3
+  },
+  "sweep": [
+    {
+      "loss": 0.0,
+      "final_pct_of_fair": 283.295,
+      "converged": false
+    },
+    {
+      "loss": 0.05,
+      "final_pct_of_fair": 283.295,
+      "converged": false
+    },
+    {
+      "loss": 0.1,
+      "final_pct_of_fair": 283.295,
+      "converged": false
+    },
+    {
+      "loss": 0.15,
+      "final_pct_of_fair": 283.295,
+      "converged": false
+    },
+    {
+      "loss": 0.2,
+      "final_pct_of_fair": 283.295,
+      "converged": false
+    },
+    {
+      "loss": 0.25,
+      "final_pct_of_fair": 283.295,
+      "converged": false
+    },
+    {
+      "loss": 0.3,
+      "final_pct_of_fair": 283.295,
+      "converged": false
+    }
+  ]
+}

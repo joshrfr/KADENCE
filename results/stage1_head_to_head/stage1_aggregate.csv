@@ -1,0 +1,5 @@
+policy,peak_cpu,peak_io,slo_viol_cpu,slo_viol_io,jct_stretch_mean,packing_jobs_fit,packing_gain_vs_rr_pct
+linear-fixed,9.576,5.7317,0.1908,0.1953,5.6795,0.0,-100.0
+linear-rr,1.212,0.8235,0.1619,0.0,1.0183,26.67,0.0
+ml-cfs-static,1.3401,0.8275,0.2269,0.0,1.0501,21.04,-21.1
+phase-coupled,1.1456,0.8102,0.1156,0.0032,1.0068,27.71,3.9

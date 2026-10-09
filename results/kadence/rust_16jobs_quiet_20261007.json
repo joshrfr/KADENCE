@@ -1,0 +1,48 @@
+{
+  "provenance": {
+    "global_clock": false,
+    "jobs": 16,
+    "kernel": "core::neighbor_gossip (local_correction + limit_displacement)",
+    "kind": "KADENCE Rust prototype (tokio async UDP)",
+    "language": "Rust/tokio",
+    "loss": 0.0,
+    "reps": 5,
+    "rings": 1,
+    "seconds": 15.0,
+    "tick_ms": 20
+  },
+  "reps": [
+    {
+      "rep": 0,
+      "init_gap_error_pct": 175.10989608173762,
+      "final_gap_error_pct": 99.99704888738408,
+      "converged": false
+    },
+    {
+      "rep": 1,
+      "init_gap_error_pct": 305.2179465894034,
+      "final_gap_error_pct": 0.002839596815507091,
+      "converged": true
+    },
+    {
+      "rep": 2,
+      "init_gap_error_pct": 192.49557706795284,
+      "final_gap_error_pct": 0.0007440532422720359,
+      "converged": true
+    },
+    {
+      "rep": 3,
+      "init_gap_error_pct": 340.0048194484936,
+      "final_gap_error_pct": 0.006434118252323196,
+      "converged": true
+    },
+    {
+      "rep": 4,
+      "init_gap_error_pct": 253.30443335042787,
+      "final_gap_error_pct": 99.99702936826804,
+      "converged": false
+    }
+  ],
+  "mean_final_pct": 40.00081920479245,
+  "converged_fraction": 0.6
+}

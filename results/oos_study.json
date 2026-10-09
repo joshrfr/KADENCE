@@ -1,0 +1,18 @@
+{
+  "days": 5,
+  "task_day_pairs": 145258,
+  "K": 8,
+  "phase_stability_dominant_harmonic": {
+    "median_R": 0.858,
+    "frac_stable_R>0.8": 0.56,
+    "frac_unstable_R<0.4": 0.176
+  },
+  "phase_stability_daily_harmonic_k1": {
+    "median_R": 0.859
+  },
+  "daily_peak_cv": {
+    "median": 0.128,
+    "p90": 1.406
+  },
+  "reading": "R_dom near 1 means the rhythm recurs and phase helps; near 0 means it drifts and only a per-task margin helps. Heterogeneity across tasks is what a better model exploits."
+}

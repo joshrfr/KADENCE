@@ -1,0 +1,26 @@
+{
+  "n_jobs": 24,
+  "seeds": 20,
+  "capacity": 1.0,
+  "schemes": {
+    "linear-fixed": {
+      "peak_cpu": 4.9055,
+      "peak_io": 4.8607,
+      "viol_cpu": 0.1293,
+      "viol_io": 0.1337
+    },
+    "linear-rr": {
+      "peak_cpu": 0.8024,
+      "peak_io": 0.8049,
+      "viol_cpu": 0.0022,
+      "viol_io": 0.0015
+    },
+    "phase-coupled": {
+      "peak_cpu": 1.4569,
+      "peak_io": 1.4331,
+      "viol_cpu": 0.0335,
+      "viol_io": 0.0327
+    }
+  },
+  "generated_at": 1783886632.062639
+}

@@ -1,0 +1,970 @@
+{
+ "meta": {
+  "data": "gct_days.npz",
+  "data_md5": "ebe0f4482eda6186dc1f853401435d82",
+  "data_shape_full": [
+   8,
+   82440,
+   2,
+   288
+  ],
+  "history": 3,
+  "last_day": 7,
+  "seed": 1,
+  "n_tasks": 1000,
+  "cap": 1.0,
+  "usable_days": [
+   3,
+   4,
+   5,
+   6
+  ],
+  "zs": [
+   0.0,
+   0.25,
+   0.5,
+   0.75,
+   1.0,
+   1.25,
+   1.5,
+   1.75,
+   2.0,
+   2.25,
+   2.5,
+   2.75,
+   3.0,
+   3.25,
+   3.5,
+   3.75,
+   4.0,
+   4.25,
+   4.5,
+   4.75,
+   5.0,
+   5.25,
+   5.5,
+   5.75,
+   6.0
+  ],
+  "quantiles": [
+   0.5,
+   0.8,
+   0.9,
+   0.95,
+   0.975,
+   0.99,
+   0.995
+  ],
+  "K_harmonic": 4,
+  "selection_rule": "min nodes subject to validation overload <= peak-requests validation overload; ties -> smaller z/q; infeasible -> min overload (flag fallback)",
+  "script": "experiments/fair_compare/fair_compare.py",
+  "device": "cuda",
+  "torch": "2.0.0+cu117",
+  "gpu": "NVIDIA A10",
+  "held_day": 6,
+  "val_day": 5,
+  "train_days": [
+   3,
+   4
+  ],
+  "n_val": 47125,
+  "n_test": 49713,
+  "sampled_task_order_md5": {
+   "val": "7b31265bea46b5ab0159f91b1a6ff1a0",
+   "heldout": "e1c3026ebbff7d473e581474fb92336c"
+  },
+  "train_max_tasks_per_day": null,
+  "wall_s": 441.2,
+  "peak_rss_gib": 14.45,
+  "recovered_from": "pod stdout @@RESULT@@ line (job ran same script, ConfigMap md5 verified identical)"
+ },
+ "arms": {
+  "peak": {
+   "val": {
+    "nodes": 50,
+    "overload": 0.0
+   },
+   "heldout": {
+    "nodes": 47,
+    "overload": 0.0
+   }
+  },
+  "mean_z": {
+   "selected_z": 1.5,
+   "fallback": false,
+   "n_feasible_on_val": 19,
+   "validation_basis": {
+    "day": 5,
+    "val_nodes": 37,
+    "val_overload": 0.0,
+    "val_peak_nodes": 50,
+    "val_peak_overload": 0.0
+   },
+   "heldout": {
+    "nodes": 34,
+    "overload": 0.0
+   },
+   "heldout_diagnostic": [
+    {
+     "z": 0.0,
+     "nodes": 28,
+     "overload": 0.09567212301587301
+    },
+    {
+     "z": 0.25,
+     "nodes": 28,
+     "overload": 0.033792162698412696
+    },
+    {
+     "z": 0.5,
+     "nodes": 29,
+     "overload": 0.004669540229885058
+    },
+    {
+     "z": 0.75,
+     "nodes": 29,
+     "overload": 0.00041906130268199235
+    },
+    {
+     "z": 1.0,
+     "nodes": 31,
+     "overload": 0.0
+    },
+    {
+     "z": 1.25,
+     "nodes": 32,
+     "overload": 0.0
+    },
+    {
+     "z": 1.5,
+     "nodes": 34,
+     "overload": 0.0
+    },
+    {
+     "z": 1.75,
+     "nodes": 35,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 37,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 39,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 40,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 42,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 44,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 46,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 48,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 50,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 52,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 54,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 57,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 58,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 61,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 62,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 66,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 67,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 69,
+     "overload": 0.0
+    }
+   ],
+   "val_grid": [
+    {
+     "z": 0.0,
+     "nodes": 29,
+     "overload": 0.06459530651340996
+    },
+    {
+     "z": 0.25,
+     "nodes": 30,
+     "overload": 0.05260416666666667
+    },
+    {
+     "z": 0.5,
+     "nodes": 31,
+     "overload": 0.014168906810035842
+    },
+    {
+     "z": 0.75,
+     "nodes": 32,
+     "overload": 0.0008680555555555555
+    },
+    {
+     "z": 1.0,
+     "nodes": 34,
+     "overload": 0.0004084967320261438
+    },
+    {
+     "z": 1.25,
+     "nodes": 35,
+     "overload": 9.92063492063492e-05
+    },
+    {
+     "z": 1.5,
+     "nodes": 37,
+     "overload": 0.0
+    },
+    {
+     "z": 1.75,
+     "nodes": 38,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 40,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 43,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 45,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 46,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 49,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 51,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 53,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 56,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 58,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 60,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 64,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 65,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 68,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 69,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 72,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 76,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 78,
+     "overload": 0.0
+    }
+   ]
+  },
+  "harmonic_z": {
+   "selected_z": 1.25,
+   "fallback": false,
+   "n_feasible_on_val": 20,
+   "validation_basis": {
+    "day": 5,
+    "val_nodes": 34,
+    "val_overload": 0.0,
+    "val_peak_nodes": 50,
+    "val_peak_overload": 0.0
+   },
+   "heldout": {
+    "nodes": 31,
+    "overload": 0.0
+   },
+   "heldout_diagnostic": [
+    {
+     "z": 0.0,
+     "nodes": 27,
+     "overload": 0.18171296296296297
+    },
+    {
+     "z": 0.25,
+     "nodes": 27,
+     "overload": 0.07111625514403293
+    },
+    {
+     "z": 0.5,
+     "nodes": 28,
+     "overload": 0.01134672619047619
+    },
+    {
+     "z": 0.75,
+     "nodes": 29,
+     "overload": 0.0031130268199233715
+    },
+    {
+     "z": 1.0,
+     "nodes": 30,
+     "overload": 0.00028935185185185184
+    },
+    {
+     "z": 1.25,
+     "nodes": 31,
+     "overload": 0.0
+    },
+    {
+     "z": 1.5,
+     "nodes": 33,
+     "overload": 0.0
+    },
+    {
+     "z": 1.75,
+     "nodes": 34,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 36,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 38,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 40,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 41,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 44,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 45,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 47,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 49,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 51,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 52,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 55,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 57,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 59,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 62,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 64,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 65,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 67,
+     "overload": 0.0
+    }
+   ],
+   "val_grid": [
+    {
+     "z": 0.0,
+     "nodes": 29,
+     "overload": 0.12811302681992337
+    },
+    {
+     "z": 0.25,
+     "nodes": 29,
+     "overload": 0.07177921455938698
+    },
+    {
+     "z": 0.5,
+     "nodes": 30,
+     "overload": 0.029861111111111113
+    },
+    {
+     "z": 0.75,
+     "nodes": 31,
+     "overload": 0.0024081541218637995
+    },
+    {
+     "z": 1.0,
+     "nodes": 33,
+     "overload": 0.00015782828282828284
+    },
+    {
+     "z": 1.25,
+     "nodes": 34,
+     "overload": 0.0
+    },
+    {
+     "z": 1.5,
+     "nodes": 36,
+     "overload": 0.0
+    },
+    {
+     "z": 1.75,
+     "nodes": 38,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 39,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 41,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 43,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 45,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 47,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 49,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 52,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 55,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 57,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 58,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 61,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 63,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 67,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 69,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 71,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 73,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 75,
+     "overload": 0.0
+    }
+   ]
+  },
+  "neural": {
+   "selected_q": 0.8,
+   "fallback": false,
+   "n_feasible_on_val": 6,
+   "validation_basis": {
+    "day": 5,
+    "val_nodes": 33,
+    "val_overload": 0.0,
+    "val_peak_nodes": 50,
+    "val_peak_overload": 0.0
+   },
+   "heldout": {
+    "nodes": 30,
+    "overload": 0.0010416666666666667
+   },
+   "heldout_q95": {
+    "nodes": 36,
+    "overload": 0.0
+   },
+   "heldout_diagnostic": [
+    {
+     "q": 0.5,
+     "nodes": 27,
+     "overload": 0.16075102880658437
+    },
+    {
+     "q": 0.8,
+     "nodes": 30,
+     "overload": 0.0010416666666666667
+    },
+    {
+     "q": 0.9,
+     "nodes": 32,
+     "overload": 0.0
+    },
+    {
+     "q": 0.95,
+     "nodes": 36,
+     "overload": 0.0
+    },
+    {
+     "q": 0.975,
+     "nodes": 42,
+     "overload": 0.0
+    },
+    {
+     "q": 0.99,
+     "nodes": 48,
+     "overload": 0.0
+    },
+    {
+     "q": 0.995,
+     "nodes": 53,
+     "overload": 0.0
+    }
+   ],
+   "val_grid": [
+    {
+     "q": 0.5,
+     "nodes": 29,
+     "overload": 0.09416906130268199
+    },
+    {
+     "q": 0.8,
+     "nodes": 33,
+     "overload": 0.0
+    },
+    {
+     "q": 0.9,
+     "nodes": 35,
+     "overload": 0.0
+    },
+    {
+     "q": 0.95,
+     "nodes": 40,
+     "overload": 0.0
+    },
+    {
+     "q": 0.975,
+     "nodes": 45,
+     "overload": 0.0
+    },
+    {
+     "q": 0.99,
+     "nodes": 52,
+     "overload": 0.0
+    },
+    {
+     "q": 0.995,
+     "nodes": 58,
+     "overload": 0.0
+    }
+   ],
+   "training_budget": {
+    "backbone": "tcn",
+    "emb": 48,
+    "batch": 256,
+    "lr": 0.002,
+    "optimizer": "AdamW wd1e-4, cosine over max/fixed epochs, clip 2.0",
+    "quantiles": [
+     0.5,
+     0.8,
+     0.9,
+     0.95,
+     0.975,
+     0.99,
+     0.995
+    ],
+    "max_epochs": 100,
+    "patience": 10,
+    "fixed_epochs": null,
+    "epochs_run": 28,
+    "stopped_by": "patience",
+    "best_epoch": 17,
+    "best_val_pinball": 0.000791,
+    "n_train_windows": 78910,
+    "device": "cuda",
+    "val_pinball_last10": [
+     0.00083,
+     0.000823,
+     0.000842,
+     0.000828,
+     0.000809,
+     0.000793,
+     0.000795,
+     0.000829,
+     0.000794,
+     0.000816
+    ],
+    "val_drop_last10": 1.4e-05,
+    "weights_used": "best-val checkpoint"
+   },
+   "history": [
+    {
+     "epoch": 0,
+     "train_pinball": 0.002366,
+     "val_pinball": 0.001299,
+     "lr": 0.002,
+     "t_s": 6.4
+    },
+    {
+     "epoch": 1,
+     "train_pinball": 0.001134,
+     "val_pinball": 0.00102,
+     "lr": 0.0019995065603657315,
+     "t_s": 11.1
+    },
+    {
+     "epoch": 2,
+     "train_pinball": 0.00106,
+     "val_pinball": 0.000896,
+     "lr": 0.0019980267284282717,
+     "t_s": 16.0
+    },
+    {
+     "epoch": 3,
+     "train_pinball": 0.001017,
+     "val_pinball": 0.000953,
+     "lr": 0.00199556196460308,
+     "t_s": 20.7
+    },
+    {
+     "epoch": 4,
+     "train_pinball": 0.000993,
+     "val_pinball": 0.000945,
+     "lr": 0.001992114701314478,
+     "t_s": 25.5
+    },
+    {
+     "epoch": 5,
+     "train_pinball": 0.000974,
+     "val_pinball": 0.000896,
+     "lr": 0.0019876883405951376,
+     "t_s": 30.3
+    },
+    {
+     "epoch": 6,
+     "train_pinball": 0.000952,
+     "val_pinball": 0.000905,
+     "lr": 0.001982287250728689,
+     "t_s": 35.2
+    },
+    {
+     "epoch": 7,
+     "train_pinball": 0.000926,
+     "val_pinball": 0.000828,
+     "lr": 0.001975916761938747,
+     "t_s": 40.0
+    },
+    {
+     "epoch": 8,
+     "train_pinball": 0.000902,
+     "val_pinball": 0.000846,
+     "lr": 0.0019685831611286307,
+     "t_s": 44.8
+    },
+    {
+     "epoch": 9,
+     "train_pinball": 0.000896,
+     "val_pinball": 0.000948,
+     "lr": 0.001960293685676943,
+     "t_s": 49.7
+    },
+    {
+     "epoch": 10,
+     "train_pinball": 0.000873,
+     "val_pinball": 0.000853,
+     "lr": 0.0019510565162951534,
+     "t_s": 54.5
+    },
+    {
+     "epoch": 11,
+     "train_pinball": 0.000863,
+     "val_pinball": 0.00087,
+     "lr": 0.0019408807689542255,
+     "t_s": 59.3
+    },
+    {
+     "epoch": 12,
+     "train_pinball": 0.000851,
+     "val_pinball": 0.000818,
+     "lr": 0.0019297764858882513,
+     "t_s": 64.2
+    },
+    {
+     "epoch": 13,
+     "train_pinball": 0.000844,
+     "val_pinball": 0.000896,
+     "lr": 0.001917754625683981,
+     "t_s": 69.0
+    },
+    {
+     "epoch": 14,
+     "train_pinball": 0.000831,
+     "val_pinball": 0.000844,
+     "lr": 0.0019048270524660196,
+     "t_s": 73.8
+    },
+    {
+     "epoch": 15,
+     "train_pinball": 0.000826,
+     "val_pinball": 0.000916,
+     "lr": 0.0018910065241883678,
+     "t_s": 78.7
+    },
+    {
+     "epoch": 16,
+     "train_pinball": 0.000821,
+     "val_pinball": 0.000839,
+     "lr": 0.0018763066800438636,
+     "t_s": 83.5
+    },
+    {
+     "epoch": 17,
+     "train_pinball": 0.000815,
+     "val_pinball": 0.000791,
+     "lr": 0.0018607420270039439,
+     "t_s": 88.3
+    },
+    {
+     "epoch": 18,
+     "train_pinball": 0.000806,
+     "val_pinball": 0.00083,
+     "lr": 0.0018443279255020153,
+     "t_s": 93.2
+    },
+    {
+     "epoch": 19,
+     "train_pinball": 0.000792,
+     "val_pinball": 0.000823,
+     "lr": 0.001827080574274562,
+     "t_s": 98.1
+    },
+    {
+     "epoch": 20,
+     "train_pinball": 0.000788,
+     "val_pinball": 0.000842,
+     "lr": 0.0018090169943749477,
+     "t_s": 103.0
+    },
+    {
+     "epoch": 21,
+     "train_pinball": 0.00078,
+     "val_pinball": 0.000828,
+     "lr": 0.0017901550123756904,
+     "t_s": 107.8
+    },
+    {
+     "epoch": 22,
+     "train_pinball": 0.000774,
+     "val_pinball": 0.000809,
+     "lr": 0.0017705132427757893,
+     "t_s": 112.7
+    },
+    {
+     "epoch": 23,
+     "train_pinball": 0.000773,
+     "val_pinball": 0.000793,
+     "lr": 0.0017501110696304595,
+     "t_s": 117.5
+    },
+    {
+     "epoch": 24,
+     "train_pinball": 0.000761,
+     "val_pinball": 0.000795,
+     "lr": 0.0017289686274214115,
+     "t_s": 122.3
+    },
+    {
+     "epoch": 25,
+     "train_pinball": 0.00076,
+     "val_pinball": 0.000829,
+     "lr": 0.0017071067811865474,
+     "t_s": 127.0
+    },
+    {
+     "epoch": 26,
+     "train_pinball": 0.000757,
+     "val_pinball": 0.000794,
+     "lr": 0.0016845471059286888,
+     "t_s": 131.8
+    },
+    {
+     "epoch": 27,
+     "train_pinball": 0.00075,
+     "val_pinball": 0.000816,
+     "lr": 0.0016613118653236519,
+     "t_s": 136.5
+    }
+   ],
+   "checkpoint": {
+    "file": "fair_compare_ld7_s1_h3.json.model.pt",
+    "sha256": "c7407c326f9e832ffcf1189d771e20e1ff70bb66399e5e3b1945de683862a87e",
+    "bytes": 4456460
+   }
+  }
+ },
+ "status": "ok"
+}

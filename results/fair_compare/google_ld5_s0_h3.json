@@ -1,0 +1,631 @@
+{
+ "meta": {
+  "data": "gct_days.npz",
+  "data_md5": "ebe0f4482eda6186dc1f853401435d82",
+  "data_shape_full": [
+   8,
+   82440,
+   2,
+   288
+  ],
+  "history": 3,
+  "last_day": 5,
+  "seed": 0,
+  "n_tasks": 1000,
+  "cap": 1.0,
+  "usable_days": [
+   3,
+   4
+  ],
+  "zs": [
+   0.0,
+   0.25,
+   0.5,
+   0.75,
+   1.0,
+   1.25,
+   1.5,
+   1.75,
+   2.0,
+   2.25,
+   2.5,
+   2.75,
+   3.0,
+   3.25,
+   3.5,
+   3.75,
+   4.0,
+   4.25,
+   4.5,
+   4.75,
+   5.0,
+   5.25,
+   5.5,
+   5.75,
+   6.0
+  ],
+  "quantiles": [
+   0.5,
+   0.8,
+   0.9,
+   0.95,
+   0.975,
+   0.99,
+   0.995
+  ],
+  "K_harmonic": 4,
+  "selection_rule": "min nodes subject to validation overload <= peak-requests validation overload; ties -> smaller z/q; infeasible -> min overload (flag fallback)",
+  "script": "experiments/fair_compare/fair_compare.py",
+  "device": "cpu",
+  "torch": "2.13.0+cpu",
+  "gpu": null,
+  "held_day": 4,
+  "val_day": 3,
+  "train_days": [],
+  "n_val": 40481,
+  "n_test": 38429,
+  "sampled_task_order_md5": {
+   "val": "5535e287dda28a54001fd7b67f1f7ee9",
+   "heldout": "0ab0a6a4879ae79b781f830919146f48"
+  },
+  "wall_s": 10827.9,
+  "peak_rss_gib": 4.84
+ },
+ "arms": {
+  "peak": {
+   "val": {
+    "nodes": 50,
+    "overload": 0.0
+   },
+   "heldout": {
+    "nodes": 55,
+    "overload": 0.0
+   }
+  },
+  "mean_z": {
+   "selected_z": 1.5,
+   "fallback": false,
+   "n_feasible_on_val": 19,
+   "validation_basis": {
+    "day": 3,
+    "val_nodes": 36,
+    "val_overload": 0.0,
+    "val_peak_nodes": 50,
+    "val_peak_overload": 0.0
+   },
+   "heldout": {
+    "nodes": 39,
+    "overload": 4.451566951566952e-05
+   },
+   "heldout_diagnostic": [
+    {
+     "z": 0.0,
+     "nodes": 32,
+     "overload": 0.04600694444444445
+    },
+    {
+     "z": 0.25,
+     "nodes": 32,
+     "overload": 0.014756944444444444
+    },
+    {
+     "z": 0.5,
+     "nodes": 33,
+     "overload": 0.010258838383838384
+    },
+    {
+     "z": 0.75,
+     "nodes": 35,
+     "overload": 0.0001984126984126984
+    },
+    {
+     "z": 1.0,
+     "nodes": 36,
+     "overload": 0.004918981481481482
+    },
+    {
+     "z": 1.25,
+     "nodes": 38,
+     "overload": 0.0
+    },
+    {
+     "z": 1.5,
+     "nodes": 39,
+     "overload": 4.451566951566952e-05
+    },
+    {
+     "z": 1.75,
+     "nodes": 41,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 43,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 46,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 48,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 50,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 52,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 54,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 58,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 60,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 63,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 66,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 68,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 70,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 73,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 78,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 80,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 82,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 85,
+     "overload": 0.0
+    }
+   ],
+   "val_grid": [
+    {
+     "z": 0.0,
+     "nodes": 30,
+     "overload": 0.08246527777777778
+    },
+    {
+     "z": 0.25,
+     "nodes": 30,
+     "overload": 0.03553240740740741
+    },
+    {
+     "z": 0.5,
+     "nodes": 31,
+     "overload": 0.007840501792114695
+    },
+    {
+     "z": 0.75,
+     "nodes": 32,
+     "overload": 0.0013020833333333333
+    },
+    {
+     "z": 1.0,
+     "nodes": 34,
+     "overload": 0.0005106209150326798
+    },
+    {
+     "z": 1.25,
+     "nodes": 35,
+     "overload": 0.0003968253968253968
+    },
+    {
+     "z": 1.5,
+     "nodes": 36,
+     "overload": 0.0
+    },
+    {
+     "z": 1.75,
+     "nodes": 38,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 40,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 42,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 44,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 46,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 48,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 51,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 53,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 55,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 57,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 60,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 62,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 65,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 68,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 71,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 74,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 76,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 79,
+     "overload": 0.0
+    }
+   ]
+  },
+  "harmonic_z": {
+   "selected_z": 1.75,
+   "fallback": false,
+   "n_feasible_on_val": 18,
+   "validation_basis": {
+    "day": 3,
+    "val_nodes": 38,
+    "val_overload": 0.0,
+    "val_peak_nodes": 50,
+    "val_peak_overload": 0.0
+   },
+   "heldout": {
+    "nodes": 40,
+    "overload": 0.0
+   },
+   "heldout_diagnostic": [
+    {
+     "z": 0.0,
+     "nodes": 31,
+     "overload": 0.139336917562724
+    },
+    {
+     "z": 0.25,
+     "nodes": 31,
+     "overload": 0.0750448028673835
+    },
+    {
+     "z": 0.5,
+     "nodes": 32,
+     "overload": 0.011555989583333334
+    },
+    {
+     "z": 0.75,
+     "nodes": 34,
+     "overload": 0.008476307189542483
+    },
+    {
+     "z": 1.0,
+     "nodes": 35,
+     "overload": 0.0003968253968253968
+    },
+    {
+     "z": 1.25,
+     "nodes": 37,
+     "overload": 4.692192192192192e-05
+    },
+    {
+     "z": 1.5,
+     "nodes": 38,
+     "overload": 0.0
+    },
+    {
+     "z": 1.75,
+     "nodes": 40,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 42,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 44,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 46,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 48,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 51,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 54,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 56,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 59,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 61,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 64,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 67,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 69,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 72,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 74,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 77,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 81,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 84,
+     "overload": 0.0
+    }
+   ],
+   "val_grid": [
+    {
+     "z": 0.0,
+     "nodes": 29,
+     "overload": 0.1303280651340996
+    },
+    {
+     "z": 0.25,
+     "nodes": 30,
+     "overload": 0.07291666666666667
+    },
+    {
+     "z": 0.5,
+     "nodes": 31,
+     "overload": 0.01472894265232975
+    },
+    {
+     "z": 0.75,
+     "nodes": 32,
+     "overload": 0.004069010416666667
+    },
+    {
+     "z": 1.0,
+     "nodes": 33,
+     "overload": 0.0007891414141414141
+    },
+    {
+     "z": 1.25,
+     "nodes": 35,
+     "overload": 0.00014880952380952382
+    },
+    {
+     "z": 1.5,
+     "nodes": 36,
+     "overload": 4.8225308641975306e-05
+    },
+    {
+     "z": 1.75,
+     "nodes": 38,
+     "overload": 0.0
+    },
+    {
+     "z": 2.0,
+     "nodes": 39,
+     "overload": 0.0
+    },
+    {
+     "z": 2.25,
+     "nodes": 41,
+     "overload": 0.0
+    },
+    {
+     "z": 2.5,
+     "nodes": 43,
+     "overload": 0.0
+    },
+    {
+     "z": 2.75,
+     "nodes": 44,
+     "overload": 0.0
+    },
+    {
+     "z": 3.0,
+     "nodes": 47,
+     "overload": 0.0
+    },
+    {
+     "z": 3.25,
+     "nodes": 50,
+     "overload": 0.0
+    },
+    {
+     "z": 3.5,
+     "nodes": 52,
+     "overload": 0.0
+    },
+    {
+     "z": 3.75,
+     "nodes": 54,
+     "overload": 0.0
+    },
+    {
+     "z": 4.0,
+     "nodes": 56,
+     "overload": 0.0
+    },
+    {
+     "z": 4.25,
+     "nodes": 59,
+     "overload": 0.0
+    },
+    {
+     "z": 4.5,
+     "nodes": 61,
+     "overload": 0.0
+    },
+    {
+     "z": 4.75,
+     "nodes": 64,
+     "overload": 0.0
+    },
+    {
+     "z": 5.0,
+     "nodes": 67,
+     "overload": 0.0
+    },
+    {
+     "z": 5.25,
+     "nodes": 69,
+     "overload": 0.0
+    },
+    {
+     "z": 5.5,
+     "nodes": 72,
+     "overload": 0.0
+    },
+    {
+     "z": 5.75,
+     "nodes": 74,
+     "overload": 0.0
+    },
+    {
+     "z": 6.0,
+     "nodes": 78,
+     "overload": 0.0
+    }
+   ]
+  },
+  "neural": {
+   "status": "infeasible",
+   "reason": "no training windows: every usable day before the validation day is missing at this history/last_day (the same 'insufficient split' as train_eval)"
+  }
+ },
+ "status": "ok_no_neural"
+}

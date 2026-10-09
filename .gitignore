@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Rust
+/src/kadence-rs/target/
+
+# C build products
+/src/native/build/
+
+# Large derived datasets (see data/README.md for checksums and rebuild steps)
+/data/*.npz
+/data/raw/
+
+# Regenerated outputs that are not part of the committed record
+/analysis/generated/
+
+# Local scratch and logs
+*.log
+*.tmp
+.DS_Store

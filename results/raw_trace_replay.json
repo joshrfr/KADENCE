@@ -1,0 +1,81 @@
+{
+  "assumptions": [
+    "mean observed CPU usage is replayed as offered fluid work",
+    "each reporting interval's work arrives at its start boundary",
+    "missing task samples are zero demand; values are not imputed",
+    "memory is described but not a consumable service backlog",
+    "no deadline or counterfactual SLO claim is inferred",
+    "neighbor-token-scaffold is a local baseline, not the oscillator"
+  ],
+  "data": {
+    "common_mode_energy_fraction": 0.6630853896914781,
+    "dataset": "Google ClusterData 2011 v2.1 task_usage",
+    "documentation": "https://github.com/google/cluster-data/blob/master/ClusterData2011_2.md",
+    "intervals": 17,
+    "kind": "raw-official-slice",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "mean_aggregate_cpu": 0.004408817647058824,
+    "missing_task_intervals_zero_filled": 0,
+    "path": "data/google_cluster_2011_task_usage_slice.csv",
+    "peak_aggregate_canonical_memory": 0.45055,
+    "peak_aggregate_cpu": 0.0047596999999999995,
+    "rows": 102,
+    "sha256": "54a2d8d2fd3142e5f0008fe2507e770a876cd25c1db8a4cd6b78d839a3b03e98",
+    "tasks": 6
+  },
+  "evidence_level": "raw official trace slice; replay surrogate, not cluster measurement",
+  "experiment": "raw task-usage fluid replay scaffold",
+  "generated_at": "2026-10-09T11:26:23.887842+00:00",
+  "parameters": {
+    "capacity_fraction_of_observed_peak": 0.75,
+    "normalized_cpu_capacity_per_second": 0.003569775
+  },
+  "policies": {
+    "max-min-fair": {
+      "acknowledged_service": 18.2058525,
+      "arrived_work": 22.48497,
+      "conservation_residual": 2.6645352591003757e-15,
+      "directed_neighbor_messages": 0,
+      "final_backlog": 4.279117499999999,
+      "fulfillment_jain_index": 0.9777351069808404,
+      "idle_service": 2.220446049250313e-16,
+      "lost_work": 0.0,
+      "maximum_backlog": 4.279117499999999,
+      "mean_interval_backlog": 2.3408686764705875,
+      "minimum_task_fulfillment": 0.683713711087793,
+      "p95_interval_backlog": 4.085551499999999,
+      "policy": "max-min-fair"
+    },
+    "max-pressure": {
+      "acknowledged_service": 18.205852500000002,
+      "arrived_work": 22.48497,
+      "conservation_residual": 0.0,
+      "directed_neighbor_messages": 0,
+      "final_backlog": 4.279117499999998,
+      "fulfillment_jain_index": 0.8938805174347565,
+      "idle_service": 0.0,
+      "lost_work": 0.0,
+      "maximum_backlog": 4.279117499999998,
+      "mean_interval_backlog": 2.3408686764705875,
+      "minimum_task_fulfillment": 0.1758130562393486,
+      "p95_interval_backlog": 4.0855514999999984,
+      "policy": "max-pressure"
+    },
+    "neighbor-token-scaffold": {
+      "acknowledged_service": 18.2058525,
+      "arrived_work": 22.48497,
+      "conservation_residual": 1.7763568394002505e-15,
+      "directed_neighbor_messages": 204,
+      "final_backlog": 4.2791175,
+      "fulfillment_jain_index": 0.9758685183455185,
+      "idle_service": 0.0,
+      "lost_work": 0.0,
+      "maximum_backlog": 4.2791175,
+      "mean_interval_backlog": 2.340868676470588,
+      "minimum_task_fulfillment": 0.596498440003373,
+      "p95_interval_backlog": 4.085551499999999,
+      "policy": "neighbor-token-scaffold"
+    }
+  }
+}

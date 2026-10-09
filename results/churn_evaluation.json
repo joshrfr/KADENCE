@@ -1,0 +1,164 @@
+{
+  "claim_boundary": [
+    "topology authority is a single-process reference model",
+    "adjacent swap uses an atomic equal-width phase-slot handoff",
+    "departed/crashed backlog is durably parked, not yet rescheduled",
+    "no network delay distribution, multi-resource commit, or SLO claim"
+  ],
+  "events": [
+    {
+      "centralized_slot_oracle": {
+        "final_max_gap_error": 0.0,
+        "global_phase_writes": 7,
+        "settled": true,
+        "settling_rounds": 0
+      },
+      "epoch": 1,
+      "event": "join",
+      "frozen_no_coupling": {
+        "directed_messages": 0,
+        "final_max_gap_error": 1.5131148575128552,
+        "settled": false,
+        "settling_rounds": 0
+      },
+      "initial_max_gap_error": 1.5131148575128552,
+      "members": 7,
+      "strict_neighbor": {
+        "directed_messages": 6650,
+        "energy_increase_rounds": 0,
+        "final_max_gap_error": 9.782401484415004e-07,
+        "messages_per_job_round": 2.0,
+        "minimum_safety_margin": 0.0,
+        "settled": true,
+        "settling_rounds": 475
+      }
+    },
+    {
+      "committed": false,
+      "epoch": 1,
+      "event": "join-timeout",
+      "old_order_preserved": true
+    },
+    {
+      "centralized_slot_oracle": {
+        "final_max_gap_error": 0.0,
+        "global_phase_writes": 7,
+        "settled": true,
+        "settling_rounds": 0
+      },
+      "epoch": 2,
+      "event": "adjacent-swap",
+      "frozen_no_coupling": {
+        "directed_messages": 0,
+        "final_max_gap_error": 9.782401484415004e-07,
+        "settled": true,
+        "settling_rounds": 0
+      },
+      "initial_max_gap_error": 9.782401484415004e-07,
+      "members": 7,
+      "strict_neighbor": {
+        "directed_messages": 0,
+        "energy_increase_rounds": 0,
+        "final_max_gap_error": 9.782401484415004e-07,
+        "messages_per_job_round": 0.0,
+        "minimum_safety_margin": 2.9189518913064205e-08,
+        "settled": true,
+        "settling_rounds": 0
+      }
+    },
+    {
+      "centralized_slot_oracle": {
+        "final_max_gap_error": 0.0,
+        "global_phase_writes": 6,
+        "settled": true,
+        "settling_rounds": 0
+      },
+      "epoch": 3,
+      "event": "graceful-leave",
+      "frozen_no_coupling": {
+        "directed_messages": 0,
+        "final_max_gap_error": 0.2800009782401478,
+        "settled": false,
+        "settling_rounds": 0
+      },
+      "initial_max_gap_error": 0.2800009782401478,
+      "members": 6,
+      "strict_neighbor": {
+        "directed_messages": 3756,
+        "energy_increase_rounds": 0,
+        "final_max_gap_error": 9.621963323880323e-07,
+        "messages_per_job_round": 2.0,
+        "minimum_safety_margin": 2.8405636509631904e-08,
+        "settled": true,
+        "settling_rounds": 313
+      }
+    },
+    {
+      "centralized_slot_oracle": {
+        "final_max_gap_error": 0.0,
+        "global_phase_writes": 5,
+        "settled": true,
+        "settling_rounds": 0
+      },
+      "epoch": 4,
+      "event": "lease-expiry-repair",
+      "frozen_no_coupling": {
+        "directed_messages": 0,
+        "final_max_gap_error": 0.28000096219633264,
+        "settled": false,
+        "settling_rounds": 0
+      },
+      "initial_max_gap_error": 0.28000096219633264,
+      "members": 5,
+      "strict_neighbor": {
+        "directed_messages": 1860,
+        "energy_increase_rounds": 0,
+        "final_max_gap_error": 9.347065530462828e-07,
+        "messages_per_job_round": 2.0,
+        "minimum_safety_margin": 4.11933316346591e-08,
+        "settled": true,
+        "settling_rounds": 186
+      }
+    }
+  ],
+  "experiment": "epoch-fenced strict-neighbor churn/fault evaluation",
+  "fault_injection": {
+    "aborted_transactions": 1,
+    "duplicate_acknowledgements": 1,
+    "duplicate_topology_frames": 1,
+    "old_epoch_actions_fenced": 1,
+    "stale_pressure_pulses_fenced": 1,
+    "stale_topology_frames_fenced": 1
+  },
+  "generated_at": "2026-09-27T02:56:07.274304+00:00",
+  "parameters": {
+    "bubble_width": 0.25,
+    "controller_dt": 0.08,
+    "guard": 0.03,
+    "initial_members": 6,
+    "max_rounds_per_event": 20000,
+    "tolerance": 1e-06
+  },
+  "scope": "deterministic simulator; not a distributed deployment",
+  "summary": {
+    "all_strict_neighbor_events_settled": true,
+    "committed_topology_events": 4,
+    "directed_spacing_messages": 12266,
+    "energy_increase_rounds": 0,
+    "final_active_members": 5,
+    "final_epoch": 4,
+    "maximum_settling_rounds": 475,
+    "minimum_safety_margin": 0.0,
+    "topology_acknowledgement_attempts": 13
+  },
+  "work_conservation": {
+    "acknowledged_service": 0.3,
+    "active_backlog": 5.25,
+    "admitted_work": 8.25,
+    "conservation_residual": 0.0,
+    "duplicate_receipts_ignored": 1,
+    "durably_parked_backlog": 2.7,
+    "lost_work": 0.0,
+    "old_epoch_actions_fenced": 1
+  }
+}

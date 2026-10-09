@@ -1,0 +1,68 @@
+{
+  "provenance": {
+    "kind": "KADENCE cluster (ssh)",
+    "kernel": "core.neighbor_gossip via kadence_node (real UDP)",
+    "mode": "ssh",
+    "nodes": "hostfile",
+    "jobs_per_ring": 48,
+    "rings_per_node": 10,
+    "loss": 0.1,
+    "jitter": 0.0,
+    "reps": 3,
+    "global_clock": false
+  },
+  "reps": [
+    {
+      "nodes_reporting": 14,
+      "across_node_final_pct_of_fair": {
+        "median": 11.56,
+        "p95": 17.695,
+        "p99": 18.635,
+        "worst_node_max": 149.461
+      },
+      "fraction_nodes_converged": 0.0,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 6720000,
+      "rep": 0,
+      "wall_s": 100.85
+    },
+    {
+      "nodes_reporting": 14,
+      "across_node_final_pct_of_fair": {
+        "median": 14.912,
+        "p95": 33.114,
+        "p99": 54.296,
+        "worst_node_max": 242.473
+      },
+      "fraction_nodes_converged": 0.0,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 6720000,
+      "rep": 1,
+      "wall_s": 100.88
+    },
+    {
+      "nodes_reporting": 14,
+      "across_node_final_pct_of_fair": {
+        "median": 14.495,
+        "p95": 54.379,
+        "p99": 54.957,
+        "worst_node_max": 219.001
+      },
+      "fraction_nodes_converged": 0.0,
+      "cross_node_messages": 0,
+      "messages_per_job_round": 2,
+      "total_messages": 6720000,
+      "rep": 2,
+      "wall_s": 100.86
+    }
+  ],
+  "across_node_median_pct_of_fair_ci95": [
+    13.6557,
+    11.5884,
+    15.7229
+  ],
+  "cross_node_messages": 0,
+  "messages_per_job_round": 2
+}

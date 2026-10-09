@@ -1,0 +1,792 @@
+{
+  "meta": {
+    "data": "gct_days.npz",
+    "data_md5": "ebe0f4482eda6186dc1f853401435d82",
+    "history": 3,
+    "n_tasks": 1000,
+    "seed": 2,
+    "cap": 1.0,
+    "last_day": 5,
+    "held_day": 4,
+    "val_day": 3,
+    "zs": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      6.0
+    ],
+    "ks": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      12
+    ],
+    "rule": "min nodes s.t. zero overload on validation; ties: smaller z, then smaller K",
+    "script": "experiments/stage1_cheap.py --nested",
+    "wall_s": 188.1,
+    "peak_rss_gib": 4.23
+  },
+  "status": "ok",
+  "result": {
+    "chosen_z": 2.0,
+    "chosen_K": 1,
+    "validation_basis": {
+      "val_nodes": 37,
+      "val_overload": 0.0,
+      "val_peak_nodes": 50,
+      "val_peak_overload": 0.0,
+      "n_feasible_on_val": 63
+    },
+    "peak_heldout": {
+      "nodes": 49,
+      "overload": 0.0
+    },
+    "harmonic_heldout": {
+      "nodes": 37,
+      "overload": 0.0
+    },
+    "reduction_pct": 24.489795918367346
+  },
+  "heldout_diagnostic": [
+    {
+      "K": 1,
+      "z": 0.0,
+      "val_nodes": 28,
+      "val_overload": 0.15469990079365079,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.1596623563218391
+    },
+    {
+      "K": 1,
+      "z": 0.5,
+      "val_nodes": 29,
+      "val_overload": 0.03316570881226054,
+      "heldout_nodes": 30,
+      "heldout_overload": 0.03958333333333333
+    },
+    {
+      "K": 1,
+      "z": 1.0,
+      "val_nodes": 32,
+      "val_overload": 0.00048828125,
+      "heldout_nodes": 31,
+      "heldout_overload": 0.0003360215053763441
+    },
+    {
+      "K": 1,
+      "z": 1.5,
+      "val_nodes": 34,
+      "val_overload": 5.1062091503267975e-05,
+      "heldout_nodes": 34,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 2.0,
+      "val_nodes": 37,
+      "val_overload": 0.0,
+      "heldout_nodes": 37,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 2.5,
+      "val_nodes": 42,
+      "val_overload": 0.0,
+      "heldout_nodes": 41,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 3.0,
+      "val_nodes": 46,
+      "val_overload": 0.0,
+      "heldout_nodes": 44,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 3.5,
+      "val_nodes": 51,
+      "val_overload": 0.0,
+      "heldout_nodes": 47,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 4.0,
+      "val_nodes": 56,
+      "val_overload": 0.0,
+      "heldout_nodes": 52,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 4.5,
+      "val_nodes": 60,
+      "val_overload": 0.0,
+      "heldout_nodes": 57,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 5.0,
+      "val_nodes": 65,
+      "val_overload": 0.0,
+      "heldout_nodes": 62,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 5.5,
+      "val_nodes": 70,
+      "val_overload": 0.0,
+      "heldout_nodes": 66,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 1,
+      "z": 6.0,
+      "val_nodes": 74,
+      "val_overload": 0.0,
+      "heldout_nodes": 71,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 0.0,
+      "val_nodes": 28,
+      "val_overload": 0.15860615079365079,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.1527777777777778
+    },
+    {
+      "K": 2,
+      "z": 0.5,
+      "val_nodes": 29,
+      "val_overload": 0.023168103448275863,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.03771551724137931
+    },
+    {
+      "K": 2,
+      "z": 1.0,
+      "val_nodes": 31,
+      "val_overload": 0.00044802867383512545,
+      "heldout_nodes": 32,
+      "heldout_overload": 0.00021701388888888888
+    },
+    {
+      "K": 2,
+      "z": 1.5,
+      "val_nodes": 34,
+      "val_overload": 5.1062091503267975e-05,
+      "heldout_nodes": 34,
+      "heldout_overload": 5.1062091503267975e-05
+    },
+    {
+      "K": 2,
+      "z": 2.0,
+      "val_nodes": 37,
+      "val_overload": 0.0,
+      "heldout_nodes": 37,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 2.5,
+      "val_nodes": 41,
+      "val_overload": 0.0,
+      "heldout_nodes": 41,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 3.0,
+      "val_nodes": 46,
+      "val_overload": 0.0,
+      "heldout_nodes": 45,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 3.5,
+      "val_nodes": 51,
+      "val_overload": 0.0,
+      "heldout_nodes": 49,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 4.0,
+      "val_nodes": 55,
+      "val_overload": 0.0,
+      "heldout_nodes": 53,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 4.5,
+      "val_nodes": 60,
+      "val_overload": 0.0,
+      "heldout_nodes": 57,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 5.0,
+      "val_nodes": 66,
+      "val_overload": 0.0,
+      "heldout_nodes": 62,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 5.5,
+      "val_nodes": 70,
+      "val_overload": 0.0,
+      "heldout_nodes": 67,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 2,
+      "z": 6.0,
+      "val_nodes": 75,
+      "val_overload": 0.0,
+      "heldout_nodes": 71,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 0.0,
+      "val_nodes": 27,
+      "val_overload": 0.1336162551440329,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.10548371647509579
+    },
+    {
+      "K": 3,
+      "z": 0.5,
+      "val_nodes": 29,
+      "val_overload": 0.028436302681992338,
+      "heldout_nodes": 30,
+      "heldout_overload": 0.018692129629629628
+    },
+    {
+      "K": 3,
+      "z": 1.0,
+      "val_nodes": 31,
+      "val_overload": 0.0002800179211469534,
+      "heldout_nodes": 32,
+      "heldout_overload": 0.00016276041666666666
+    },
+    {
+      "K": 3,
+      "z": 1.5,
+      "val_nodes": 34,
+      "val_overload": 5.1062091503267975e-05,
+      "heldout_nodes": 34,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 2.0,
+      "val_nodes": 38,
+      "val_overload": 0.0,
+      "heldout_nodes": 37,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 2.5,
+      "val_nodes": 42,
+      "val_overload": 0.0,
+      "heldout_nodes": 41,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 3.0,
+      "val_nodes": 47,
+      "val_overload": 0.0,
+      "heldout_nodes": 45,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 3.5,
+      "val_nodes": 51,
+      "val_overload": 0.0,
+      "heldout_nodes": 49,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 4.0,
+      "val_nodes": 56,
+      "val_overload": 0.0,
+      "heldout_nodes": 53,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 4.5,
+      "val_nodes": 60,
+      "val_overload": 0.0,
+      "heldout_nodes": 57,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 5.0,
+      "val_nodes": 66,
+      "val_overload": 0.0,
+      "heldout_nodes": 62,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 5.5,
+      "val_nodes": 70,
+      "val_overload": 0.0,
+      "heldout_nodes": 67,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 3,
+      "z": 6.0,
+      "val_nodes": 75,
+      "val_overload": 0.0,
+      "heldout_nodes": 72,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 0.0,
+      "val_nodes": 28,
+      "val_overload": 0.1306423611111111,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.10368773946360153
+    },
+    {
+      "K": 4,
+      "z": 0.5,
+      "val_nodes": 29,
+      "val_overload": 0.014008620689655173,
+      "heldout_nodes": 30,
+      "heldout_overload": 0.028645833333333332
+    },
+    {
+      "K": 4,
+      "z": 1.0,
+      "val_nodes": 31,
+      "val_overload": 0.0012880824372759857,
+      "heldout_nodes": 32,
+      "heldout_overload": 5.425347222222222e-05
+    },
+    {
+      "K": 4,
+      "z": 1.5,
+      "val_nodes": 34,
+      "val_overload": 5.1062091503267975e-05,
+      "heldout_nodes": 34,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 2.0,
+      "val_nodes": 38,
+      "val_overload": 0.0,
+      "heldout_nodes": 37,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 2.5,
+      "val_nodes": 42,
+      "val_overload": 0.0,
+      "heldout_nodes": 41,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 3.0,
+      "val_nodes": 45,
+      "val_overload": 0.0,
+      "heldout_nodes": 45,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 3.5,
+      "val_nodes": 51,
+      "val_overload": 0.0,
+      "heldout_nodes": 48,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 4.0,
+      "val_nodes": 56,
+      "val_overload": 0.0,
+      "heldout_nodes": 53,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 4.5,
+      "val_nodes": 60,
+      "val_overload": 0.0,
+      "heldout_nodes": 57,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 5.0,
+      "val_nodes": 65,
+      "val_overload": 0.0,
+      "heldout_nodes": 62,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 5.5,
+      "val_nodes": 70,
+      "val_overload": 0.0,
+      "heldout_nodes": 67,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 4,
+      "z": 6.0,
+      "val_nodes": 75,
+      "val_overload": 0.0,
+      "heldout_nodes": 72,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 0.0,
+      "val_nodes": 28,
+      "val_overload": 0.13647073412698413,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.08399185823754789
+    },
+    {
+      "K": 6,
+      "z": 0.5,
+      "val_nodes": 29,
+      "val_overload": 0.016822318007662835,
+      "heldout_nodes": 30,
+      "heldout_overload": 0.03391203703703704
+    },
+    {
+      "K": 6,
+      "z": 1.0,
+      "val_nodes": 31,
+      "val_overload": 0.0005600358422939068,
+      "heldout_nodes": 32,
+      "heldout_overload": 0.00037977430555555556
+    },
+    {
+      "K": 6,
+      "z": 1.5,
+      "val_nodes": 34,
+      "val_overload": 5.1062091503267975e-05,
+      "heldout_nodes": 34,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 2.0,
+      "val_nodes": 38,
+      "val_overload": 0.0,
+      "heldout_nodes": 37,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 2.5,
+      "val_nodes": 42,
+      "val_overload": 0.0,
+      "heldout_nodes": 41,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 3.0,
+      "val_nodes": 46,
+      "val_overload": 0.0,
+      "heldout_nodes": 45,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 3.5,
+      "val_nodes": 51,
+      "val_overload": 0.0,
+      "heldout_nodes": 49,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 4.0,
+      "val_nodes": 56,
+      "val_overload": 0.0,
+      "heldout_nodes": 53,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 4.5,
+      "val_nodes": 60,
+      "val_overload": 0.0,
+      "heldout_nodes": 57,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 5.0,
+      "val_nodes": 65,
+      "val_overload": 0.0,
+      "heldout_nodes": 63,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 5.5,
+      "val_nodes": 71,
+      "val_overload": 0.0,
+      "heldout_nodes": 67,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 6,
+      "z": 6.0,
+      "val_nodes": 75,
+      "val_overload": 0.0,
+      "heldout_nodes": 73,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 0.0,
+      "val_nodes": 28,
+      "val_overload": 0.11687748015873016,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.08530890804597702
+    },
+    {
+      "K": 8,
+      "z": 0.5,
+      "val_nodes": 29,
+      "val_overload": 0.016882183908045977,
+      "heldout_nodes": 30,
+      "heldout_overload": 0.026909722222222224
+    },
+    {
+      "K": 8,
+      "z": 1.0,
+      "val_nodes": 31,
+      "val_overload": 0.0010080645161290322,
+      "heldout_nodes": 32,
+      "heldout_overload": 0.0006510416666666666
+    },
+    {
+      "K": 8,
+      "z": 1.5,
+      "val_nodes": 34,
+      "val_overload": 0.00010212418300653595,
+      "heldout_nodes": 34,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 2.0,
+      "val_nodes": 38,
+      "val_overload": 0.0,
+      "heldout_nodes": 37,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 2.5,
+      "val_nodes": 42,
+      "val_overload": 0.0,
+      "heldout_nodes": 41,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 3.0,
+      "val_nodes": 47,
+      "val_overload": 0.0,
+      "heldout_nodes": 45,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 3.5,
+      "val_nodes": 51,
+      "val_overload": 0.0,
+      "heldout_nodes": 49,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 4.0,
+      "val_nodes": 55,
+      "val_overload": 0.0,
+      "heldout_nodes": 53,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 4.5,
+      "val_nodes": 60,
+      "val_overload": 0.0,
+      "heldout_nodes": 57,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 5.0,
+      "val_nodes": 66,
+      "val_overload": 0.0,
+      "heldout_nodes": 62,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 5.5,
+      "val_nodes": 70,
+      "val_overload": 0.0,
+      "heldout_nodes": 66,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 8,
+      "z": 6.0,
+      "val_nodes": 75,
+      "val_overload": 0.0,
+      "heldout_nodes": 72,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 0.0,
+      "val_nodes": 27,
+      "val_overload": 0.12384259259259259,
+      "heldout_nodes": 29,
+      "heldout_overload": 0.0963242337164751
+    },
+    {
+      "K": 12,
+      "z": 0.5,
+      "val_nodes": 29,
+      "val_overload": 0.018498563218390805,
+      "heldout_nodes": 30,
+      "heldout_overload": 0.02488425925925926
+    },
+    {
+      "K": 12,
+      "z": 1.0,
+      "val_nodes": 31,
+      "val_overload": 0.0006160394265232974,
+      "heldout_nodes": 32,
+      "heldout_overload": 0.00021701388888888888
+    },
+    {
+      "K": 12,
+      "z": 1.5,
+      "val_nodes": 34,
+      "val_overload": 5.1062091503267975e-05,
+      "heldout_nodes": 34,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 2.0,
+      "val_nodes": 38,
+      "val_overload": 0.0,
+      "heldout_nodes": 37,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 2.5,
+      "val_nodes": 42,
+      "val_overload": 0.0,
+      "heldout_nodes": 41,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 3.0,
+      "val_nodes": 47,
+      "val_overload": 0.0,
+      "heldout_nodes": 45,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 3.5,
+      "val_nodes": 51,
+      "val_overload": 0.0,
+      "heldout_nodes": 49,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 4.0,
+      "val_nodes": 56,
+      "val_overload": 0.0,
+      "heldout_nodes": 53,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 4.5,
+      "val_nodes": 60,
+      "val_overload": 0.0,
+      "heldout_nodes": 57,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 5.0,
+      "val_nodes": 66,
+      "val_overload": 0.0,
+      "heldout_nodes": 62,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 5.5,
+      "val_nodes": 71,
+      "val_overload": 0.0,
+      "heldout_nodes": 67,
+      "heldout_overload": 0.0
+    },
+    {
+      "K": 12,
+      "z": 6.0,
+      "val_nodes": 75,
+      "val_overload": 0.0,
+      "heldout_nodes": 72,
+      "heldout_overload": 0.0
+    }
+  ]
+}

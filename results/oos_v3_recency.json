@@ -1,0 +1,111 @@
+{
+  "provenance": {
+    "history": 3,
+    "K": 8,
+    "zs": [
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      8.0
+    ],
+    "qs": [
+      60.0,
+      70.0,
+      80.0,
+      88.0,
+      95.0
+    ],
+    "half_life": 1.5,
+    "cp_thresh": 0.6,
+    "z_extra": 0.0,
+    "smooth_k": 0,
+    "n_tasks": 1000,
+    "seeds": 4,
+    "target_overload_pct": 0.5,
+    "test_windows_used": 1,
+    "dataset": "Google 2011 multi-day (gct_days.npz copy)"
+  },
+  "frontier": {
+    "blind": [
+      [
+        31.5,
+        1.437
+      ],
+      [
+        33.2,
+        0.299
+      ],
+      [
+        34.8,
+        0.142
+      ],
+      [
+        36.8,
+        0.006
+      ],
+      [
+        41.5,
+        0.002
+      ]
+    ],
+    "aware": [
+      [
+        33.5,
+        0.156
+      ],
+      [
+        36.0,
+        0.012
+      ],
+      [
+        38.2,
+        0.002
+      ],
+      [
+        40.5,
+        0.0
+      ],
+      [
+        46.2,
+        0.0
+      ]
+    ],
+    "v3": [
+      [
+        31.8,
+        0.933
+      ],
+      [
+        33.0,
+        0.418
+      ],
+      [
+        33.0,
+        0.418
+      ],
+      [
+        34.5,
+        0.022
+      ],
+      [
+        34.5,
+        0.022
+      ]
+    ]
+  },
+  "peak_nodes": 31.0,
+  "nodes_at_target": {
+    "blind": 32.9,
+    "aware": 33.5,
+    "v3": 32.8
+  },
+  "baselines_reference_h3": {
+    "peak": 31.3,
+    "blind": 33.4,
+    "aware": 34.2
+  },
+  "v3_saving_vs_peak_pct": -5.8,
+  "v3_saving_vs_blind_pct": 0.3,
+  "v3_saving_vs_aware_pct": 2.1
+}

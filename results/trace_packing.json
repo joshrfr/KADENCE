@@ -1,0 +1,74 @@
+{
+  "with_diurnal": {
+    "ceiling": 1.0,
+    "seeds": 24,
+    "workload": "trace-calibrated",
+    "generated_at": 1784419839.2940135,
+    "schemes": {
+      "linear-fixed": {
+        "mean_jobs_fit": 2.33,
+        "ci95": [
+          1.5,
+          3.0
+        ],
+        "min": 0,
+        "max": 4
+      },
+      "linear-rr": {
+        "mean_jobs_fit": 3.17,
+        "ci95": [
+          2.5,
+          3.83
+        ],
+        "min": 0,
+        "max": 4
+      },
+      "phase-coupled": {
+        "mean_jobs_fit": 3.0,
+        "ci95": [
+          2.33,
+          3.67
+        ],
+        "min": 0,
+        "max": 4
+      }
+    },
+    "phase_packing_gain_pct": -5.4
+  },
+  "rhythm_only": {
+    "ceiling": 1.0,
+    "seeds": 24,
+    "workload": "trace-calibrated",
+    "generated_at": 1784419839.7855551,
+    "schemes": {
+      "linear-fixed": {
+        "mean_jobs_fit": 3.5,
+        "ci95": [
+          3.0,
+          4.0
+        ],
+        "min": 0,
+        "max": 4
+      },
+      "linear-rr": {
+        "mean_jobs_fit": 4.0,
+        "ci95": [
+          3.5,
+          4.5
+        ],
+        "min": 0,
+        "max": 8
+      },
+      "phase-coupled": {
+        "mean_jobs_fit": 4.5,
+        "ci95": [
+          4.0,
+          5.0
+        ],
+        "min": 4,
+        "max": 8
+      }
+    },
+    "phase_packing_gain_pct": 12.5
+  }
+}

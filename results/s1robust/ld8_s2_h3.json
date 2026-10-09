@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "data": "gct_days.npz",
+    "history": 3,
+    "n_tasks": 1000,
+    "max_tasks": null,
+    "seed": 2,
+    "cap": 1.0,
+    "last_day": 8,
+    "train_windows": 78910,
+    "test_windows": 49713,
+    "held_day": 6,
+    "wall_s": 37.8,
+    "peak_rss_gib": 15.09
+  },
+  "peak_baseline": {
+    "arm": "peak",
+    "z": null,
+    "nodes": 49,
+    "overload": 3.5430839002267575e-05,
+    "params": 0,
+    "trained": false
+  },
+  "rows": [
+    {
+      "arm": "peak",
+      "z": null,
+      "nodes": 49,
+      "overload": 3.5430839002267575e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 1.0,
+      "nodes": 33,
+      "overload": 0.00010521885521885521,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 1.0,
+      "nodes": 32,
+      "overload": 0.0002712673611111111,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 1.5,
+      "nodes": 36,
+      "overload": 4.8225308641975306e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 1.5,
+      "nodes": 35,
+      "overload": 4.96031746031746e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 2.0,
+      "nodes": 40,
+      "overload": 4.340277777777778e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 2.0,
+      "nodes": 38,
+      "overload": 4.5687134502923974e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 2.5,
+      "nodes": 43,
+      "overload": 4.037467700258398e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 2.5,
+      "nodes": 41,
+      "overload": 4.234417344173442e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 3.0,
+      "nodes": 46,
+      "overload": 3.7741545893719805e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 3.0,
+      "nodes": 45,
+      "overload": 3.8580246913580246e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "mean_z",
+      "z": 3.5,
+      "nodes": 51,
+      "overload": 3.4041394335511986e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "harmonic_z",
+      "z": 3.5,
+      "nodes": 50,
+      "overload": 3.472222222222222e-05,
+      "params": 0,
+      "trained": false
+    },
+    {
+      "arm": "lsq_z",
+      "z": 1.0,
+      "nodes": 41,
+      "overload": 8.468834688346883e-05,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "lsq_z",
+      "z": 1.5,
+      "nodes": 47,
+      "overload": 3.693853427895981e-05,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "lsq_z",
+      "z": 2.0,
+      "nodes": 52,
+      "overload": 3.338675213675214e-05,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "lsq_z",
+      "z": 2.5,
+      "nodes": 59,
+      "overload": 2.9425612052730696e-05,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "lsq_z",
+      "z": 3.0,
+      "nodes": 65,
+      "overload": 2.670940170940171e-05,
+      "params": 5,
+      "trained": true
+    },
+    {
+      "arm": "lsq_z",
+      "z": 3.5,
+      "nodes": 71,
+      "overload": 2.445226917057903e-05,
+      "params": 5,
+      "trained": true
+    }
+  ],
+  "beats_peak": [],
+  "lsq": {
+    "coef": [
+      8.372087177122012e-05,
+      0.132388174533844,
+      0.22374357283115387,
+      0.8420791625976562,
+      -0.00020535028306767344
+    ],
+    "resid_std": 0.011235353536903858
+  }
+}

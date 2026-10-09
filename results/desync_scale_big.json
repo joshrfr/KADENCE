@@ -1,0 +1,44 @@
+{
+  "provenance": {
+    "stepper": "vectorised, validated vs RingController",
+    "dt": 0.1,
+    "safety_fraction": 0.45,
+    "tol": 1e-06,
+    "validation": {
+      "n": 50,
+      "kernel_rounds": 5366,
+      "fast_rounds": 5367,
+      "match": true
+    }
+  },
+  "populations": [
+    {
+      "n": 100,
+      "settling_rounds": 22176,
+      "final_max_gap_error": 9.999242542024778e-07,
+      "energy_increase_rounds": 0,
+      "converged": true
+    },
+    {
+      "n": 200,
+      "settling_rounds": 62416,
+      "final_max_gap_error": 9.999357496390249e-07,
+      "energy_increase_rounds": 0,
+      "converged": true
+    },
+    {
+      "n": 400,
+      "settling_rounds": 237910,
+      "final_max_gap_error": 9.99977009898123e-07,
+      "energy_increase_rounds": 0,
+      "converged": true
+    },
+    {
+      "n": 1000,
+      "settling_rounds": 1307979,
+      "final_max_gap_error": 9.99997430537261e-07,
+      "energy_increase_rounds": 0,
+      "converged": true
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "provenance": {
+    "kind": "real async multi-process (UDP) w/ loss+jitter",
+    "kernel": "core.neighbor_gossip.local_correction",
+    "n": 16,
+    "seconds": 8.0
+  },
+  "sweep": [
+    {
+      "loss": 0.0,
+      "jitter_s": 0.02,
+      "final_max_gap_error": 0.007712,
+      "final_pct_of_fair": 1.96,
+      "converged": true
+    },
+    {
+      "loss": 0.1,
+      "jitter_s": 0.02,
+      "final_max_gap_error": 0.008157,
+      "final_pct_of_fair": 2.08,
+      "converged": true
+    },
+    {
+      "loss": 0.3,
+      "jitter_s": 0.02,
+      "final_max_gap_error": 0.010019,
+      "final_pct_of_fair": 2.55,
+      "converged": true
+    },
+    {
+      "loss": 0.5,
+      "jitter_s": 0.02,
+      "final_max_gap_error": 0.01315,
+      "final_pct_of_fair": 3.35,
+      "converged": true
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "provenance": {
+    "kernel": "core.neighbor_gossip.RingController",
+    "dt": 0.1,
+    "tol": 1e-06,
+    "messages_per_job_round": 2
+  },
+  "populations": [
+    {
+      "n": 10,
+      "settling_rounds": 316,
+      "final_max_gap_error": 9.709135753155351e-07,
+      "energy_increase_rounds": 0
+    },
+    {
+      "n": 25,
+      "settling_rounds": 1681,
+      "final_max_gap_error": 9.95318738483686e-07,
+      "energy_increase_rounds": 0
+    },
+    {
+      "n": 50,
+      "settling_rounds": 5366,
+      "final_max_gap_error": 9.986249371596312e-07,
+      "energy_increase_rounds": 0
+    },
+    {
+      "n": 100,
+      "settling_rounds": 22175,
+      "final_max_gap_error": 9.999242541469666e-07,
+      "energy_increase_rounds": 0
+    },
+    {
+      "n": 200,
+      "settling_rounds": 62415,
+      "final_max_gap_error": 9.99935750020664e-07,
+      "energy_increase_rounds": 0
+    }
+  ]
+}
