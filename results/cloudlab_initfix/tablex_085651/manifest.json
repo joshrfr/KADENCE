@@ -1,0 +1,418 @@
+{
+  "alpha": 1.0,
+  "base_seed": 20261008,
+  "experiment_id": "kadence-initfix",
+  "head_hostname": "head.kadence-initfix.famu-recreate.emulab.net",
+  "hostfile_sha256": "36aff8d2c1d0c9229e1c2be16f3db9a21d8c205895454d21b60a509d1f62e42a",
+  "jitter": 0.02,
+  "jobs_per_ring": [
+    8,
+    16,
+    48
+  ],
+  "kind": "16 physical workers; independent localhost UDP rings only",
+  "loss_levels": [
+    0.0,
+    0.1,
+    0.3
+  ],
+  "not_measured": [
+    "cross-node scheduler",
+    "JCT",
+    "SLO",
+    "utilization"
+  ],
+  "paired_seed_rule": "base_seed + repetition * 1000; same across conditions",
+  "remote_root": "/users/JomoFamu/kadence-artifact",
+  "repetitions_per_condition": 5,
+  "rings_per_node": 1,
+  "schedule": [
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.3,
+      "order": 0,
+      "rep": 0,
+      "seed": 20261008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.0,
+      "order": 1,
+      "rep": 0,
+      "seed": 20261008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.1,
+      "order": 2,
+      "rep": 0,
+      "seed": 20261008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.3,
+      "order": 3,
+      "rep": 0,
+      "seed": 20261008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.3,
+      "order": 4,
+      "rep": 0,
+      "seed": 20261008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.1,
+      "order": 5,
+      "rep": 0,
+      "seed": 20261008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.0,
+      "order": 6,
+      "rep": 0,
+      "seed": 20261008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.0,
+      "order": 7,
+      "rep": 0,
+      "seed": 20261008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.1,
+      "order": 8,
+      "rep": 0,
+      "seed": 20261008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.1,
+      "order": 0,
+      "rep": 1,
+      "seed": 20262008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.3,
+      "order": 1,
+      "rep": 1,
+      "seed": 20262008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.3,
+      "order": 2,
+      "rep": 1,
+      "seed": 20262008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.0,
+      "order": 3,
+      "rep": 1,
+      "seed": 20262008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.0,
+      "order": 4,
+      "rep": 1,
+      "seed": 20262008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.3,
+      "order": 5,
+      "rep": 1,
+      "seed": 20262008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.1,
+      "order": 6,
+      "rep": 1,
+      "seed": 20262008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.1,
+      "order": 7,
+      "rep": 1,
+      "seed": 20262008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.0,
+      "order": 8,
+      "rep": 1,
+      "seed": 20262008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.0,
+      "order": 0,
+      "rep": 2,
+      "seed": 20263008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.1,
+      "order": 1,
+      "rep": 2,
+      "seed": 20263008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.1,
+      "order": 2,
+      "rep": 2,
+      "seed": 20263008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.1,
+      "order": 3,
+      "rep": 2,
+      "seed": 20263008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.3,
+      "order": 4,
+      "rep": 2,
+      "seed": 20263008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.0,
+      "order": 5,
+      "rep": 2,
+      "seed": 20263008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.3,
+      "order": 6,
+      "rep": 2,
+      "seed": 20263008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.0,
+      "order": 7,
+      "rep": 2,
+      "seed": 20263008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.3,
+      "order": 8,
+      "rep": 2,
+      "seed": 20263008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.1,
+      "order": 0,
+      "rep": 3,
+      "seed": 20264008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.1,
+      "order": 1,
+      "rep": 3,
+      "seed": 20264008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.0,
+      "order": 2,
+      "rep": 3,
+      "seed": 20264008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.0,
+      "order": 3,
+      "rep": 3,
+      "seed": 20264008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.3,
+      "order": 4,
+      "rep": 3,
+      "seed": 20264008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.3,
+      "order": 5,
+      "rep": 3,
+      "seed": 20264008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.0,
+      "order": 6,
+      "rep": 3,
+      "seed": 20264008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.3,
+      "order": 7,
+      "rep": 3,
+      "seed": 20264008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.1,
+      "order": 8,
+      "rep": 3,
+      "seed": 20264008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.1,
+      "order": 0,
+      "rep": 4,
+      "seed": 20265008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.0,
+      "order": 1,
+      "rep": 4,
+      "seed": 20265008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.3,
+      "order": 2,
+      "rep": 4,
+      "seed": 20265008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.1,
+      "order": 3,
+      "rep": 4,
+      "seed": 20265008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 16,
+      "loss": 0.3,
+      "order": 4,
+      "rep": 4,
+      "seed": 20265008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.1,
+      "order": 5,
+      "rep": 4,
+      "seed": 20265008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.3,
+      "order": 6,
+      "rep": 4,
+      "seed": 20265008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 8,
+      "loss": 0.0,
+      "order": 7,
+      "rep": 4,
+      "seed": 20265008
+    },
+    {
+      "alpha": 1.0,
+      "jobs": 48,
+      "loss": 0.0,
+      "order": 8,
+      "rep": 4,
+      "seed": 20265008
+    }
+  ],
+  "seconds_per_repetition": 30.0,
+  "source_sha256": {
+    "experiments/simulation/desync_distributed.py": "3dc959e2e18ff8a52b59a4496477828c927d23c502a031b1cc4ab22bd02f1e5a",
+    "experiments/testbed/cloudlab/kadence_agent_counted.py": "c63637d3e09931a3212f4f380bb3c90c41dbcdf9b82be6a25c2f2a6d9c450fb2",
+    "experiments/testbed/cloudlab/kadence_cluster.py": "98df8093945e5f642638232e483e9dac37175c21fd531995a689f784f80f8bcf",
+    "experiments/testbed/cloudlab/kadence_node.py": "8d83cb1cf2eafb945e220f375432495308ef0dcac35c993cec42d8ee383e0a6e",
+    "src/kadence/neighbor_gossip.py": "d9c2eb56632961f1c1dc9366772ec9d2a7083d033fb25f2f56806fd6edd45bc7"
+  },
+  "ssh_user": "JomoFamu",
+  "workers": [
+    "head",
+    "w000",
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007",
+    "w008",
+    "w009",
+    "w010",
+    "w011",
+    "w012",
+    "w013",
+    "w014"
+  ]
+}
