@@ -1,0 +1,8 @@
+{
+  "note": "Node peak before and after the repulsive rule for the eight real tasks in Fig. 1. Produced by paper_ipdps/figures/make_model_figures.py:fig_order_descent from data/gct_day0_series.npz; recorded here so the caption's numbers are traceable without the figure script.",
+  "tasks": [8283, 23172, 20773, 7715, 7699, 1323, 17938, 21354],
+  "n_tasks": 8,
+  "peak_before": 0.4122,
+  "peak_after": 0.3876,
+  "z1_ratio": 0.757
+}

@@ -1,0 +1,118 @@
+{
+  "note": "Effect of the pessimistic-neighbour-initialisation fix (commit 825a15b) on cyclic-order breakage, with per-datagram loss genuinely injected into the sendto path. Both arms are the same agent differing in exactly two init lines, so alpha is shared. 6 seeds per cell, 20 ms tick, 20 ms jitter, 6 s, localhost UDP.",
+  "finding": "Severity is alpha-dependent. At alpha=0.2 the first step is five times smaller and the fabricated gap rarely licenses an overshoot (1-2/6 rings break). At alpha=1, which is the configuration the CloudLab campaign used, every n=48 ring breaks at every loss level. This reconciles the hardware result (79/80 broken) with simulations at alpha=0.2 that looked healthy: they were different alpha, not different conclusions.",
+  "producer": "experiments/simulation/init_fix_loss_matrix.py",
+  "generated_at": "2026-10-10",
+  "cells": [
+    {
+      "alpha": 1.0,
+      "n": 16,
+      "loss": 0.0,
+      "reps": 6,
+      "base_rings_with_order_break": 5,
+      "base_median_gap_err_pct": 99.97,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 0.0
+    },
+    {
+      "alpha": 1.0,
+      "n": 16,
+      "loss": 0.1,
+      "reps": 6,
+      "base_rings_with_order_break": 4,
+      "base_median_gap_err_pct": 0.05,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 0.0
+    },
+    {
+      "alpha": 1.0,
+      "n": 16,
+      "loss": 0.3,
+      "reps": 6,
+      "base_rings_with_order_break": 3,
+      "base_median_gap_err_pct": 99.78,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 0.01
+    },
+    {
+      "alpha": 1.0,
+      "n": 48,
+      "loss": 0.0,
+      "reps": 6,
+      "base_rings_with_order_break": 6,
+      "base_median_gap_err_pct": 64.17,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 4.31
+    },
+    {
+      "alpha": 1.0,
+      "n": 48,
+      "loss": 0.1,
+      "reps": 6,
+      "base_rings_with_order_break": 6,
+      "base_median_gap_err_pct": 60.45,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 4.65
+    },
+    {
+      "alpha": 1.0,
+      "n": 48,
+      "loss": 0.3,
+      "reps": 6,
+      "base_rings_with_order_break": 6,
+      "base_median_gap_err_pct": 61.3,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 5.99
+    },
+    {
+      "alpha": 0.2,
+      "n": 16,
+      "loss": 0.0,
+      "reps": 6,
+      "base_rings_with_order_break": 2,
+      "base_median_gap_err_pct": 2.21,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 2.2
+    },
+    {
+      "alpha": 0.2,
+      "n": 16,
+      "loss": 0.1,
+      "reps": 6,
+      "base_rings_with_order_break": 0,
+      "base_median_gap_err_pct": 2.21,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 2.31
+    },
+    {
+      "alpha": 0.2,
+      "n": 16,
+      "loss": 0.3,
+      "reps": 6,
+      "base_rings_with_order_break": 1,
+      "base_median_gap_err_pct": 2.68,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 2.65
+    },
+    {
+      "alpha": 0.2,
+      "n": 48,
+      "loss": 0.0,
+      "reps": 6,
+      "base_rings_with_order_break": 1,
+      "base_median_gap_err_pct": 13.92,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 10.23
+    },
+    {
+      "alpha": 0.2,
+      "n": 48,
+      "loss": 0.1,
+      "reps": 6,
+      "base_rings_with_order_break": 2,
+      "base_median_gap_err_pct": 18.44,
+      "fixed_rings_with_order_break": 0,
+      "fixed_median_gap_err_pct": 10.26
+    }
+  ]
+}

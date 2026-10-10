@@ -99,6 +99,12 @@ def main():
         hi = max(by)
         defs["asyncMaxLoss"] = f"{100*hi:.0f}"
         defs["asyncPctMax"] = f"{by[hi]['final_pct_of_fair']:.1f}"
+    ofp = load("order_figure_peaks.json")
+    if ofp:
+        defs["ordPeakBefore"] = f"{ofp['peak_before']:.2f}"
+        defs["ordPeakAfter"] = f"{ofp['peak_after']:.2f}"
+        defs["ordPeakTasks"] = str(ofp["n_tasks"])
+
 
     # packing (time-shift mode), if present
     gains = []
