@@ -22,7 +22,9 @@ extraction parameters and the source object. It is the only trace input to
 |---|---|---|---|
 | `gct_days.npz` | 487,395,383 | `81ee817361f57a913a7275000392f49fb32564c9a0c5700819153316634026a8` | Google ClusterData 2011 v2.1, multi-day per-task series (5 days per the provenance in `results/oos_placement_h3.json`) |
 | `alibaba_days.npz` | 52,456,447 | `baa1839a8dbfabc82da1c3c4f0284adfa716e63d83ac312067b71969c4241a61` | Alibaba cluster trace 2018 |
-| `gct_day0_series.npz` | not recorded | not recorded | Google ClusterData 2011 v2.1, day 0, 5-minute slots |
+| `gct_day0_series.npz` | 80,968,854 | `bca336f381f3edbc3093c08253f3f541ffa9886f376f4152d0768c27199cd68c` | Google ClusterData 2011 v2.1, day 0, 5-minute slots |
+| `gct32.npz` | 1,520,194,106 | `1e4bb514b1f7fb8f74410b9f3896faf71eadd95eac0d81f72c52ee79310e472c` | float32 projection of `gct_days.npz`, holding `series.npy` and `full.npy` |
+| `series_f32.npy` | 1,519,534,208 | `8741e5a16e8f114f79e51982dbb257209e718048fe6a06191e2af130f8c78140` | the same float32 `series` array standalone, as a memmap |
 
 Licences. The Google trace is published under CC-BY-4.0
 (https://github.com/google/cluster-data/blob/master/ClusterData2011_2.md). The
@@ -37,3 +39,11 @@ NumPy versions.
 
 Every result file derived from these caches is committed under `results/`, so
 the numbers in the paper can be inspected without the caches.
+
+The last two rows are caches of a cache and are not inputs. Both are produced
+by streaming `gct_days.npz:series` down from float64 to float32, which takes
+about 90 seconds and holds little memory; float32 is not a loss of precision
+here because `build_examples` already casts every window to float32 before
+use. They are listed only so that a 3 GB pair found on a disk is recognisable
+as regenerable rather than irreplaceable. Delete them first when space is
+needed.
